@@ -3,15 +3,15 @@ let handler = async (m, { conn, groupMetadata, usedPrefix }) => {
     let id = m.chat
     conn.absen = conn.absen ? conn.absen : {}
     if (!(id in conn.absen)) {
-        await conn.sendButton(m.chat, `Tidak ada absen berlangsung!`, author, null, [
-        ['Mulaiabsen', `${usedPrefix}mulaiabsen`]
+        await conn.sendButton(m.chat, `No absenteeism took place!`, author, null, [
+        ['Startabsent', `${usedPrefix}startabsent`]
     ], m)
         throw false
     }
     
     let absen = conn.absen[id][1]
     const wasVote = absen.includes(m.sender)
-    if (wasVote) throw 'Kamu sudah absen!'
+    if (wasVote) throw 'You have been absent!'
     absen.push(m.sender)
     let d = new Date
     let date = d.toLocaleDateString('id', {
@@ -21,22 +21,22 @@ let handler = async (m, { conn, groupMetadata, usedPrefix }) => {
     })
     
     let list = absen.map((v, i) => `${dmenub} ${i + 1}.  @${v.split`@`[0]}`).join('\n')
-            let caption = `*${htjava} TANGGAL ${htjava}*\n${date}
+            let caption = `*${htjava} DATE ${htjava}*\n${date}
 ${conn.absen[id][2]}
 
-*${htjava} DAFTAR ABSEN ${htjava}*
+*${htjava} ABSENT LIST ${htjava}*
 *Total:* ${absen.length}
 
 ${dmenut}
 ${list}
 ${dmenuf}
 `
-await conn.sendButton(m.chat, caption, author, null, [['absen', `${usedPrefix}absen`], ['cekabsen', `${usedPrefix}cekabsen`]], m, { mentions: conn.parseMention(caption) })
+await conn.sendButton(m.chat, caption, author, null, [['absent', `${usedPrefix}absent`], ['checkattendance', `${usedPrefix}checkattendance`]], m, { mentions: conn.parseMention(caption) })
 
 
 }
-handler.help = ['absen']
-handler.tags = ['absen']
-handler.command = /^(absen|hadir)$/i
+handler.help = ['absent']
+handler.tags = ['absent']
+handler.command = /^(absent|present)$/i
 
 export default handler
