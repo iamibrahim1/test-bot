@@ -13,27 +13,27 @@
 
 let handler = async (m, { conn, text, usedPrefix, command }) => {
     conn.confess = conn.confess ? conn.confess : {}
-    if (!text) throw `*Cara penggunaan :*\n\n${usedPrefix + command} nomor|nama pengirim|pesan\n\n*Note:* nama pengirim boleh nama samaran atau anonymous.\n\n*Contoh:* ${usedPrefix + command} ${m.sender.split`@`[0]}|Nama|Halo.\n\n「 𝙰𝚕𝚋𝚎𝚍𝚘-𝙱𝙾𝚃  」`;
+    if (!text) throw `*Cara penggunaan :*\n\n${usedPrefix + command} nnumber|sender's name|message\n\n*Note:* sender's name can be a pseudonym or anonymous.\n\n*Example:* ${usedPrefix + command} ${m.sender.split`@`[0]}|Name|Hello.\n\n「Ibrahim」`;
     let [jid, name, pesan] = text.split('|');
-    if ((!jid || !name || !pesan)) throw `*Cara penggunaan :*\n\n${usedPrefix + command} nomor|nama pengirim|pesan\n\n*Note:* nama pengirim boleh nama samaran atau anonymous.\n\n*Contoh:* ${usedPrefix + command} ${m.sender.split`@`[0]}|Bapakmu|Halo.\n\n「 𝙰𝚕𝚋𝚎𝚍𝚘-𝙱𝙾𝚃 」`;
+    if ((!jid || !name || !pesan)) throw `*How to use :*\n\n${usedPrefix + command} number|sender's name|message\n\n*Note:* sender's name can be a pseudonym or anonymous.\n\n*Example:* ${usedPrefix + command} ${m.sender.split`@`[0]}|Your father|Hello.\n\n「Ibrahim」`;
     jid = jid.replace(/[^0-9]/g, '') + '@s.whatsapp.net';
     let data = (await conn.onWhatsApp(jid))[0] || {};
-    if (!data.exists) throw 'Nomer tidak terdaftar di whatsapp.';
-    if (jid == m.sender) throw 'tidak bisa mengirim pesan confess ke diri sendiri.'
+    if (!data.exists) throw 'Number not registered on WhatsApp.';
+    if (jid == m.sender) throw 'can not send a message confess to yourself.'
     let mf = Object.values(conn.confess).find(mf => mf.status === true)
     if (mf) return !0
     try {
     	let id = + new Date
-        let txt = `Hai @${data.jid.split('@')[0]}, kamu menerima pesan confess nih.\n\nDari: *${name}*\nPesan: \n${pesan}\n\nMau balas pesan ini kak? bisa kak. kakak tinggal ketik pesan kakak nanti saya sampaikan ke *${name}*.`.trim();
+        let txt = `Hai @${data.jid.split('@')[0]},You received a confess message.\n\nFrom: *${name}*\nMessage: \n${pesan}\n\nWould you like to reply to this message? can sis. Sis, just type your message, I'll pass it on to *${name}*.`.trim();
         await conn.sendButton(data.jid, txt, wm, 0, [['Balas Pesan', '.balasconfess']], null)
         .then(() => {
-            m.reply('Berhasil mengirim pesan confess.')
+            m.reply('Successfully sent message confess.')
             conn.confess[id] = {
                 id,
-                dari: m.sender,
-                nama: name,
-                penerima: data.jid,
-                pesan: pesan,
+                from: m.sender,
+                Name: name,
+                recipient: data.jid,
+                message: pesan,
                 status: false
             }
             return !0
@@ -43,8 +43,8 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
         m.reply('eror');
     }
 }
-handler.tags = ['menbalas']
-handler.help = ['confes'].map(v => v + ' <nomor|nama|pesan>')
+handler.tags = ['reply']
+handler.help = ['confes'].map(v => v + ' <number|name|message>')
 handler.command = /^(confes)$/i
 handler.private = true
 
