@@ -5,9 +5,9 @@ let handler = async (m, { conn }) => {
     await m.reply('Sedang merestart bot...')
     await global.db.write()
     process.send('reset')
-  } else throw 'Error. Tempat run tidak mendukung fitur debounce.'
+  } else throw 'Error. The place run does not support the debounce featuree.'
 }
-handler.help = ['debounce' + (process.send ? '' : ' (Tidak Bekerja)')]
+handler.help = ['debounce' + (process.send ? '' : ' (Doesnt work)')]
 handler.tags = ['host']
 handler.command = /^debounce$/i
 handler.owner = true
