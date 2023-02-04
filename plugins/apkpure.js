@@ -1,7 +1,7 @@
 import { sandroid1 } from '../lib/scrape.js'
 import fetch from 'node-fetch'
 let handler = async(m, { conn, text, usedPrefix, command }) => {
-  if (!text) return conn.reply(m.chat, 'Harap Masukan Query', m)
+  if (!text) return conn.reply(m.chat, 'Please Enter Queries', m)
 
   await m.reply('Searching...')
     let res = await sandroid1(text)
@@ -12,8 +12,8 @@ let handler = async(m, { conn, text, usedPrefix, command }) => {
 		rowId: usedPrefix + 'ss ' + v.link
 	}))
 	let button = {
-		buttonText: `☂️ apkpure Search Disini ☂️`,
-		description: `⚡ Silakan pilih apkpure Search di tombol di bawah...\n*Teks yang anda kirim:* ${text}\n\nKetik ulang *${usedPrefix + command}* teks anda untuk mengubah teks lagi`,
+		buttonText: `☂️ apkpure Search Here ☂️`,
+		description: `⚡ Please select apkpure Search in the button below...\n*Text to send:* ${text}\n\nRetype *${usedPrefix + command}* your text to change the text again`,
 		footerText: wm
 	}
 	return await conn.sendListM(m.chat, button, row, m)
