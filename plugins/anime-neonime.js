@@ -16,7 +16,7 @@ let handler = async (m, { conn, args, text, usedPrefix, command }) => {
 		await conn.sendMessage(m.chat, { image: { url: get_result.result[0].thumbnail }, caption: ini_txt }, { quoted: m })
 	} catch (e) {
 		console.log(e)
-		m.reply(`Tidak ditemukan hasil.`)
+		m.reply(`No results found.`)
 	}
 }
 
