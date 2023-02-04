@@ -7,7 +7,7 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
 
         let q = m.quoted ? m.quoted : m
         let mime = (q.msg || q).mimetype || ''
-        if (!/audio/.test(mime)) throw `Balas vn/audio yang ingin diubah dengan caption *${usedPrefix + command}*`
+        if (!/audio/.test(mime)) throw `Reply to the vn/audio you want to change with a caption*${usedPrefix + command}*`
         let audio = await q.download?.()
         if (!audio) throw 'Can\'t download audio!'
         if (!args[0] || !args[1]) throw `example: ${usedPrefix + command} 00:00:30 00:00:30`
