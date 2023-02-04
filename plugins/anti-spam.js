@@ -11,7 +11,7 @@ export async function all(m) {
         if (m.messageTimestamp.toNumber() - this.spam[m.sender].lastspam > 10) {
             if (this.spam[m.sender].count > 5) {
                user.banned = true
-    let caption = `👋 Banned *@${m.sender.split("@")[0]}* Jangan spam!`
+    let caption = `👋 Banned *@${m.sender.split("@")[0]}* Don't spam!`
     this.sendButton(m.chat, caption, wm, null, [['Disable Anti Spam', '/disable antispam']], m, { mentions: this.parseMention(caption) })
             }
             this.spam[m.sender].count = 0
