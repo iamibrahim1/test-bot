@@ -2,7 +2,7 @@ import axios from "axios"
 
 let handler = async(m, { conn, text }) => {
 
-    if (!text) return conn.reply(m.chat, 'Masukan Teksnya', m)
+    if (!text) return conn.reply(m.chat, 'Enter the Text', m)
 
 	axios.get(`https://some-random-api.ml/binary?text=${text}`).then ((res) => {
 	 	let hasil = `Teks : ${text}\nBinary : ${res.data.binary}`
@@ -10,7 +10,7 @@ let handler = async(m, { conn, text }) => {
     conn.reply(m.chat, hasil, m)
 	})
 }
-handler.help = ['binary'].map(v => v + ' <teks>')
+handler.help = ['binary'].map(v => v + ' <text>')
 handler.tags = ['tools']
 handler.command = /^(binary)$/i
 handler.owner = false
