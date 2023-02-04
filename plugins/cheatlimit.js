@@ -2,91 +2,90 @@ import fetch from 'node-fetch'
 
 let handler = async (m, { conn, text, args, usedPrefix, command }) => {
 let cit = ['money',
-'limit',
-'level',
-'limit',
+'limits',
+'levels',
+'limits',
 'exp',
-'potion',
+'potions',
 'aqua',
 'trash',
 'wood',
 'rock',
-'string',
+'strings',
 'iron',
-'diamond',
-'emerald',
+'diamonds',
+'emeralds',
 'gold',
-'coal',
+'coals',
 'common',
 'uncommon',
 'mythic',
 'legendary',
 'foodpet',
 'Fox',
-'naga',
-'pet',
-'anggur',
-'apel',
-'batu',
-'berlian',
-'bibitanggur',
+'dragon',
+'pets',
+'wine',
+'Apple',
+'rock',
+'diamond',
+'vineyard',
 'bibitapel',
-'bibitjeruk',
-'bibitmangga',
-'bibitpisang',
-'botol',
+'orange seeds',
+'mango seeds',
+'banana seeds',
+'bottle',
 'centaur',
-'eleksirb',
-'emasbatang',
-'emasbiasa',
+'electionrb',
+'gold bars',
+'gold usual',
 'exp',
 'gardenboc',
 'gardenboxs',
 'griffin',
-'healtmonster',
-'jeruk',
-'kaleng',
-'kardus',
-'kayu',
-'ketake',
+'healthmonster',
+'orange',
+'can',
+'cardboard box',
+'wood',
+'take',
 'koinexpg',
-'kucing',
-'kuda',
+'cat',
+'horse',
 'kyubi',
-'makanancentaur',
-'makanangriffin',
-'makanankyubi',
-'makanannaga',
-'makananpet',
-'makananphonix',
-'mangga',
-'pancingan',
+'centaur food',
+'griffin food',
+'kyubi food',
+'food dragon',
+'petfood',
+'foodphonix',
+'mango',
+'inducement',
 'phonix',
-'pisang',
-'rubah',
-'sampah',
-'serigala',
-'sword',
-'tiketcoin',
-'umpan']
-
+'banana',
+'change',
+'rubbish',
+'wolf',
+'swords',
+'ticketcoin',
+'bait']
 let user = global.db.data.users[m.sender]
 
     let listSections = []
 	Object.keys(cit).map((v, index) => {
 	listSections.push([htki + 'Cheat Num. ' + ++index + ' ' + htka, [
-          ['Infinity ' + cit[v], usedPrefix + command +' cheat ' + cit[v], '\n⌚ *Desc:* Untuk ngechit ' + cit[v]]
+          ['Infinity ' + cit[v], usedPrefix + command +' cheat ' + cit[v], '\n⌚ *Desc:* To chat ' + cit[v]]
         ]])
 	})
-	if (!args[0]) return conn.sendList(m.chat, htki + ' 📺 Cheat Infinity 🔎 ' + htka, `⚡ Silakan pilih Cheat di tombol di bawah...\n*Teks yang anda kirim:* ${text}\n\nKetik ulang *${usedPrefix + command}* teks anda untuk mengubah teks lagi`, author, `☂️ Cheat Disini ☂️`, listSections, m)
+	if (!args[0]) return conn.sendList(m.chat, htki + ' 📺 Cheat Infinity 🔎 ' + htka, `⚡ Please select Cheat in the button below...\n*Text to send:* ${text}\n\nRetype *${usedPrefix + command}* your text to change the text again`, author, `☂️ Cheat Here☂️`, listSections, m)
 	if (args[0] == 'cheat') {
 		conn.reply(m.chat, `*Succes Cheat Infinity ${args[1]}*`, fakes, fakefb)
 		user[args[1]] = Infinity
 		}
 }
-handler.help = ['ngechit'].map(v => v + ' *hehe..*')
+handler.help = ['cheat'].map(v => v + ' *hehe..*')
 handler.tags = ['xp']
-handler.command = /^(ngech(ea|i)t|c(((he(ater|t)|iter)|(hea|i)t)|hit))$/i
+handler.command = /^(cheat)$/i
 handler.private = true
 
 export default handler
