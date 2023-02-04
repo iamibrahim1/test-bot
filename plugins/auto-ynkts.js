@@ -13,14 +13,14 @@ export async function all(m) {
 if (m.isBaileys) return
     if (m.chat.endsWith('broadcast')) return
     try {
-    let TandaTanya = /^(what|who|why|when|where|how|apa|dimana|kapan|siapa|mengapa|bagaimana)$/i.test(m.text)
+    let TandaTanya = /^(what|who|why|when|where|how|what|where|when|who|why|how)$/i.test(m.text)
         if (TandaTanya && m.isGroup) {
             await this.sendMessage(m.chat, { sticker : stc, thumbnail: await( await fetch(pp)).buffer() , contextInfo:{  externalAdReply: { showAdAttribution: true,
 mediaType:  1,
 mediaUrl: sig,
 title: '「 ❔ 」',
 body: wm,
-sourceUrl: 'http://github.com/AyGemuy',
+sourceUrl: 'http://github.com/iamibrahim1',
 thumbnail: await( await fetch(pp)).buffer()
   }
  }}, { quoted: m })
