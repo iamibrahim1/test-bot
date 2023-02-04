@@ -22,73 +22,73 @@ export async function before(m, { isAdmin, isBotAdmin }) {
     let hapus = m.key.participant
     let bang = m.key.id
     if (chat.antiLinkTik && isAntiLinkTik) {
-        await this.sendButton(m.chat, `*Link Terdeteksi!* ${isBotAdmin ? '' : '\n\n_Bot bukan atmin_'}`, author, ['off antilinktik', '/disable antilinktik'], m)
+        await this.sendButton(m.chat, `*Detected Link!* ${isBotAdmin ? '' : '\n\n_Bot is not admin_'}`, author, ['off antilinktik', '/disable antilinktik'], m)
         if (isBotAdmin) {
     user.warn += 1
     user.banned = true
     return this.sendMessage(m.chat, { delete: { remoteJid: m.chat, fromMe: false, id: bang, participant: hapus }})
     return this.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
-        } else if (isAdmin) return m.reply('*Anda Atmin Anda Aman :v!*!')
+        } else if (isAdmin) return m.reply('*You are admin so you are safe :v!*!')
     }
     
     if (chat.antiLinkYt && isAntiLinkYt) {
-        await this.sendButton(m.chat, `*Link Terdeteksi!* ${isBotAdmin ? '' : '\n\n_Bot bukan atmin_'}`, author, ['off antilinkyt', '/disable antilinkyt'], m)
+        await this.sendButton(m.chat, `*Detected Link!* ${isBotAdmin ? '' : '\n\n_Bot is not admin_'}`, author, ['off antilinkyt', '/disable antilinkyt'], m)
         if (isBotAdmin) {
     user.warn += 1
     user.banned = true
     return this.sendMessage(m.chat, { delete: { remoteJid: m.chat, fromMe: false, id: bang, participant: hapus }})
     return this.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
-        } else if (isAdmin) return m.reply('*Anda Atmin Anda Aman :v!*!')
+        } else if (isAdmin) return m.reply('*You are admin so you are safe :v!*!')
     }
     
     if (chat.antiLinkTel && isAntiLinkTel) {
-        await this.sendButton(m.chat, `*Link Terdeteksi!* ${isBotAdmin ? '' : '\n\n_Bot bukan atmin_'}`, author, ['off antilinktel', '/disable antilinktel'], m)
+        await this.sendButton(m.chat, `*Detected Link!* ${isBotAdmin ? '' : '\n\n_Bot is not admin_'}`, author, ['off antilinktel', '/disable antilinktel'], m)
         if (isBotAdmin) {
     user.warn += 1
     user.banned = true
     return this.sendMessage(m.chat, { delete: { remoteJid: m.chat, fromMe: false, id: bang, participant: hapus }})
     return this.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
-        } else if (isAdmin) return m.reply('*Anda Atmin Anda Aman :v!*!')
+        } else if (isAdmin) return m.reply('*You are admin so you are safe :v!*!')
     }
     
     if (chat.antiLinkFb && isAntiLinkFb) {
-        await this.sendButton(m.chat, `*Link Terdeteksi!* ${isBotAdmin ? '' : '\n\n_Bot bukan atmin_'}`, author, ['off antilinkfb', '/disable antilinkfb'], m)
+        await this.sendButton(m.chat, `*Detected Link!* ${isBotAdmin ? '' : '\n\n_Bot is not admin_'}`, author, ['off antilinkfb', '/disable antilinkfb'], m)
         if (isBotAdmin) {
     user.warn += 1
     user.banned = true
     return this.sendMessage(m.chat, { delete: { remoteJid: m.chat, fromMe: false, id: bang, participant: hapus }})
     return this.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
-        } else if (isAdmin) return m.reply('*Anda Atmin Anda Aman :v!*!')
+        } else if (isAdmin) return m.reply('*You are admin so you are safe :v!*!')
     }
     
     if (chat.antiLinkIg && isAntiLinkIg) {
-        await this.sendButton(m.chat, `*Link Terdeteksi!* ${isBotAdmin ? '' : '\n\n_Bot bukan atmin_'}`, author, ['off antilinkig', '/disable antilinkig'], m)
+        await this.sendButton(m.chat, `*Detected Link!* ${isBotAdmin ? '' : '\n\n_Bot is not admin_'}`, author, ['off antilinkig', '/disable antilinkig'], m)
         if (isBotAdmin) {
     user.warn += 1
     user.banned = true
     return this.sendMessage(m.chat, { delete: { remoteJid: m.chat, fromMe: false, id: bang, participant: hapus }})
     return this.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
-        } else if (isAdmin) return m.reply('*Anda Atmin Anda Aman :v!*!')
+        } else if (isAdmin) return m.reply('*You are admin so you are safe :v!*!')
     }
     
     if (chat.antiLinkWa && isAntiLinkWa) {
-        await this.sendButton(m.chat, `*Link Terdeteksi!* ${isBotAdmin ? '' : '\n\n_Bot bukan atmin_'}`, author, ['off antilinkwa', '/disable antilinkwa'], m)
+        await this.sendButton(m.chat, `*Detected Link!* ${isBotAdmin ? '' : '\n\n_Bot is not admin'}`, author, ['off antilinkwa', '/disable antilinkwa'], m)
         if (isBotAdmin) {
     user.warn += 1
     user.banned = true
     return this.sendMessage(m.chat, { delete: { remoteJid: m.chat, fromMe: false, id: bang, participant: hapus }})
     return this.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
-        } else if (isAdmin) return m.reply('*Anda Atmin Anda Aman :v!*!')
+        } else if (isAdmin) return m.reply('*You are admin so you are safe :v!*!')
     }
     
     if (chat.antiLinkHttp && isAntiLinkHttp) {
-        await this.sendButton(m.chat, `*Link Terdeteksi!* ${isBotAdmin ? '' : '\n\n_Bot bukan atmin_'}`, author, ['off antihatetepe', '/disable antihatetepe'], m)
+        await this.sendButton(m.chat, `*Detected Link!* ${isBotAdmin ? '' : '\n\n_Bot bukan atmin_'}`, author, ['off antihatetepe', '/disable antihatetepe'], m)
         if (isBotAdmin) {
     user.warn += 1
     user.banned = true
     return this.sendMessage(m.chat, { delete: { remoteJid: m.chat, fromMe: false, id: bang, participant: hapus }})
     return this.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
-        } else if (isAdmin) return m.reply('*Anda Atmin Anda Aman :v!*!')
+        } else if (isAdmin) return m.reply('*You are admin so you are safe :v!*!')
     }
     return !0
 }
