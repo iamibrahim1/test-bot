@@ -12,11 +12,11 @@ export async function before(m, { isAdmin, isBotAdmin }) {
     if (chat.antiVirtex && isVirtexOn && !m.fromMe) {
    await this.sendMessage(m.chat, { delete: { remoteJid: m.chat, fromMe: false, id: bang, participant: hapus }})
    await this.groupParticipantsUpdate(m.chat, [m.sender], "remove")
-        await this.sendButton(m.chat, `*Font Virtext detect!*${isBotAdmin ? '' : '\n\n_Bot bukan admin_'}`, author, ['off antivirtex', '/disable antivirtex'], m)
+        await this.sendButton(m.chat, `*Font Virtext detect!*${isBotAdmin ? '' : '\n\n_Bot is not admin_'}`, author, ['off antivirtex', '/disable antivirtex'], m)
         if (isBotAdmin && bot.restrict) {
        return m.reply('Kick!')
         await this.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
-        } else if (!bot.restrict) return m.reply('Mungkin dia atmin!')
+        } else if (!bot.restrict) return m.reply('Maybe he is admin!')
     }
     return !0
 }
