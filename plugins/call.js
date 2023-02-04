@@ -3,7 +3,7 @@ import { promisify } from 'util'
 let exec = promisify(_exec).bind(cp)
 
 let handler = async (m, { conn, isOwner, command, text }) => {
-if (!text) throw "input Nomor"
+if (!text) throw "enter Number"
   if (global.conn.user.jid != conn.user.jid) return
   m.reply('Waiting...')
   let o
