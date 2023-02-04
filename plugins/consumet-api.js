@@ -43,7 +43,7 @@ let urut = text.split`|`
           [anime[v], usedPrefix + command + " consumetget " + url, "➥"]
         ]])
 	})
-	return conn.sendList(m.chat, htki + " 📺 Models 🔎 " + htka, `⚡ Silakan pilih Model di tombol di bawah...\n*Teks yang anda kirim:* ${text}\n\nKetik ulang *${usedPrefix + command}* teks anda untuk mengubah teks lagi`, author, "☂️ M O D E L ☂️", listSections, m)
+	return conn.sendList(m.chat, htki + " 📺 Models 🔎 " + htka, `⚡ Please select your Model in the button below...\n*Text to send:* ${text}\n\nRetype *${usedPrefix + command}* your text to change the text again`, author, "☂️ M O D E L ☂️", listSections, m)
 	}
 	if (args[0] == 'books') {
           let listSections = []
@@ -53,7 +53,7 @@ let urut = text.split`|`
           [books[v], usedPrefix + command + " consumetget " + url, "➥"]
         ]])
 	})
-	return conn.sendList(m.chat, htki + " 📺 Models 🔎 " + htka, `⚡ Silakan pilih Model di tombol di bawah...\n*Teks yang anda kirim:* ${text}\n\nKetik ulang *${usedPrefix + command}* teks anda untuk mengubah teks lagi`, author, "☂️ M O D E L ☂️", listSections, m)
+	return conn.sendList(m.chat, htki + " 📺 Models 🔎 " + htka, `⚡ Please select your Model in the button below...\n*Text to send:* ${text}\n\nRetype *${usedPrefix + command}* your text to change the text again`, author, "☂️ M O D E L ☂️", listSections, m)
 	}
 	if (args[0] == 'comics') {
           let listSections = []
@@ -63,7 +63,7 @@ let urut = text.split`|`
           [comics[v], usedPrefix + command + " consumetget " + url, "➥"]
         ]])
 	})
-	return conn.sendList(m.chat, htki + " 📺 Models 🔎 " + htka, `⚡ Silakan pilih Model di tombol di bawah...\n*Teks yang anda kirim:* ${text}\n\nKetik ulang *${usedPrefix + command}* teks anda untuk mengubah teks lagi`, author, "☂️ M O D E L ☂️", listSections, m)
+	return conn.sendList(m.chat, htki + " 📺 Models 🔎 " + htka, `⚡Please select your Model in the button below...\n*Text to send:* ${text}\n\nRetype *${usedPrefix + command}* your text to change the text again`, author, "☂️ M O D E L ☂️", listSections, m)
 	}
 	if (args[0] == 'lightnovels') {
           let listSections = []
@@ -73,7 +73,7 @@ let urut = text.split`|`
           [lightnovels[v], usedPrefix + command + " consumetget " + url, "➥"]
         ]])
 	})
-	return conn.sendList(m.chat, htki + " 📺 Models 🔎 " + htka, `⚡ Silakan pilih Model di tombol di bawah...\n*Teks yang anda kirim:* ${text}\n\nKetik ulang *${usedPrefix + command}* teks anda untuk mengubah teks lagi`, author, "☂️ M O D E L ☂️", listSections, m)
+	return conn.sendList(m.chat, htki + " 📺 Models 🔎 " + htka, `⚡ Please select your Model in the button below...\n*Text to send:* ${text}\n\nRetype *${usedPrefix + command}* your text to change the text again`, author, "☂️ M O D E L ☂️", listSections, m)
 	}
 	if (args[0] == 'manga') {
           let listSections = []
@@ -83,7 +83,7 @@ let urut = text.split`|`
           [manga[v], usedPrefix + command + " consumetget " + url, "➥"]
         ]])
 	})
-	return conn.sendList(m.chat, htki + " 📺 Models 🔎 " + htka, `⚡ Silakan pilih Model di tombol di bawah...\n*Teks yang anda kirim:* ${text}\n\nKetik ulang *${usedPrefix + command}* teks anda untuk mengubah teks lagi`, author, "☂️ M O D E L ☂️", listSections, m)
+	return conn.sendList(m.chat, htki + " 📺 Models 🔎 " + htka, `⚡ Please select your Model in the button below...\n*Text to send:* ${text}\n\nRetype *${usedPrefix + command}* your text to change the text again`, author, "☂️ M O D E L ☂️", listSections, m)
 	}
 	if (args[0] == 'meta') {
           let listSections = []
@@ -93,7 +93,7 @@ let urut = text.split`|`
           [meta[v], usedPrefix + command + " consumetget " + url, "➥"]
         ]])
 	})
-	return conn.sendList(m.chat, htki + " 📺 Models 🔎 " + htka, `⚡ Silakan pilih Model di tombol di bawah...\n*Teks yang anda kirim:* ${text}\n\nKetik ulang *${usedPrefix + command}* teks anda untuk mengubah teks lagi`, author, "☂️ M O D E L ☂️", listSections, m)
+	return conn.sendList(m.chat, htki + " 📺 Models 🔎 " + htka, `⚡ Splease select Model in button below...\n*Text you send:* ${text}\n\nRetype *${usedPrefix + command}* your text to change text again`, author, "☂️ M O D E L ☂️", listSections, m)
 	}
 	if (args[0] == 'movies') {
           let listSections = []
@@ -103,7 +103,7 @@ let urut = text.split`|`
           [movies[v], usedPrefix + command + " consumetget " + url, "➥"]
         ]])
 	})
-	return conn.sendList(m.chat, htki + " 📺 Models 🔎 " + htka, `⚡ Silakan pilih Model di tombol di bawah...\n*Teks yang anda kirim:* ${text}\n\nKetik ulang *${usedPrefix + command}* teks anda untuk mengubah teks lagi`, author, "☂️ M O D E L ☂️", listSections, m)
+	return conn.sendList(m.chat, htki + " 📺 Models 🔎 " + htka, `⚡ Please select your Model in the button below...\n*Text to send:* ${text}\n\nRetype *${usedPrefix + command}* your text to change the text again`, author, "☂️ M O D E L ☂️", listSections, m)
 	}
 	if (args[0] == 'consumetget') {
 	let jso = await fetch(args[1])
