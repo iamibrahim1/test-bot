@@ -7,18 +7,18 @@ let handler = async (m, { conn, text, args, usedPrefix, command }) => {
     const result = await otakudesu(text)
     
 let otaku = `
-*JUDUL:* ${result.judul}
+*TITLE:* ${result.judul}
 *RATE:* ${result.rate}
-*PRODUSER:* ${result.produser}
-*TIPE:* ${result.tipe}
+*PRODUCER:* ${result.produser}
+*TYPE:* ${result.tipe}
 *STATUS:* ${result.status}
 *EPISODE:* ${result.episode}
-*DURASI:* ${result.durasi}
-*RILIS:* ${result.rilis}
+*DURATION:* ${result.durasi}
+*RELEASE:* ${result.rilis}
 *STUDIO:* ${result.studio}
 *GENRE:* ${result.genre}
 *DESC:* ${result.desc}
-*BATCH:* ${result.batch}
+*BATCHES:* ${result.batch}
 
 *BATCHSD:* ${result.batchSD}
 
