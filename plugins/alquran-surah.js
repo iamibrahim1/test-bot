@@ -5,7 +5,7 @@ let handler = async (m, { conn, args, text, usedPrefix, command }) => {
 let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender
 let pp = await conn.profilePictureUrl(who).catch(_ => hwaifu.getRandom())
 let name = await conn.getName(who)
-    if (!text) throw `Contoh:\n${usedPrefix + command} 1\n\nMaka hasilnya adalah surah Al-Fatihah ayat beserta audionya, dan ayatnya 1 aja`
+    if (!text) throw `Example:\n${usedPrefix + command}1\x\So the result is surah Al-Fatihah verses along with the audio, and only 1 verse`
     let f = await fetch(`https://api.alquran.cloud/v1/surah/${text}/ar.alafasy`)
         let xx = await f.json()
         let str = xx.data.ayahs.map((v, index) => {
@@ -26,7 +26,7 @@ let name = await conn.getName(who)
     mediaUrl: sig,
     mediaType: 2,
     description: wm, 
-    title: '👋 Hai, ' + name + ' ' + ucapan,
+    title: '👋 Hi, ' + name + ' ' + ucapan,
     body: botdate,
     thumbnail: await(await fetch(pp)).buffer(),
     sourceUrl: sgc
