@@ -17,7 +17,7 @@ export async function before(m, { isAdmin, isBotAdmin }) {
         if (isBotAdmin && bot.restrict) {
         return this.sendMessage(m.chat, { delete: { remoteJid: m.chat, fromMe: false, id: bang, participant: hapus }})
         return this.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
-        } else if (!bot.restrict) return m.reply('*Anda Atmin Anda Aman :v!*')
+        } else if (!bot.restrict) return m.reply('*you are admin so you can send link:v!*')
     }
     return !0
 }
