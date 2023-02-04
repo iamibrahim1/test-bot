@@ -15,7 +15,7 @@ ${dmenuf}
 }
 handler.help = ['bank']
 handler.tags = ['rpg']
-handler.command = /^(bank(cek)?|cekbank)$/i
+handler.command = /^bankcheck$/i
 
 handler.register = false
 export default handler
