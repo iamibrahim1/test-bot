@@ -3,10 +3,10 @@ import fetch from "node-fetch"
 let handler = async (m, { conn, text, usedPrefix, command }) => {
   if (!text)
     throw `
-*${usedPrefix}${command} <nama hewan>*
-contoh:
+*${usedPrefix}${command} <animal name>*
+Example:
 *${usedPrefix}${command} <dog>*\n
-┌〔 Opsi 〕
+┌〔 Option 〕
 ├ dog
 ├ cat
 ├ panda
