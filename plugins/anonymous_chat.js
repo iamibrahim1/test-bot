@@ -5,18 +5,18 @@ let handler = async(m, { command }) => {
         case 'next':
         case 'leave': {
             let room = Object.values(this.anonymous).find(room => room.check(m.sender))
-            if (!room) return this.sendButton(m.chat, '*Kamu tidak sedang berada di anonymous chat*', author, null, [['Cari Partner', `.start`]], m)
+            if (!room) return this.sendButton(m.chat, '*You are not in an anonymous chat*', author, null, [['Find Partners', `.start`]], m)
             m.reply('Ok')
             let other = room.other(m.sender)
-            if (other) await this.sendButton(other, '*Partner meninggalkan chat*', author, null, [['Cari Partner', `.start`]], m)
+            if (other) await this.sendButton(other, '*Partner left the chat*', author, null, [['Find Partners', `.start`]], m)
             delete this.anonymous[room.id]
             if (command === 'leave') break
         }
         case 'start': {
-            if (Object.values(this.anonymous).find(room => room.check(m.sender))) return this.sendButton(m.chat, '*Kamu masih berada di dalam anonymous chat, menunggu partner*', author, null, [['Keluar', `.leave`]], m)
+            if (Object.values(this.anonymous).find(room => room.check(m.sender))) return this.sendButton(m.chat, '*You are still in the anonymous chat, waiting for a partner*', author, null, [['Go out', `.leave`]], m)
             let room = Object.values(this.anonymous).find(room => room.state === 'WAITING' && !room.check(m.sender))
             if (room) {
-                await this.sendButton(room.a, '*Partner ditemukan!*', author, null, [['Next', `.next`]], m)
+                await this.sendButton(room.a, '*Partner found!*', author, null, [['Next', `.next`]], m)
                 room.b = m.sender
                 room.state = 'CHATTING'
             } else {
@@ -33,7 +33,7 @@ let handler = async(m, { command }) => {
                         return who === this.a ? this.b : who === this.b ? this.a : ''
                     },
                 }
-                await this.sendButton(m.chat, '*Menunggu partner...*', author, null, [['Keluar', `.leave`]], m)
+                await this.sendButton(m.chat, '*Waiting for partners...*', author, null, [['Keluar', `.leave`]], m)
             }
             break
         }
