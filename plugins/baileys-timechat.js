@@ -1,10 +1,10 @@
 let handler = async (m, { conn, args, usedPrefix, command }) => {
 
-if (!args[0] || !args[1] || !args[2] || !args[3]) throw `.setchattime 6282328303332 2022-04-30 15:30 hola`
+if (!args[0] || !args[1] || !args[2] || !args[3]) throw `.setchattime 923229931076 2022-04-30 15:30 hello`
 
 let obj = { 
-tanggal: `${args[1]}`, 
-jam: `${args[2]}`
+date: `${args[1]}`, 
+O'clock: `${args[2]}`
 }
 
 let date1 = +new Date()
@@ -21,7 +21,7 @@ ${args[3]}
 
 }
 
-handler.help = ['setchattime'].map(v => v + ' <tanggal|jam|text>')
+handler.help = ['setchattime'].map(v => v + ' <date|time|text>')
 handler.tags = ['Baileys']
 
 handler.command = /^(set(chat)?(time)?)$/i
