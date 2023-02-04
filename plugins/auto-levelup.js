@@ -10,7 +10,7 @@ export async function before(m) {
         throw `
 Level ${user.level} 📊
 *${user.exp - min} / ${xp}*
-Kurang *${max - user.exp}* lagi! ✨
+Not enough *${max - user.exp}* Again! ✨
 `.trim()
     }
     let before = user.level * 1
@@ -22,11 +22,11 @@ Kurang *${max - user.exp}* lagi! ✨
 *🎉 C O N G R A T S 🎉*
 *${before}* ➔ *${user.level}* [ *${user.role}* ]
 
-• 🧬Level Sebelumnya : ${before}
-• 🧬Level Baru : ${user.level}
-• Pada Jam : ${new Date().toLocaleString('id-ID')}
+• 🧬Previous Levels : ${before}
+• 🧬New Levels : ${user.level}
+• At what hour : ${new Date().toLocaleString('id-ID')}
 
-*Note:* _Semakin sering berinteraksi dengan bot Semakin Tinggi level kamu_
+*Note:* The more frequently you interact with bots, the higher your level_
 `.trim()
             let knights = await(await import('knights-canvas'))
             let image = await new knights.Up()
