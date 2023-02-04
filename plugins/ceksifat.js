@@ -13,23 +13,23 @@ let name = await conn.getName(who)
     let f = nm.getRandom()
     let g = nm.getRandom()
     let h = nm.getRandom()
-    let c = ['Baik Hati','Sombong','Pelit','Dermawan','Rendah Hati','Rendah Diri','Pemalu','Penakut','Pengusil','Cengeng'].getRandom()
-    let d = ['Rajin','Malas','Membantu','Ngegosip','Jail','Gak jelas','Shoping','Chattan sama Doi','Chattan di WA karna Jomblo','Sedih','Kesepian','Bahagia'].getRandom()
+   let c = ['Kind','Arrogant','Stingy','Generous','Humble','Humble','Shy','Coward','Nosy','Crybaby']. getRandom( )
+     let d = ['Diligent','Lazy','Helping','Gossiping','Jail','Not clear','Shoping','Chattan with Doi','Chattan on WA because Single','Sad' ,'lonely','happy'].getRandom()
 
-let cksft = `${cmenut} *SIFAT ${text}* 🔖
+let cksft = `${cmenut} *CHARACTERISTIC ${text}* 🔖
 │
-${cmenub} Nama : *${text}*
-${cmenub} Ahlak Baik : *${a}%*
-${cmenub} Ahlak Buruk : *${b}%*
-${cmenub} Orang yang : *${c}*
-${cmenub} Selalu : *${d}*
-${cmenub} Kecerdasan : *${e}%*
-${cmenub} Kenakalan : *${f}%*
-${cmenub} Keberanian : *${g}%*
-${cmenub} Ketakutan : *${h}%*
+${cmenub} Name : *${text}*
+${cmenub} Good morals : *${a}%*
+${cmenub} Bad Morals : *${b}%*
+${cmenub} People who : *${c}*
+${cmenub} Always : *${d}*
+${cmenub} Intelligence : *${e}%*
+${cmenub} Delinquency : *${f}%*
+${cmenub} Courage : *${g}%*
+${cmenub} Afraid : *${h}%*
 ${cmenuf}
 `
-let msdpn = ['Anda akan menjadi orang yang Kaya, keluarga yang harmonis, memiliki ' + b + ' memiliki anak, memiliki ' + d + ' memiliki kendaraan, memiliki ' + b + ' rumah','Anda akan menjadi orang yang Sederhana, keluarga yang harmonis, memiliki ' + c + ' memiliki anak, memiliki ' + a + ' memiliki kendaraan, memiliki ' + a + ' rumah','Anda akan menjadi orang yang Miskin, keluarga yang Sederhana, memiliki ' + a + ' anak, tidak memiliki kendaraan, rumah ngontrak','Anda akan menjadi orang yang Sederhana, keluarga yang dicerai, memiliki ' + e + ' anak, memiliki ' + b + ' kendaraan, memiliki ' + b + ' rumah','Anda akan menjadi orang yang Sederhana, keluarga yang Sederhana, memiliki ' + b + ' anak, memiliki ' + b + ' kendaraan, memiliki ' + a + ' rumah','Anda akan menjadi orang yang Miskin, keluarga yang dicerai memiliki ' + b + ' anak, memiliki ' + a + ' kendaraan, memiliki ' + a + ' rumah','Anda akan menjadi orang yang Kaya, keluarga yang Sederhana, memiliki ' + a + ' anak, memiliki ' + a + ' kendaraan, memiliki ' + b + ' rumah','Anda akan menjadi orang yang Sederhana, keluarga yang Harmonis, memiliki ' + a + ' anak, memiliki ' + c + ' kendaraan, memiliki ' + a + ' rumah','Anda akan menjadi orang yang Miskin, tidak memiliki keluarga (jomblo), tidak memiliki anak, tidak memiliki kendaraan, tidak memiliki rumah','Anda akan menjadi orang yang Sederhana, keluarga yang Sederhana, memiliki ' + d + ' anak, memiliki ' + a + ' kendaraan, memiliki ' + b + ' rumah','Anda akan menjadi orang yang Sederhana, keluarga yang kacau, tidak memiliki anak (Gugur), memiliki ' + b + ' kendaraan, memiliki ' + a + ' rumah','Anda akan menjadi orang yang Sangat Kaya, keluarga yang Sangat Harmonis, memiliki ' + e + ' anak, memiliki ' + f + ' kendaraan, memiliki ' + g + ' rumah','Anda akan menjadi orang yang Sangat Miskin, keluarga yang Sederhana, memiliki ' + g + ' anak, tidak memiliki kendaraan, rumah ngontrak','Anda akan menjadi orang yang Kaya, keluarga yang Pelit, memiliki ' + b + ' anak, memiliki ' + b + ' kendaraan, memiliki ' + b + ' rumah','Anda akan menjadi orang yang Sederhana, keluarga yang Pelit, memiliki ' + a + ' anak, memiliki ' + a + ' kendaraan, memiliki ' + a + ' rumah','Anda akan menjadi orang yang Sederhana, keluarga yang dicerai, memiliki ' + b + ' anak, memiliki ' + a + ' kendaraan, rumah ngontrak','Anda akan menjadi orang yang Sangat Sederhana, keluarga yang Sakinah, memiliki ' + a + ' anak, memiliki ' + a + ' kendaraan, memiliki ' + a + ' rumah','Anda akan menjadi orang yang Sederhana, keluarga yang Sangat Sederhana, memiliki ' + a + '' + a + ' anak, memiliki ' + a + ' kendaraan, memiliki ' + a + ' rumah','Anda akan menjadi orang yang Sederhana, keluarga yang Sangat Sederhana, memiliki ' + b + ' anak kembar, memiliki ' + c + ' kendaraan, memiliki ' + b + ' rumah','Anda akan menjadi orang yang Sederhana keluarga yang Sederhana, memiliki ' + b + ' anak kembar dan ' + a + ' anak lagi, memiliki ' + a + ' kendaraan, memiliki ' + a + ' rumah'].getRandom()
+let msdpn = ['You will be a Wealthy person, a harmonious family, have a ' + b + ' have children, have a ' + d + ' have a vehicle, have a ' + b + ' house','You will be a Simple person, a harmonious family, have ' + c + ' have children, have ' + a + ' have a vehicle, have ' + a + ' house','You will be poor, a simple family, have ' + a + ' children, do not have a vehicle , rented house','You will be a Simple person, divorced family, have ' + e + ' children, have ' + b + ' vehicle, have ' + b + ' house',' You will be a Simple person, simple family, have ' + b + ' children, have ' + b + ' vehicles, have ' + a + ' houses','You will be poor, divorced families have ' + b + ' children, have ' + a + ' vehicle, have a ' + a + ' house','You will be a Rich person, a Simple family, have a ' + a + ' child, have a ' + a + ' vehicle, have ' + b + ' home','You will be a Simple, Harmonious family, have ' + a + ' children, have ' + c + ' vehicles, have ' + a + ' houses',' you will be people who are poor, don't have a family (single), don't have children, don't have a car, don't have a house','You will be a simple person, a simple family, have ' + d + ' children, have ' + a + ' a vehicle, have a ' + b + ' home','You will be a Simple person, a chaotic family, childless (Failed), have a ' + b + ' vehicle, have a ' + a + ' home',' you will be Very Rich, Very Harmonious family, have ' + e + ' children, have ' + f + ' vehicles, have ' + g + ' houses','You will be Very Poor people, Simple families, have ' + g + ' child, no car, rented house','You will be a Rich man, Narrow family, have ' + b + ' child, have ' + b + ' vehicle, have ' + b + ' home','You will be a Simple person, Cheap family, have ' + a + ' children, have ' + a + ' vehicle, have ' + a + ' house',' you will be a Simple person, divorced family, have ' + b + ' children, have ' + a + ' vehicle, rented house','You will be a Very Simple person, Sakinah family, have ' + a + ' children , have ' + a + ' vehicle, have ' + a + ' house','You will be a Simple person, Very Simple family, have ' + a + '' + a + ' children, have ' + a + ' vehicle, have ' + a + ' house','You will be a Simple person, Very Simple family, have ' + b + ' twins, have ' + c + ' vehicle, have ' + b + ' house', 'You will be a Simple person Simple family, have ' + b + ' twins and ' + a + ' another child, have ' + a + ' vehicle, have ' + a + ' house'].getRandom()
 
 if (command == 'ceksifat') {
 await conn.sendButton(m.chat, cksft, author, await(await fetch(hwaifu.getRandom())).buffer(), [['🎀 Menu', '/menu']], m, { mentions: conn.parseMention(cksft), fileLength: fsizedoc, seconds: fsizedoc, contextInfo: {
@@ -50,7 +50,7 @@ await conn.sendButton(m.chat, cksft, author, await(await fetch(hwaifu.getRandom(
     mediaUrl: sig,
     mediaType: 2,
     description: wm, 
-    title: '👋 Hai, ' + name + ' ' + ucapan,
+    title: '👋 Ha, ' + name + ' ' + ucapan,
     body: botdate,
     thumbnail: await(await fetch(pp)).buffer(),
     sourceUrl: sig
@@ -58,8 +58,8 @@ await conn.sendButton(m.chat, cksft, author, await(await fetch(hwaifu.getRandom(
   })
   }
 }
-handler.help = ['ceksifat', 'masadepannya'].map(v => v + ' <nama>')
-handler.tags = ['kerang', 'fun']
-handler.command = ['ceksifat', 'masadepannya']
+handler.help = ['checkproperties', 'future'].map(v => v + ' <nama>')
+handler.tags = ['shell', 'fun']
+handler.command = ['checkproperties', 'future']
 
 export default handler
