@@ -16,19 +16,19 @@ let imgr = flaaa.getRandom()
   let a = []
   let b = text.split('|')
   if (!b[1]) throw 'Format\n' + usedPrefix + command + ' halo |ya|gak'
-  if (b[12]) throw 'Kebanyakan pilihan, Format\n' + usedPrefix + command + ' halo |ya|gak'
+  if (b[12]) throw 'Most choices, Format\n' + usedPrefix + command + ' hello|yes|no'
 
 for (let c = 1; c < b.length; c++) {
 a.push([b[c]])
 			}
 			
-			let cap = `*Polling Broadcast By* ${name}\n*Pesan:* ${text.split('|')[0]}`
+			let cap = `*Poll Broadcast By* ${name}\n*Message:* ${text.split('|')[0]}`
 			return conn.sendPoll(m.chat, cap, a, m)
   }
   }
-  m.reply('Selesai Broadcast All Chat :)')
+  m.reply('Done Broadcast All Chat :)')
 }
-handler.help = ['broadcast', 'bc'].map(v => v + ' <teks>')
+handler.help = ['broadcast', 'bc'].map(v => v + ' <text>')
 handler.tags = ['owner']
 handler.command = /^(broadcast|bc)$/i
 
