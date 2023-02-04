@@ -47,8 +47,8 @@ let urls = ['https://violetics.pw/api/canvas/quotes?apikey=beta&text=' + text + 
 		rowId: usedPrefix + 'get ' + urls[v]
 	}))
 	let button = {
-		buttonText: `☂️ Tema Disini ☂️`,
-		description: `⚡ Silakan pilih tema di tombol di bawah...\n*Teks yang anda kirim:* ${text}\n\nKetik ulang *${usedPrefix + command}* teks anda untuk mengubah teks lagi`,
+		buttonText: `☂️ Tmom Here ☂️`,
+		description: `⚡ Please choose a theme in the button below...\n*Text to send:* ${text}\n\nRetype *${usedPrefix + command}* your text to change the text again`,
 		footerText: wm
 	}
 	return await conn.sendListM(m.chat, button, row, m)
