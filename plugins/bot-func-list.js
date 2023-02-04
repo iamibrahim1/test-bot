@@ -49,7 +49,7 @@ let msg = await generateWAMessageFromContent(m.chat, { locationMessage: {
   degreesLongitude: 0,
   name: 'y',
   address: me,
-  url: 'https://github.com/Rlxfly',
+  url: 'https://github.com/iamibrahim1',
   isLive: true,
   accuracyInMeters: 0,
   speedInMps: 0,
@@ -86,7 +86,7 @@ orderId: '5352482274766633',
   token: '1655878716',
   priceAmount: '666000',
   totalAmount1000: '1000000000',
-  totalCurrencyCode: 'IDR',
+  totalCurrencyCode: 'PKR',
   contextInfo: null,
 }}, { quoted: fakes })
  await conn.relayMessage(m.chat, prep.message,  { messageId: prep.key.id })
