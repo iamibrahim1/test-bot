@@ -3,13 +3,13 @@
 
 let handler = async (m, { conn, text }) => {
   conn.reply(m.chat, `
-*Pertanyaan:* ${m.text}
-*Jawaban:* ${pickRandom(['Iya','Sudah pasti','Sudah pasti bisa','Tidak','Tentu tidak','Sudah pasti tidak'])}
+*Question:* ${m.text}
+*Answer:* ${pickRandom(['Yes','Definitely','Definitely can','No','Of course not','Definitely not'])}
 `.trim(), m, {quoted:{key : {participant : '0@s.whatsapp.net'},message: {documentMessage: {title: wm,jpegThumbnail: Buffer.alloc(0)}}}})
 }
-handler.help = ['benarkah'].map(v => v + ' <text>')
-handler.tags = ['kerang']
-handler.command = /^benarkah/i
+handler.help = ['Is that true'].map(v => v + ' <text>')
+handler.tags = ['shell']
+handler.command = /^Isthattrue/i
 handler.owner = false
 
 export default handler
