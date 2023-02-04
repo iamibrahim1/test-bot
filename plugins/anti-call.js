@@ -19,8 +19,8 @@ export async function all(m, {
 	let chat = global.db.data.chats[m.chat]
 	if(chat.antiCall) return
 	if (m.messageStubType === (WAMessageStubType.CALL_MISSED_VOICE || WAMessageStubType.CALL_MISSED_VIDEO)) {
-		let cap = 'Kamu Di banned + block + warn + kick oleh bot karena telah melanggar aturan bot\n\n*📮Dilarang menelepon Bot!*'
-        await conn.send2ButtonDoc(m.chat, cap, author, '🔖 Matikan Fitur', '.off anticall', 'ℹ️ Menu', '.menu', null, adReply)
+		let cap = 'You are banned + block + warn + kick by bots for violating bot rules\n\n*📮Do not call bots!*'
+        await conn.send2ButtonDoc(m.chat, cap, author, '🔖 Turn off Features', '.off anticall', 'ℹ️ Menu', '.menu', null, adReply)
 		await delay(1000)
 		global.db.data.users[ban].banned = true
         global.db.data.users[ban].warning = 1
