@@ -6,17 +6,17 @@ let pp = await conn.profilePictureUrl(who).catch(_ => hwaifu.getRandom())
 let name = await conn.getName(who)
     let hash = text
     if (m.quoted && m.quoted.fileSha256) hash = m.quoted.fileSha256.toString('hex')
-    if (!hash) throw `Tidak ada hash`
+    if (!hash) throw `No hashes`
     let sticker = global.db.data.sticker
-    if (sticker[hash] && sticker[hash].locked) throw 'Kamu tidak memiliki izin untuk menghapus perintah stiker ini'
+    if (sticker[hash] && sticker[hash].locked) throw 'You do not have permission to remove this sticker prompt'
     delete sticker[hash]
-    let str = `*Berhasil menghapus CMD!*`
+    let str = `*Successfully removed CMD!*`
     conn.reply(m.chat, str, m, { contextInfo: {
           externalAdReply :{
     mediaUrl: sig,
     mediaType: 2,
     description: wm, 
-    title: '👋 Hai, ' + name + ' ' + ucapan,
+    title: '👋 Hi, ' + name + ' ' + ucapan,
     body: botdate,
     thumbnail: await(await fetch(pp)).buffer(),
     sourceUrl: sgc
