@@ -4,7 +4,7 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
 let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender
 let pp = await conn.profilePictureUrl(who).catch(_ => hwaifu.getRandom())
 let name = await conn.getName(who)
-    if (!m.quoted) throw 'Reply Pesan!'
+    if (!m.quoted) throw 'Message Replies!'
     if (!m.quoted.fileSha256) throw 'SHA256 Hash Missing'
     let sticker = global.db.data.sticker
     let hash = m.quoted.fileSha256.toString('hex')
@@ -16,7 +16,7 @@ let name = await conn.getName(who)
     mediaUrl: sig,
     mediaType: 2,
     description: wm, 
-    title: '👋 Hai, ' + name + ' ' + ucapan,
+    title: '👋 Hi, ' + name + ' ' + ucapan,
     body: botdate,
     thumbnail: await(await fetch(pp)).buffer(),
     sourceUrl: sgc
