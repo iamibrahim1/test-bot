@@ -10,14 +10,14 @@ export async function before(m, { match, usedPrefix }) {
 		let sim = similarity(noPrefix, mean)
 		let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? this.user.jid : m.sender
 		let name = await this.getName(who)
-		let caption = `👋 Hai ${name} @${who.split("@")[0]},\nApakah yang kamu maksud:\n*${usedPrefix + mean}*\nSimilarity: *${Number(sim * 100).toFixed(2)}%*`
+		let caption = `👋 Hi ${name} @${who.split("@")[0]},\nWhat do you mean:\n*${usedPrefix + mean}*\nSimilarity: *${Number(sim * 100).toFixed(2)}%*`
 		/* Button List Section */
 		let spas = "                "
       const sections = [{
-	title: spas + " [ P I L I H - O P S I ] ",
+	title: spas + " [ SELECT - OPTIONS ] ",
 	rows: [
-	    {title: "✅ Benar️", rowId: usedPrefix + mean, description: ""},
-	    {title: "❌ Salah", rowId: usedPrefix + '?', description: ""}
+	    {title: "✅ Right️", rowId: usedPrefix + mean, description: ""},
+	    {title: "❌ Wrong", rowId: usedPrefix + '?', description: ""}
 	]
     },{
 	title: spas + " [ L I S T - C M D ] ",
