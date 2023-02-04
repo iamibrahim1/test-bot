@@ -1,9 +1,9 @@
 let handler = async (m) => {
     let user = global.db.data.users[m.sender]
-    if (user.warning == 0) throw 'Kamu tidak memiliki warning!'
+    if (user.warning == 0) throw 'You have no warnings!'
 
     let waktu = user.lastIstigfar + 180000
-    if (new Date - user.lastIstigfar < 180000) throw `Kamu bisa menggunakan perintah ini lagi setelah ${msToTime(waktu - new Date())}`
+    if (new Date - user.lastIstigfar < 180000) throw `You can use this command again after ${msToTime(waktu - new Date())}`
     user.warning -= 1
     m.reply(`Warning: ${user.warning} / 10`)
     user.lastIstigfar = new Date * 1
