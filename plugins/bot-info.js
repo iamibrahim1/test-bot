@@ -14,8 +14,8 @@ let format = sizeFormatter({
   render: (literal, symbol) => `${literal} ${symbol}B`,
 })
 let handler = async (m, { conn, usedPrefix, __dirname, text, command }) => {
-    let date = moment.tz('Asia/Jakarta').format("dddd, Do MMMM, YYYY")
-    let time = moment.tz('Asia/Jakarta').format('HH:mm:ss')
+    let date = moment.tz('Asia/Karachi').format("dddd, Do MMMM, YYYY")
+    let time = moment.tz('Asia/Karachi').format('HH:mm:ss')
     let _package = JSON.parse(await promises.readFile(join(__dirname, '../package.json')).catch(_ => ({}))) || {}
     let _uptime = process.uptime() * 1000
     let uptime = clockString(_uptime)
