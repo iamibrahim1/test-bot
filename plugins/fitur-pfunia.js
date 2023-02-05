@@ -1,6 +1,6 @@
 let handler = async(m, { conn, text, args, usedPrefix, command }) => {
 
-  if (!args[0]) return m.reply(`Example : ${usedPrefix + command} noir helo
+  if (!args[0]) return m.reply(`Example : ${usedPrefix + command} noir Ibrahim
    *List Efek:*
 balloon
 beach-sign
@@ -43,7 +43,8 @@ yacht`)
                 ['Menu', `${usedPrefix}menu`]
             ], fakes, adReply)
             }
-
+handler.help = ['pfunia']
+handler.tags = ['maker']
 handler.command = /^(pfunia|pfun)$/i
 
 export default handler
