@@ -7,10 +7,10 @@ let name = await conn.getName(who)
 try {
     let listSections = []
 	listSections.push(['No. ' + ++index, [
-          ['Metode A', usedPrefix + command + ' a', '\n⌚ *By:* ' + author],
-          ['Metode B', usedPrefix + command + ' b', '\n⌚ *By:* ' + author]
+         ['Method A', usedPrefix + command + ' a', '\n⌚ *By:* ' + author],
+         ['Metode B', usedPrefix + command + ' b', '\n⌚ *By:* ' + author]
                   ]])
-        if (!args[0]) return conn.sendList(m.chat, htki + ' 📺 Dark Search 🔎 ' + htka, `⚡ Silakan pilih Dark Search di tombol di bawah...\n*Teks yang anda kirim:* ${args[0]}\n\nKetik ulang *${usedPrefix + command}* teks anda untuk mengubah teks lagi`, author, `☂️ Dark Search Disini ☂️`, listSections, m)
+        if (!args[0]) return conn.sendList(m.chat, htki + ' 📺 Dark Search 🔎 ' + htka, `⚡ Please select Dark Search in the button below...\n*Text to send:* ${args[0]}\n\nRetype *${usedPrefix + command}* your text to change the text again`, author, `☂️ Dark Search Here ☂️`, listSections, m)
 
 if (args[0] == 'a') {
 let caption = `*⎔┉━「 Random darkjoke 」━┉⎔*
@@ -24,7 +24,7 @@ let caption = `*⎔┉━「 Random darkjoke 」━┉⎔*
     mediaUrl: sig,
     mediaType: 2,
     description: wm, 
-    title: '👋 Hai, ' + name + ' ' + ucapan,
+    title: '👋 Hi, ' + name + ' ' + ucapan,
     body: botdate,
     thumbnail: await(await fetch(pp)).buffer(),
     sourceUrl: sgc
@@ -41,7 +41,7 @@ await conn.sendButton(m.chat, caption, wm, res, [['Darkjoke','.darkjoke']] , m, 
     mediaUrl: sig,
     mediaType: 2,
     description: wm, 
-    title: '👋 Hai, ' + name + ' ' + ucapan,
+    title: '👋 Hi, ' + name + ' ' + ucapan,
     body: botdate,
     thumbnail: await(await fetch(pp)).buffer(),
     sourceUrl: sgc
