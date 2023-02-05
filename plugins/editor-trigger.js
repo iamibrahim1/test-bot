@@ -16,7 +16,7 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
     		console.log(e)
     	}
     } else {
-    	m.reply(`Kirim gambar dengan caption *${usedPrefix + command}* atau tag gambar yang sudah dikirim`)
+    	m.reply(`Send images with the caption *${usedPrefix + command}* or the image tags that have been sent`)
     }
 }
 
