@@ -12,9 +12,9 @@ let listSections = []
 		text = args.slice(0).join(" ")
 	} else if (m.quoted && m.quoted.sender) {
 		text = m.quoted.sender
-	} else return conn.sendList(m.chat, htki + " 📺 Models 🔎 " + htka, '⚡ Silakan pilih User', author, "☂️ M O D E L ☂️", listSections, m)
+	} else return conn.sendList(m.chat, htki + " 📺 Models 🔎 " + htka, '⚡ Please select Users', author, "☂️ M O D E L ☂️", listSections, m)
 	
-	if (!ids.includes(text)) throw 'Dia Sudah Out'
+	if (!ids.includes(text)) throw 'Hes Out'
 	return conn.groupParticipantsUpdate(m.chat, [text], 'remove')
 }
 handler.help = ['kick', '-'].map(v => 'g' + v + ' @user')
