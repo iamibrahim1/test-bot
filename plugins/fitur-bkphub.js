@@ -7,7 +7,7 @@ let handler = async(m, { conn, usedPrefix, text, args, command }) => {
 let f = await fetch(links)
 let xx = await f.json()
 let str = xx.result.map((v, index) => {
-        return `${1 + index}. Judul *${v.title}*
+        return `${1 + index}. Title *${v.title}*
 Link: ${v.link}`.trim()
     }).join('\n\n')
     await conn.sendButton(m.chat, str, wm, null, [
