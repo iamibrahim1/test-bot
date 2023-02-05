@@ -17,8 +17,8 @@ try {
 		rowId: usedPrefix + 'get ' + v.url
 	}))
 	let button = {
-		buttonText: `☂️ ${command} Search Disini ☂️`,
-		description: `⚡ Hai ${name}, Silakan pilih ${command} Search di tombol di bawah...\n*Teks yang anda kirim:* ${text}\n\nKetik ulang *${usedPrefix + command}* teks anda untuk mengubah teks lagi`,
+		buttonText: `☂️ ${command} Search Here ☂️`,
+		description: `⚡ Hi ${name}, Please select ${command} Search in the button below...\n*Text to send:* ${text}\n\nRetype *${usedPrefix + command}* your text to change the text again`,
 		footerText: wm
 	}
 	return conn.sendListM(m.chat, button, row, m)
@@ -29,8 +29,8 @@ try {
 		m.reply(ris.map(v => `*${v.title}*\n_${v.link}_`).join('\n\n'))
 	} else throw 'Input Query / Telesticker Url'
 	} catch {
-	if (!text) throw '*Masukkan link*\n Example: https://t.me/addstickers/LINE_Menhera_chan_ENG'
-let ros = await axios('https://violetics.pw/api/downloader/telestiker?apikey=beta&url=' + text)
+	if (!text) throw '*Enter links*\n Example: https://t.me/addstickers/LINE_Menhera_chan_ENG'
+let ros = await axios('https://api.lolhuman.xyz/api/telestick?apikey=${global.lolkey}&url=' + text)
 let json = ros.data
 let dapet = json.result.sticker
 	let row = Object.keys(dapet).map((v, index) => ({
@@ -39,8 +39,8 @@ let dapet = json.result.sticker
 		rowId: usedPrefix + 'get ' + dapet[v]
 	}))
 	let button = {
-		buttonText: `☂️ ${command} Search Disini ☂️`,
-		description: `⚡ Hai ${name}, Silakan pilih ${command} Search di tombol di bawah...\n*Teks yang anda kirim:* ${text}\n\nKetik ulang *${usedPrefix + command}* teks anda untuk mengubah teks lagi`,
+		buttonText: `☂️ ${command} Search Here  ☂️`,
+		description: `⚡ Hi ${name}, Please select ${command} Search in the button below...\n*Text to send:* ${text}\n\nRetype *${usedPrefix + command}* your text to change the text again`,
 		footerText: wm
 	}
 	return conn.sendListM(m.chat, button, row, m)
