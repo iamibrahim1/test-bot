@@ -298,7 +298,8 @@ let thm = args[0]
                 ['Menu', `${usedPrefix}menu`]
             ], fakes, adReply)
             }
-
+handler.help = ['ephotox']
+handler.tags = ['maker']
 handler.command = /^(ephotox|ephotoh)$/i
 
 export default handler
