@@ -7,7 +7,7 @@ if (command == 'gettenor') {
 let urut = text.split`|`
   let text1 = urut[0]
   let text2 = urut[1]
-  if (!text1||!text2) throw `Contoh penggunaan ${usedPrefix}${command} pentol|2`
+  if (!text1||!text2) throw `Example of using the ${usedPrefix}${command} pentol|2`
 
     let gas = await fetch(`https://g.tenor.com/v1/search?q=${text1}&key=LIVDSRZULELA&limit=${text2}`)
     let json = await gas.json()
