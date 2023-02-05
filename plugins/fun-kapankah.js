@@ -7,42 +7,42 @@ let handler = async(m, { conn, groupMetadata, usedPrefix, text, args, command })
 let frep = { contextInfo: { externalAdReply: {title: global.wm, body: global.author, sourceUrl: snh, thumbnail: fs.readFileSync('./thumbnail.jpg')}}}
 let imgr = flaaa.getRandom()
 
-if (command == 'kapankah') {
+if (command == 'when') {
 return m.reply(`
 *Pertanyaan:* ${m.text}
-*Jawaban:* ${(10).getRandom()} ${['detik', 'menit', 'jam', 'hari', 'minggu', 'bulan', 'tahun', 'dekade', 'abad'].getRandom()} lagi ...
+*Jawaban:* ${(10).getRandom()} ${['seconds', 'minutes', 'hours', 'days', 'weeks', 'months', 'years', 'decades', 'centuries'.'].getRandom()} lagi ...
   `.trim(), null, m.mentionedJid ? {
   mentions: m.mentionedJid
 } : {})
 }
 
-if (command == 'akankah') {
+if (command == 'will') {
 return m.reply(`
 *Pertanyaan:* ${m.text}
-*Jawaban:* ${['Ya', 'Mungkin iya', 'Mungkin', 'Mungkin tidak', 'Tidak', 'Tidak mungkin'].getRandom()}
+*Jawaban:* ${['Yes', 'Maybe yes', 'Maybe', 'Maybe not', 'No', 'Impossible'].getRandom()}
   `.trim(), null, m.mentionedJid ? {
   mentions: m.mentionedJid
 } : {})
 }
 
-if (command == 'siapakah') {
+if (command == 'who') {
 let ps = groupMetadata.participants.map(v => v.id)
     let a = ps.getRandom()
-    m.reply(`${toM(a)} Dia bang.🗿`, null, {
+    m.reply(`${toM(a)} He bang.🗿`, null, {
         mentions: [a]
     })
 }
 
-if (command == 'mengapa') {
+if (command == 'Why') {
 return m.reply(`
 *Pertanyaan:* ${m.text}
-*Jawaban:* ${['Karena anda ganteng', 'Karna lo wibu :[', 'karna lo didikan wahyu', 'Karna gw gk tau', 'Lo punya jin', 'Tidak mungkin'].getRandom()}
+*Jawaban:* ${['Because you are handsome', 'Because you are weeb :[', 'Because you were educated by revelation', 'Because I don't know', 'You have a genie', 'No way'].getRandom()}
   `.trim(), null, m.mentionedJid ? {
   mentions: m.mentionedJid
 } : {})
 }
 
-if (command == 'bisakah') {
+if (command == 'can') {
 return m.reply(`
 *Pertanyaan:* ${m.text}
 *Jawaban:* ${['Ya', 'Mungkin iya', 'Mungkin', 'Mungkin tidak', 'Tidak', 'Tidak mungkin'].getRandom()}
@@ -51,27 +51,26 @@ return m.reply(`
 } : {})
 }
 
-if (command == 'misteribox') {
-let klb = `${pickRandom(['kecil', 'lumayan', 'besar'])}`
-let klb1 = `${pickRandom(['kecil', 'lumayan', 'besar'])}`
-let klb2 = `${pickRandom(['kecil', 'lumayan', 'besar'])}`
-
-if (args[0] == 'kecil') {
-let angka1 = Math.floor(Math.random() * 10)
-    let angka2 = Math.floor(Math.random() * 100)
-    let angka3 = Math.floor(Math.random() * 1000)
+if (command == 'mysterbox') {
+let klb = `${pickRandom(['small', 'good', 'big'])}`
+let klb1 = `${pickRandom(['small', 'good', 'big'])}`
+let klb2 = `${pickRandom(['small', 'good', 'big'])}`
+if (args[0] == 'small') {
+let number1 = Math.floor(Math.random() * 10)
+    let number2 = Math.floor(Math.random() * 100)
+    let number3 = Math.floor(Math.random() * 1000)
     
-    global.db.data.users[m.sender].limit += angka1
-    global.db.data.users[m.sender].exp += angka2
-    global.db.data.users[m.sender].money += angka3
+    global.db.data.users[m.sender].limit += number1
+    global.db.data.users[m.sender].exp += number2
+    global.db.data.users[m.sender].money += number3
 await conn.sendButton(m.chat, `*Result : ${args[0]}*
-+ *${angka1}* EXP Banh
-+ *${angka2}* Limit Banh
-+ *${angka3}* Money Banh`, wm, null, [
++ *${number1}* EXP Banh
++ *${number2}* Banh Limit
++ *${number3}* Money Banh`, wm, null, [
                 ['Ngechit', `${usedPrefix}ngechit`]
             ], fakes, adReply)
 }
-if (args[0] == 'lumayan') {
+if (args[0] == 'reasonable') {
 let angka1 = Math.floor(Math.random() * 1000)
     let angka2 = Math.floor(Math.random() * 10000)
     let angka3 = Math.floor(Math.random() * 100000)
@@ -86,7 +85,7 @@ await conn.sendButton(m.chat, `*Result : ${args[0]}*
                 ['Ngechit', `${usedPrefix}ngechit`]
             ], fakes, adReply)
 }
-if (args[0] == 'besar') {
+if (args[0] == 'big') {
 let angka1 = Math.floor(Math.random() * 10000)
     let angka2 = Math.floor(Math.random() * 100000)
     let angka3 = Math.floor(Math.random() * 1000000)
@@ -101,7 +100,7 @@ await conn.sendButton(m.chat, `*Result : ${args[0]}*
                 ['Ngechit', `${usedPrefix}ngechit`]
             ], fakes, adReply)
 }
-await conn.sendButton(m.chat, `*Silahkan pilih di bawah:*
+await conn.sendButton(m.chat, `*Please select below:*
   ${command}`, wm, null, [
                 ['🎁 Box A', `${usedPrefix + command} ${klb}`],
                 ['🎁 Box B', `${usedPrefix + command} ${klb1}`],
@@ -110,8 +109,8 @@ await conn.sendButton(m.chat, `*Silahkan pilih di bawah:*
 }
 
 }
-handler.command = handler.help = ['kapankah', 'akankah', 'siapakah', 'mengapa', 'bisakah', 'misteribox']
-handler.tags = ['kerang']
+handler.command = handler.help = ['when', 'will', 'who is', 'why', 'could', 'mysterybox']
+handler.tags = ['shell']
 
 export default handler
 
