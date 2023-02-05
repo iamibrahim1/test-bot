@@ -1,6 +1,6 @@
 let handler = async(m, { conn, text, args, usedPrefix, command }) => {
 
-  if (!args[0]) return m.reply(`Example : ${usedPrefix + command} neon helo
+  if (!args[0]) return m.reply(`Example : ${usedPrefix + command} neon ibrahim
    *List Efek:*
 3d-effect
 3d-rubystone
