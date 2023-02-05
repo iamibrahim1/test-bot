@@ -9,7 +9,7 @@ let listSections = []
           [v.isi, '', '']
         ]])
 	})
-	return conn.sendList(m.chat, htki + ' 📺 STYLE 🔎 ' + htka, '⚡ Berikut daftar List Style...\nAkses langsung dengan copy namanya', author, '☂️ Klik Disini ☂️', listSections, m)
+	return conn.sendList(m.chat, htki + ' 📺 STYLE 🔎 ' + htka, '⚡ Heres a list of Style List...\nAccess directly by copying the name', author, '☂️ Click Here ☂️', listSections, m)
 }
 handler.help = ['style'].map(v => v + ' <text>')
 handler.tags = ['tools']
