@@ -15,7 +15,7 @@ try {
           ['Metode C', usedPrefix + command + ' ' + args[0] + ' c', '\n⌚ *By:* ' + author],
           ['Metode D', usedPrefix + command + ' ' + args[0] + ' d', '\n⌚ *By:* ' + author]
                   ]])
-        if (args[0]) return conn.sendList(m.chat, htki + ' 📺 Twitter Search 🔎 ' + htka, `⚡ Silakan pilih Twitter Search di tombol di bawah...\n*Teks yang anda kirim:* ${args[0]}\n\nKetik ulang *${usedPrefix + command}* teks anda untuk mengubah teks lagi`, author, `☂️ Twitter Search Disini ☂️`, listSections, m)
+        if (args[0]) return conn.sendList(m.chat, htki + ' 📺 Twitter Search 🔎 ' + htka, `⚡ Please select Twitter Search in the button below...\n*Text to send:* ${args[0]}\n\nRetype *${usedPrefix + command}* your text to change the text again`, author, `☂️ Twitter Search Here ☂️`, listSections, m)
 
 if (args[1] == 'a') {
 	let res = await twitterDl(args[0])
@@ -34,8 +34,8 @@ let dapet = json.result.url
 		rowId: usedPrefix + 'get ' + v.url
 	}))
 	let button = {
-		buttonText: `☂️ ${command} Search Disini ☂️`,
-		description: `⚡ Hai ${name}, Silakan pilih ${command} Search di tombol di bawah...\n*Teks yang anda kirim:* ${args[0]}\n\nKetik ulang *${usedPrefix + command}* teks anda untuk mengubah teks lagi`,
+		buttonText: `☂️ ${command} Search Here ☂️`,
+		description: `⚡ Hi ${name}, Please select ${command} Search in the button below...\n*Text to send:* ${args[0]}\n\nRetype *${usedPrefix + command}* text you to change the text again`,
 		footerText: wm
 	}
 	return conn.sendListM(m.chat, button, row, m)
