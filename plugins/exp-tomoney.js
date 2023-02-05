@@ -7,10 +7,10 @@ let handler = async (m, { conn, command, args }) => {
   if (global.db.data.users[m.sender].exp >= xpperlimit * count) {
     global.db.data.users[m.sender].exp -= xpperlimit * count
     global.db.data.users[m.sender].money += count
-    conn.reply(m.chat, `Sukses menukarkan exp sebesar ${count} Exp ✨`, m)
-  } else conn.reply(m.chat, `[❗] Exp anda tidak mencukupi untuk ditukar sebesar ${count} ✨`, m)
+    conn.reply(m.chat, `Success exchanging exp for ${count} Exp ✨`, m)
+  } else conn.reply(m.chat, `[❗] Your Exp is not enough to exchange for ${count} ✨`, m)
 }
-handler.help = ['tomoney <jumlah>']
+handler.help = ['tomoney <amount>']
 handler.tags = ['xp']
 handler.command = /^tomoney([0-9]+)|tomoney|tomoneyall$/i
 
