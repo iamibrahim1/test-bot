@@ -1,6 +1,7 @@
+handler.command = /^(jimp)$/i
 let handler = async(m, { conn, text, args, usedPrefix, command }) => {
 
-  if (!args[0]) return m.reply(`Example : ${usedPrefix + command} aovwall Ibrahim
+  if (!args[0]) return m.reply(`Example : ${usedPrefix + command} aovwall Ibrahim 
   *List Effect:*
 anonymhacker
 aovwall
@@ -53,7 +54,8 @@ writegalacy`)
                 ['Menu', `${usedPrefix}menu`]
             ], fakes, adReply)
         }
-
+handler.help = ['ephoto']
+handler.tags = ['maker']
 handler.command = /^(epho|ephoto)$/i
 
 export default handler
