@@ -221,7 +221,8 @@ word-leaves`)
                 ['Menu', `${usedPrefix}menu`]
             ], fakes, adReply)
             }
-
+handler.help = ['textprox']
+handler.tags = ['maker']
 handler.command = /^(textprox|textpromex)$/i
 
 export default handler
