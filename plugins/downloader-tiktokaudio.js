@@ -9,9 +9,9 @@ let txt = `🚀 *Link:* ${await(await axios.get(`https://tinyurl.com/api-create.
 ┏┉━━━━━━━━━━━❏
 ┆ *YOUTUBE MP3*
 ├┈┈┈┈┈┈┈┈┈┈┈
-┆• *Judul:* 
+┆• *Title:*
 │• *Type:* MP3
-┆• *📥 Ukuran File:* 
+┆• *📥 File Size:* 
 └❏
 `.trim(), m, null, {
    document: { url: `https://api.lolhuman.xyz/api/tiktokwm?apikey=${global.lolkey}&url=${args[0]}`}, mimetype: 'audio/mpeg', fileName: 'tiktok.mp3', conntextInfo: {
