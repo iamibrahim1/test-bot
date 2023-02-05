@@ -1,7 +1,7 @@
 let handler = async(m, { conn, text, args, usedPrefix, command }) => {
 
-  if (!args[0]) return m.reply(`Example : ${usedPrefix + command} efek|text1|text2
-  *List Efek:*
+  if (!args[0]) return m.reply(`Example : ${usedPrefix + command} effect|text1|text2
+  *List Effect:*
 3d-wood2
 3dgalaxy-metal
 3dgold
