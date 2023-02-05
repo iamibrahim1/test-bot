@@ -1,14 +1,14 @@
 import fetch from 'node-fetch'
-const teks = '0 - Ya\n1 - Tidak\n2 - Saya Tidak Tau\n3 - Mungkin\n4 - Mungkin Tidak\n5 - Kembali ke pertanyaan sebelumnya'
+const teks = '0 - Yes\n1 - No\n2 - I Dont Know\n3 - Maybe\n4 - Maybe No\n5 - Back to previous question'
 
 export async function before(m) {
 	if (global.db.data.users[m.sender].banned) return
 	if (!m.quoted || !m.quoted.fromMe || !m.quoted.isBaileys || !m.text) return !0
 	let aki = global.db.data.users[m.sender].akinator
 	if (!aki.sesi || m.quoted.id != aki.soal.key.id) return
-	if (!somematch(['0','1','2','3','4','5'], m.text)) return this.sendMessage(m.chat, { text: `[!] Jawab dengan angka 1, 2, 3, 4, atau 5\n\n${teks}` }, { quoted: aki.soal })
+	if (!somematch(['0','1','2','3','4','5'], m.text)) return this.sendMessage(m.chat, { text: `[!] Answer with numbers 1, 2, 3, 4, or 5\n\n${teks}` }, { quoted: aki.soal })
 	let { server, frontaddr, session, signature, question, progression, step } = aki
-	if (step == '0' && m.text == '5') return m.reply('Anda telah mencapai pertanyaan pertama')
+	if (step == '0' && m.text == '5') return m.reply('You have reached the first question')
 	let res, anu, soal
 	try {
 		if (m.text == '5') res = await fetch(`https://api.lolhuman.xyz/api/akinator/back?apikey=${global.lolkey}&server=${server}&session=${session}&signature=${signature}&step=${step}`)
