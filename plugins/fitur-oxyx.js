@@ -1,6 +1,6 @@
 let handler = async(m, { conn, text, args, usedPrefix, command }) => {
 
-  if (!args[0]) return m.reply(`Example : ${usedPrefix + command} bevel helo
+  if (!args[0]) return m.reply(`Example : ${usedPrefix + command} bevel Ibrahim
   *List Efek:*
 3dglowing
 3dnature
@@ -72,7 +72,8 @@ yellowroses`)
                 ['Menu', `${usedPrefix}menu`]
             ], fakes, adReply)
             }
-
+handler.help = ['photooxyx']
+handler.tags = ['maker']
 handler.command = /^(oxyx|photooxyx)$/i
 
 export default handler
