@@ -2,49 +2,50 @@ let handler = async(m, { conn, text, args, usedPrefix, command }) => {
 
   if (!args[0]) return m.reply(`Example : ${usedPrefix + command} cake teks
   *List Efek:*
-american
-anonymous
-aov
-arrow2
-arrow
-blackpink
-cake
-caper
-cloth
-cloud
-coverpubg
-crank
-dragonfire
-eraser
-foggy
-glasses
-graffiti
-greenbrush
-hallowen
-horror
-incandescent
-leafgraphy
-letters
-metals
-ml
-neonblue
-neonbp
-nightstars
-pig
-pubgavatar
-puppy
-sunlight
-television
-tiger
-typography2
-typography
-warface
-water`)
+anonymhacker
+aovwall
+avatardota
+avatarlolnew
+beautifulflower
+birthdaycake
+birthdayday
+cartoongravity
+fpslogo
+freefire
+galaxybat
+galaxystyle
+galaxywallpaper
+glittergold
+glossychrome
+goldplaybutton
+greenbush
+greenneon
+heartshaped
+hologram3d
+lighttext
+logogaming
+lolbanner
+luxurygold
+mlwall
+multicolor3d
+noeltext
+pubgmaskot
+puppycute
+royaltext
+silverplaybutton
+snow3d
+starsnight
+textbyname
+textcake
+watercolor
+wetglass
+wooden3d
+writegalacy`)
 
   let thm = args[0]
   let text1 = args.slice(1).join(' ')
   
-  let images = global.API('xcdr', `/api/ephoto/${thm}`, { text: text1 }, 'apikey')
+  let images = `https://api.lolhuman.xyz/api/ephoto1/${thm}?apikey=${global.lolkey}&text=${text1}`
   let caption = `*⎔┉━「 ${command} 」━┉⎔*
 🤠 *Query* : ${thm}`
   await conn.sendButton(m.chat, caption, wm, images, [
