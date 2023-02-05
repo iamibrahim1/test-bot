@@ -1,7 +1,7 @@
 import fetch from 'node-fetch'
 
 let handler = async(m, { conn, text, usedPrefix, command }) => {
-	if (!text) throw `Example: ${usedPrefix + command} https://vt.tiktok.com/ZS81qJD5v/`
+	if (!text) throw `Example: ${usedPrefix + command} titkok slideshow video url`
 	if (!(text.includes('http://') || text.includes('https://'))) return m.reply(`url invalid, please input a valid url. Try with add http:// or https://`)
 	if (!text.includes('tiktok.com')) return m.reply(`Invalid Tiktok URL.`)
 	try {
@@ -12,7 +12,7 @@ let handler = async(m, { conn, text, usedPrefix, command }) => {
 		if (anu.length == 0) throw Error('Error : no data')
 		let c = 0
 		for (let x of anu) {
-			if (c == 0) await conn.sendMessage(m.chat, { image: { url: x }, caption: `Mengirim 1 dari ${anu.length} slide gambar.\n_(Sisanya akan dikirim via chat pribadi.)_` }, { quoted : m })
+			if (c == 0) await conn.sendMessage(m.chat, { image: { url: x }, caption: `Sending 1 of ${anu.length} image slide.\n_(The rest will be sent via private chat.)_` }, { quoted : m })
 			else await conn.sendMessage(m.sender, { image: { url: x } }, { quoted : m })
 			c += 1
 		}
