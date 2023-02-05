@@ -81,7 +81,8 @@ yellowglass-effect`)
                 ['Menu', `${usedPrefix}menu`]
             ], fakes, adReply)
             }
-
+handler.help = ['ephotox2']
+handler.tags = ['maker']
 handler.command = /^(ephotox2|ephotoh2)$/i
 
 export default handler
