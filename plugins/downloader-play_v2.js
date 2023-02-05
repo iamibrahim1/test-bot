@@ -1,7 +1,7 @@
 import fs from 'fs'
 import fetch from 'node-fetch'
 let handler = async (m, {command, conn, text}) => {
-if (!text) throw `[❗INFO❗] Masukan Nama Lagu Yang Ingin Di Cari\n\n*—◉ Contoh:\n#play.1 Good Feeling - Flo Rida*`
+if (!text) throw `[❗INFO❗] Enter the name of the song you want to search for\n\n*—◉ Example:\n#play.1 Good Feeling - Ma phir bi tum ko cahyo ga lofi*`
 try {
 if (command == 'play.1') {
 conn.reply(m.chat, `*_⏳Wait.._⏳*`, m, {
@@ -26,7 +26,7 @@ let json = await res.json()
 conn.sendButtonVid(m.chat, json.result.url, `*R E S U L T*`, author, 'To mp3', '.tomp3', fakes, adReply)
 }
 }catch(e){
-m.reply('*[❗INFO❗] ERROR,TIDAK DAPAT MENCARI LAGU TERSEBUT*')
+m.reply('*[❗INFO❗] ERROR, CANNOT FIND THE SONG*')
 console.log(e)
 }}
 handler.help = ['play.1' , 'play.2'].map(v => v + ' <texto>')
