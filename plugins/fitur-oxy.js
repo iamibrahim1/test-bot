@@ -1,37 +1,22 @@
-let handler = async(m, { conn, text, args, usedPrefix, command }) => {
+import fetch from 'node-fetch'
 
-  if (!args[0]) return m.reply(`Example : ${usedPrefix + command} gravity helo
-  *List Efek:*
-burnpaper
-butterfly
-coffecup
-coffee
-doubleheart
-flaming
-grass
-gravity
-lovemessage
-lovetext
-naruto
-oceansea
-quotewood
-rainbow
-romantic
-shadow
-smoke`)
-  
-  let thm = args[0]
-  let text1 = args.slice(1).join(' ')
-  
-        let images = global.API('xcdr', `/api/photooxy/${thm}`, { text: text1 }, 'apikey')
-        let caption = `*⎔┉━「 ${command} 」━┉⎔*
-🤠 *Query* : ${thm}`
-  await conn.sendButton(m.chat, caption, wm, images, [
-                ['Next', `${usedPrefix + command}`],
-                ['Menu', `${usedPrefix}menu`]
-            ], fakes, adReply)
-            }
+let handler = async(m, { conn, text, usedPrefix, command }) => {
+	if (!text) throw `Example use *${usedPrefix + command} BunnyWalker*`
+	try {
+		let fimg = await fetch(`https://api.lolhuman.xyz/api/photooxy1/${command}?apikey=${apilol}&text=${encodeURIComponent(text)}`)
+		if (!fimg.ok) throw new e()
+		let fimgb = Buffer.from(await fimg.arrayBuffer())
+		await conn.sendMessage(m.chat, { image: fimgb, caption: `_Photo Oxy : ${command}_` }, { quoted: m })
+	} catch (e) {
+		m.reply(`An error occurred, try again later.`)
+	}
+}
 
-handler.command = /^(oxy|photooxy)$/i
+handler.menuoxy = ['shadow','cup','cup1','romance','smoke','burnpaper','lovemessage','undergrass','love','coffe','woodheart','woodenboard','summer3d','wolfmetal','nature3d','underwater','golderrose','summernature','fallleaves','flamming','harrypotter','carvedwood'].map(v => v + ' <text>')
+handler.tagsoxy = ['search']
+handler.command = /^(shadow|cup|cup1|romance|smoke|burnpaper|lovemessage|undergrass|love|coffe|woodheart|woodenboard|summer3d|wolfmetal|nature3d|underwater|golderrose|summernature|fallleaves|flamming|harrypotter|carvedwood)$/i
+
+handler.premium = true
+handler.limit = true
 
 export default handler
