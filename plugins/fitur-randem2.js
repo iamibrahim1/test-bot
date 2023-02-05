@@ -49,16 +49,14 @@ let handler = async(m, { conn, text, usedPrefix, command }) => {
 • wallpaper
 • pussy_jpg
 • kemonomimi
-• nsfw_avatar
-• nsfw_neko_gif
-• random_hentai_gif`)
+• nsfw_avatar`)
         let images = `https://api.lolhuman.xyz/api/random/nsfw/${text}?apikey=${global.lolkey}`
         await conn.sendButton(m.chat, `Nih ${text}`, wm, images, [
                 ['Next', `${usedPrefix}${command}`]
             ], m)
 }
-handler.help = ['randem2'].map(v => v + ' <efek>')
-handler.tags = ['tools']
-handler.command = /^(randem2)$/i
+handler.help = ['nsfw'].map(v => v + ' <name>')
+handler.tags = ['nsfw']
+handler.command = /^(nsfw)$/i
 
 export default handler
