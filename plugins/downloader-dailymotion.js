@@ -15,8 +15,8 @@ let dapet = json.result.url
 		rowId: usedPrefix + 'get ' + v.url
 	}))
 	let button = {
-		buttonText: `☂️ ${command} Search Disini ☂️`,
-		description: `⚡ Hai ${name}, Silakan pilih ${command} Search di tombol di bawah...\n*Teks yang anda kirim:* ${text}\n\nKetik ulang *${usedPrefix + command}* teks anda untuk mengubah teks lagi`,
+		buttonText: `☂️ ${command} Search Here ☂️`,
+		description: `⚡ Hi ${name}, Please select ${command} Search in the button below...\n*Text to send:* ${text}\n\nRetype *${usedPrefix + command}* your text to change text again`,
 		footerText: wm
 	}
 	return conn.sendListM(m.chat, button, row, m)
