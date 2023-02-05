@@ -1,35 +1,3 @@
-Skip to content
-Search or jump to…
-Pull requests
-Issues
-Codespaces
-Marketplace
-Explore
- 
-@iamibrahim1 
-iamibrahim1
-/
-azamibot-md-multi
-Public
-forked from clicknetcafe/azamibot-md-multi
-Cannot fork because you own this repository and are not a member of any organizations.
-Code
-Pull requests
-Actions
-Projects
-Wiki
-Security
-Insights
-Settings
-azamibot-md-multi/plugins/textpro-3.js /
-@iamibrahim1
-iamibrahim1 Update textpro-3.js
-Latest commit d4ff4a2 4 days ago
- History
- 2 contributors
-@clicknetcafe@iamibrahim1
-879 lines (873 sloc)  23.4 KB
-
 import fetch from 'node-fetch'
 import formData from 'form-data'
 import cheerio from 'cheerio'
