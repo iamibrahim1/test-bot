@@ -1,6 +1,6 @@
 let handler = async(m, { conn, text, args, usedPrefix, command }) => {
 
-  if (!args[0]) return m.reply(`Example : ${usedPrefix + command} cake teks
+  if (!args[0]) return m.reply(`Example : ${usedPrefix + command} aovwall Ibrahim
   *List Effect:*
 anonymhacker
 aovwall
