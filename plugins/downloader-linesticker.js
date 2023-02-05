@@ -7,8 +7,8 @@ let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? c
 let pp = await conn.profilePictureUrl(who).catch(_ => hwaifu.getRandom())
 let name = await conn.getName(who)
 try {
-if (!text) throw '*Masukkan link*\n Example: https://store.line.me/stickershop/product/2821/en'
-let res = await axios('https://violetics.pw/api/downloader/linesticker?apikey=beta&url=' + text)
+if (!text) throw '*Enter links*\n Example: https://store.line.me/stickershop/product/2821/en'
+let res = await axios('https://api.lolhuman.xyz/api/linestick?apikey=$${global.lolkey}&url' + text)
 let json = res.data
 let dapet = json.result.sticker
 	let row = Object.keys(dapet).map((v, index) => ({
@@ -17,8 +17,8 @@ let dapet = json.result.sticker
 		rowId: usedPrefix + 'get ' + dapet[v]
 	}))
 	let button = {
-		buttonText: `☂️ ${command} Search Disini ☂️`,
-		description: `⚡ Hai ${name}, Silakan pilih ${command} Search di tombol di bawah...\n*Teks yang anda kirim:* ${text}\n\nKetik ulang *${usedPrefix + command}* teks anda untuk mengubah teks lagi`,
+		buttonText: `☂️ ${command} Search Here ☂️`,
+		description: `⚡ Hi ${name}, Please select ${command} Search in the button below...\n*Text to send:* ${text}\n\nRetype *${usedPrefix + command}* your text to change text again`,
 		footerText: wm
 	}
 	return conn.sendListM(m.chat, button, row, m)
@@ -30,8 +30,8 @@ let dapet = json.result.sticker
 		rowId: usedPrefix + 'fetchsticker ' + v.sticker + ' lib'
 	}))
 	let button = {
-		buttonText: `☂️ ${command} Search Disini ☂️`,
-		description: `⚡ Silakan pilih ${command} Search di tombol di bawah...\n*Teks yang anda kirim:* ${text}\n\nKetik ulang *${usedPrefix + command}* teks anda untuk mengubah teks lagi`,
+		buttonText: `☂️ ${command} Search Herei ☂️`,
+                description: `⚡ Please select ${command} Search in the button below...\n*Text to send:* ${text}\n\nRetype *${usedPrefix + command}* your text to change the text again `,
 		footerText: wm
 	}
 	return await conn.sendListM(m.chat, button, row, m)
