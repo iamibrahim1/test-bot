@@ -8,7 +8,7 @@ let pp = await conn.profilePictureUrl(who).catch(_ => hwaifu.getRandom())
 let name = await conn.getName(who)
 
 if (command == 'filmanime') {
-    if (!text) return conn.reply(m.chat, 'Harap Masukan Nama Film Animenya', m)
+    if (!text) return conn.reply(m.chat, 'Please Enter the Name of the Anime Movie', m)
 	 let res = await fetch(`https://api.lolhuman.xyz/api/lk21?apikey=${global.lolkey}&query=${text}`)
 	 let jsons = await res.json()
 	 let x = jsons.result
@@ -30,9 +30,9 @@ let hasil = `*${htki} ANIME-SEARCH ${htka}*\n
     await conn.sendButton(m.chat, hasil, wm, await(await fetch(x.thumbnail)).buffer(), [[' Menu', '/menu']], m, fakefb)
     }
 if (command == 'film') {
-    if (!args[0]) throw `Gunakan format: ${usedPrefix}${command} spiderman`
+    if (!args[0]) throw `Use formats: ${usedPrefix}${command} spiderman`
 let i = await xfar.search.film(args[0])
-let txt = `*${htki} FILM-SEARCH ${htka}*\n\n*📫 Judul :* ${i[0].judul}\n*🎞️  Tipe  :* ${i[0].type}\n*📟 Kualitas :* ${i[0].quality}\n*📮Upload :* ${i[0].upload}\n*🔗 Url :* ${await shortUrl(i[0].link)}\n-----------------------------------------------\n`
+let txt = `*${htki} FILM-SEARCH ${htka}*\n\n*📫 Title :* ${i[0].judul}\n*🎞️  Tipe  :* ${i[0].type}\n*📟 Quality :* ${i[0].quality}\n*📮Upload :* ${i[0].upload}\n*🔗 Url :* ${await shortUrl(i[0].link)}\n-----------------------------------------------\n`
 
 await conn.sendButton(m.chat, txt, wm, await(await fetch(i[0].thumb)).buffer(), [[' Menu', '/menu']], m, fakefb)
   }
