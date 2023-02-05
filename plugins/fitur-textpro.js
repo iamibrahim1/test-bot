@@ -20,9 +20,9 @@ let handler = async (m, { conn, args: [effect], text: txt, usedPrefix, command }
 	await conn.sendMessage(m.chat, { image: { url: result.data}, caption: `_Text Pro : ${effect}_` }, { quoted: m })
 }
 
-handler.menutextpro = ['textpro <effect> <text>']
-handler.tagstextpro = ['offi']
-handler.command = /^((te(xt|ks))?pro)$/i
+handler.help = ['textpro']
+handler.tags = ['maker']
+handler.command = /^textpro$/i
 
 handler.premium = true
 handler.limit = true
