@@ -2,7 +2,7 @@ import cheerio from 'cheerio'
 import fetch from 'node-fetch'
 
 let handler = async (m, { conn, args, usedPrefix, command }) => {
-	if (!args[0]) throw `Ex: ${usedPrefix + command} https://play.google.com/store/apps/details?id=com.linecorp.LGGRTHN`
+	if (!args[0]) throw `Ex: ${usedPrefix + command} app link from google play store`
 	let res = await apkDl(args[0])
 	m.reply(wait)
 	conn.sendMessage(m.chat, { document: { url: res.download }, mimetype: res.mimetype, fileName: res.fileName }, { quoted: m })
