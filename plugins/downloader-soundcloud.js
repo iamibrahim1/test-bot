@@ -16,13 +16,13 @@ let dapet = json.result.url
 		rowId: usedPrefix + 'get ' + v.url
 	}))
 	let button = {
-		buttonText: `☂️ ${command} Search Disini ☂️`,
-		description: `⚡ Hai ${name}, Silakan pilih ${command} Search di tombol di bawah...\n*Teks yang anda kirim:* ${text}\n\nKetik ulang *${usedPrefix + command}* teks anda untuk mengubah teks lagi`,
+		buttonText: `☂️ ${command} Search Here☂️`,
+		description: `⚡ Hai ${name}, Please select ${command} Search in the button below...\n*Text to send:* ${text}\n\nRetype *${usedPrefix + command}* your text to change the text again`,
 		footerText: wm
 	}
 	return conn.sendListM(m.chat, button, row, m)
 	} catch {
-	if (!text) throw '*Masukkan link*\n Example: https://soundcloud.com/prodkinka/snk'
+	if (!text) throw '*Insert links*\n Example: https://soundcloud.com/prodkinka/snk'
 let res = await axios('https://violetics.pw/api/downloader/soundcloud?apikey=beta&url=' + text)
 let json = res.data
 let dapet = json.result.dlink
@@ -35,7 +35,7 @@ let dapet = json.result.dlink
     mediaUrl: sig,
     mediaType: 2,
     description: wm, 
-    title: '👋 Hai, ' + name + ' ' + ucapan,
+    title: '👋 Hi, ' + name + ' ' + ucapan,
     body: botdate,
     thumbnail: await(await fetch(json.result.thumb)).buffer(),
     sourceUrl: json.result.dlink
