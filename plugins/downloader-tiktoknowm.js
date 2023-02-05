@@ -5,11 +5,11 @@ if (!args[0]) throw 'Masukkan Link'
 try {
     let listSections = []
 	listSections.push(['No. ' + ++index, [
-          ['Metode A', usedPrefix + command + ' ' + args[0] + ' a', '\n⌚ *By:* ' + author],
-          ['Metode B', usedPrefix + command + ' ' + args[0] + ' b', '\n⌚ *By:* ' + author],
-          ['Metode C', usedPrefix + command + ' ' + args[0] + ' c', '\n⌚ *By:* ' + author]
+           ['Method A', usedPrefix + command + ' ' + args[0] + ' a', '\n⌚ *By:* ' + author],
+           ['Method B', usedPrefix + command + ' ' + args[0] + ' b', '\n⌚ *By:* ' + author],
+           ['Method C', usedPrefix + command + ' ' + args[0] + ' c', '\n⌚ *By:* ' + author]
                   ]])
-        if (args[0]) return conn.sendList(m.chat, htki + ' 📺 Tiktok Search 🔎 ' + htka, `⚡ Silakan pilih Tiktok Search di tombol di bawah...\n*Teks yang anda kirim:* ${args[0]}\n\nKetik ulang *${usedPrefix + command}* teks anda untuk mengubah teks lagi`, author, `☂️ Tiktok Search Disini ☂️`, listSections, m)
+        if (args[0]) return conn.sendList(m.chat, htki + ' 📺 Tiktok Search 🔎 ' + htka, `⚡ Please select Tiktok Search in the button below...\n*Text you send:* ${args[0]}\n\nRetype *${usedPrefix + command}* your text to change the text again`, author, `☂️ Tiktok Search Here ☂️`, listSections, m)
 
 if (args[1] == 'a') {
   let res = await fetch(`https://api.lolhuman.xyz/api/tiktok?apikey=${global.lolkey}&url=${args[0]}`)
