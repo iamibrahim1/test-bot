@@ -129,7 +129,7 @@ ${dmenub} zettai
 ${dmenuf}`
 if (!text) throw nah
 if (chat.nsfw == false) {
-return conn.sendButton(m.chat, '❗ ᴏᴘᴛɪᴏɴs ɴsғᴡ ᴅɪᴄʜᴀᴛ ɪɴɪ ʙᴇʟᴜᴍ ᴅɪɴʏᴀʟᴀᴋᴀɴ ᴏʟᴇʜ ᴀᴅᴍɪɴ ɢʀᴏᴜᴘ', botdate, null, [['ᴇɴᴀʙʟᴇ', '.on nsfw']], m)
+return conn.sendButton(m.chat, '❗ THIS NSFW OPTIONS HAVE NOT BEEN TURNED BY GROUP ADMIN', botdate, null, [['ᴇɴᴀʙʟᴇ', '.on nsfw']], m)
 } else if (chat.nsfw == true) {
 try {
         let ani = await fetch('https://raw.githubusercontent.com/AyGemuy/RESTAPI/master/data/' + text + '.json')
@@ -140,6 +140,6 @@ try {
         }
         }
 }
-handler.command = handler.help = ["foto"]
+handler.command = handler.help = ["photo"]
 handler.tags = ['anime']
 export default handler
