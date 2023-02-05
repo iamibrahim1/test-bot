@@ -6,7 +6,7 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
 	
     let q = m.quoted ? m.quoted : m
   let mime = (q.msg || q).mimetype || ''
-  if (!mime) throw 'Fotonya Mana?'
+  if (!mime) throw 'Where is the picture?'
   if (!/image\/(jpe?g|png)/.test(mime)) throw `Tipe ${mime} tidak didukung!`
     if (!text) return m.reply(`Reply pictures with commands
     ${usedPrefix + command} effect
