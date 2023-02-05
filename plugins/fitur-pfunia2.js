@@ -23,7 +23,8 @@ movie_marquee`)
                 ['Menu', `${usedPrefix}menu`]
             ], fakes, adReply)
             }
-
+handler.help = ['pfunia2']
+handler.tags = ['maker']
 handler.command = /^(pfunia2|pfun2)$/i
 
 export default handler
