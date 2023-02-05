@@ -1,6 +1,6 @@
 let handler = async(m, { conn, text, args, usedPrefix, command }) => {
 
-  if (!text) return m.reply(`Example : ${usedPrefix + command} bee helo
+  if (!text) return m.reply(`Example : ${usedPrefix + command} bee ibrahim
   *List Effect:*
 3d-crack-text-effect-online
 3d-underwater
