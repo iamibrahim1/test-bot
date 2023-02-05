@@ -46,7 +46,8 @@ wolf-galaxy`)
                 ['Menu', `${usedPrefix}menu`]
             ], fakes, adReply)
             }
-
+handler.help = ['textprox2']
+handler.tags = ['maker']
 handler.command = /^(textprox2|textpromex2)$/i
 
 export default handler
