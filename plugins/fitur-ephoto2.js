@@ -2,10 +2,10 @@ let handler = async(m, { conn, text, args, usedPrefix, command }) => {
 
   if (!args[0]) return m.reply(`Example : ${usedPrefix + command} buoys|helo|banh
   *List Efek:*
- buoys
- heated
- pencil
- quotestatus
+ realvintage
+ juventusshirt
+ cutegravity
+ codwarzone
  wood`)
   
   let urut = text.split`|`
@@ -13,7 +13,7 @@ let handler = async(m, { conn, text, args, usedPrefix, command }) => {
   let text1 = urut[1]
   let text2 = urut[2]
   
-        let images = global.API('xcdr', `/api/ephoto/${thm}`, { text: text1, text2: text2 }, 'apikey'))
+        let images = `https://api.lolhuman.xyz/api/ephoto2/${thm}?apikey=${global.lolkey}&text1=${text1}&text2=${text2}`
   let caption = `*⎔┉━「 ${command} 」━┉⎔*
 🤠 *Query* : ${thm}`
   await conn.sendButton(m.chat, caption, wm, images, [
