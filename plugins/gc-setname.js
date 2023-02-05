@@ -1,5 +1,5 @@
 let handler  = async (m, { conn, args, text }) => {
-if (!text) throw `*[❗𝐈𝐍𝐅𝐎❗] Masukkan teks*`
+if (!text) throw `*[❗𝐈𝐍𝐅𝐎❗] Enter text*`
 try {
 let text = args.join` `
 if(!args || !args[0]) {
