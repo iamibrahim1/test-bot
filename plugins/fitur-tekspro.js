@@ -10,7 +10,7 @@ let handler = async (m, { conn, args: [effect], text: txt, usedPrefix, command }
 var lurl = await fetch('https://raw.githubusercontent.com/wudysoft/Textpro-Theme/main/textprome.json') 
 var effects = await lurl.json()
 let nombor = 0
-  if (!effect) throw 'Ketik .tekspro <nama efek>\n*Contoh:*\n.tekspro space Ayang\n\n「 LIST EFFECT 」\n' + effects.map(v => ('\n' + ++nombor + '. ' + v.title))
+  if (!effect) throw 'Type .1textpro <effect name>\n*Example:*\n.textpro space Ayang\n\n「LIST EFFECT 」\n' + effects.map(v => ('\n' + ++nombor + '. ' + v.title))
   effect = effect.toLowerCase()
   if (!effects.find(v => (new RegExp(v.title, 'gi')).test(effect))) throw `Efek *${effect}* tidak ditemukan`
   let text = txt.replace(new RegExp(effect, 'gi'), '').trimStart()
@@ -23,11 +23,11 @@ let nombor = 0
   })
 
  let tag = `@${m.sender.replace(/@.+/, '')}`
- conn.send2ButtonImg(m.chat, result.data, `Effect *${effect}nya* Dah Jadi ${tag}`, author, 'Menu', '.menu', 'Owner', '.owner', fakes, adReply)
+ conn.send2ButtonImg(m.chat, result.data, `Effect *${effect}nya* So ${tag}`, author, 'Menu', '.menu', 'Owner', '.owner', fakes, adReply)
 }
-handler.help = ['tekspro'].map(v => v + ' <effect> <text>')
+handler.help = ['1textpro'].map(v => v + ' <effect> <text>')
 handler.tags = ['maker']
-handler.command = /^(tekspro)$/i
+handler.command = /^(1textpro)$/i
 
 export default handler
 
