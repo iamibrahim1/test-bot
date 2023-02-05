@@ -21,9 +21,9 @@ try {
 	} else throw 'Input Query / Sfile Url!'
 	} catch {
 	if (!text) throw '*Masukkan link*\n Example: https://sfile.mobi/1FjpfJwHxC07'
-let res = await axios('https://violetics.pw/api/downloader/sfile?apikey=beta&url=' + text)
+let res = await axios('https://api.lolhuman.xyz/api/sfile?apikey=${global.lolkey}&url=' + text)
 let json = res.data
-conn.sendMessage(m.chat, { document: { url: json.result.url }, fileName: json.result.title, mimetype: null }, { quoted: m })
+conn.sendMessage(m.chat, { document: { url: json.result.link }, fileName: json.result.title, mimetype: null }, { quoted: m })
 	}
 }
 handler.help = ['sfile']
