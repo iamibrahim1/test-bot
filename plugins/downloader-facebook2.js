@@ -8,7 +8,7 @@ for (const { url, isVideo } of result.reverse()) conn.sendFile(m.chat, url, `fac
   
 await conn.sendHydrated(m.chat, info, wm, null, sig, 'ɪɴsᴛᴀɢʀᴀᴍ✨', null, null, [
 ['🥀️⃟⃪͡ꦽᴍᴇɴᴜ🔖️⃟⃪͡ꦽ', '/menu'],
-['☙⃝✈️ᴋᴇᴄᴇᴘᴀᴛᴀɴ ʙᴏᴛ☙⃝🚀️', '/ping']
+['☙⃝✈️Ibrahim bot☙⃝🚀️', '/ping']
 ], m,)
 }
 handler.help = ['facebook2'].map(v => v + ' <url>')
