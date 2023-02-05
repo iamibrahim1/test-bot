@@ -21,7 +21,8 @@ let handler = async(m, { conn, text, args, usedPrefix, command }) => {
                 ['Menu', `${usedPrefix}menu`]
             ], fakes, adReply)
             }
-
+handler.help = ['ephoto2']
+handler.tags = ['maker']
 handler.command = /^(epho2|ephoto2)$/i
 
 export default handler
