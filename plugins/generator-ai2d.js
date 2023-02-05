@@ -3,7 +3,7 @@ import AI2D from "@arugaz/ai2d";
 let handler = async(m, { conn, usedPrefix, text, command }) => {
 let q = m.quoted ? m.quoted : m
     let mime = (q.msg || q).mimetype || q.mediaType || ''
-    if (!/image/g.test(mime)) throw `Balas/Kirim Gambar Dengan Perintah ${usedPrefix + command}!`
+    if (!/image/g.test(mime)) throw `Reply/Send Image With Command ${usedPrefix + command}!`
     m.reply(wait)
     let image = await q.download()
     let buff = await AI2D(image, {
