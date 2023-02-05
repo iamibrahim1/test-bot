@@ -1,7 +1,7 @@
 import { wikipedia } from '@bochilteam/scraper'
 let handler = async (m, { text, usedPrefix, command }) => {
 try {
-  if (!text) throw `Contoh penggunaan ${usedPrefix}${command} Minecraft`
+  if (!text) throw `Example of using ${usedPrefix}${command} Minecraft`
   let json = await wikipedia(text)
   m.reply(`*JUDUL*
 ${json.title}
@@ -16,7 +16,7 @@ m.reply("Not found")
  }
 }
 handler.help = ['wikipedia'].map(v => v + ' <apa>')
-handler.tags = ['edukasi']
+handler.tags = ['education']
 handler.command = /^(wiki|wikipedia)$/i
 
 export default handler
