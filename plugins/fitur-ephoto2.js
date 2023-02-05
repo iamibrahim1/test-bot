@@ -1,6 +1,6 @@
 let handler = async(m, { conn, text, args, usedPrefix, command }) => {
 
-  if (!args[0]) return m.reply(`Example : ${usedPrefix + command} buoys|helo|banh
+  if (!args[0]) return m.reply(`Example : ${usedPrefix + command} cutegravity|iam|ibrahim
   *List Effect:*
  realvintage
  juventusshirt
