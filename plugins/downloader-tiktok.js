@@ -3,7 +3,7 @@ import cheerio from "cheerio"
 import got from "got"
 
 let handler = async (m, { conn, text, args, usedPrefix, command }) => {
-if (!text) throw "\nSertakan querinya kak !\n\nContoh: .jagokata Sedih"
+if (!text) throw "\nInclude the query sis!\n\nExample: .sad word Sad"
     m.reply(wait)
     let ler = await Tiktokdl(text)
     let cer = ler.result
