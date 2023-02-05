@@ -1,7 +1,7 @@
 import { snapchat } from "social_media_downloader"
 let handler = async(m, { conn, usedPrefix, text, args, command }) => {
 let name = await conn.getName(m.sender)
-if (!args[0]) throw 'Masukkan Link'
+if (!args[0]) throw 'Enter Links'
 try {
 let p = await snapchat(text)
 throw p
