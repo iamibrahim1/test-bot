@@ -7,7 +7,7 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
 let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender
 let pp = await conn.profilePictureUrl(who).catch(_ => hwaifu.getRandom())
 let name = await conn.getName(who)
-if (!args[0]) throw `Use example ${usedPrefix}${command} https://vt.tiktok.com/ZSdDyUHcR/\n\nhttps://www.tiktok.com/@kata__kasar/video/7088823247373946138`
+if (!args[0]) throw `Use example ${usedPrefix}${command} any social media dwonload url`
 
 const { title, medias } = await aiovideodl(args[0])
 for (const { url, quality, formattedSize} of medias) await conn.sendButtonVid(m.chat, await(await fetch(url)).buffer(), `*AIOVIDEO DOWNLOADER*\n\n${title ? `*Title:* ${title}` : "NotFound"}\n*💽Format:* ${quality ? `${quality}` : "Unknown"}\n*📨Size:* ${formattedSize ? `${formattedSize}` : "countless" }\n`, title + '.mp4', 'To mp3', '.tomp3', fakes, adReply)
