@@ -38,7 +38,8 @@ carvedwood`)
                 ['Menu', `${usedPrefix}menu`]
             ], fakes, adReply)
         }
-
+handler.help = ['photooxy']
+handler.tags = ['maker']
 handler.command = /^(oxy|photooxy)$/i
 
 export default handler
