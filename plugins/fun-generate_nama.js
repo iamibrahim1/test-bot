@@ -31,8 +31,8 @@ function handler(m, { text }) {
         }[v.toLowerCase()] || v
     }))
 }
-handler.help = ['namaninja'].map(v => v + ' <teks>')
+handler.help = ['name].map(v => v + ' <text>')
 handler.tags = ['fun']
-handler.command =  /^(namaninja|namae)$/i
+handler.command =  /^(name|names)$/i
 
 export default handler
