@@ -11,7 +11,7 @@ let urut = text.split`|`
   
 /*MyInstans*/
 if (command == 'sfx') {
-if (!args[0]) throw `Contoh penggunaan ${usedPrefix}${command} 2`
+if (!args[0]) throw `Usage examples ${usedPrefix}${command} 2`
 try {
   let gas = await fetch(`http://www.myinstants.com/api/v1/instants/?format=json&page=${args[0]}`)
     let json = await gas.json()
@@ -22,8 +22,8 @@ try {
 		rowId: usedPrefix + 'get ' + v.sound
 	}))
 	let button = {
-		buttonText: `☂️ SFX Disini ☂️`,
-		description: `⚡ Silakan pilih SFX di tombol di bawah...\n*Teks yang anda kirim:* ${text}\n\nKetik ulang *${usedPrefix + command}* teks anda untuk mengubah teks lagi`,
+		buttonText: `☂️ SFX Here ☂️`,
+		description: `⚡ Please select SFX in the button below...\n*Text to send:* ${text}\n\nRetype *${usedPrefix + command}* your text to change text again`,
 		footerText: wm
 	}
 	return await conn.sendListM(m.chat, button, row, m)
@@ -34,7 +34,7 @@ return m.reply('Error kan')
 
 /*FreeSound*/
 if (command == 'sfx2') {
-if (!text) throw `Contoh penggunaan ${usedPrefix}${command} drum
+if (!text) throw `Example of using ${usedPrefix}${command} drum
 *ket:*
 drum : nama sound
 `
@@ -47,15 +47,15 @@ drum : nama sound
 		rowId: usedPrefix + 'sfx3 ' + v.id
 	}))
 	let button = {
-		buttonText: `☂️ SFX Disini ☂️`,
-		description: `⚡ Silakan pilih SFX di tombol di bawah...\n*Teks yang anda kirim:* ${text}\n\nKetik ulang *${usedPrefix + command}* teks anda untuk mengubah teks lagi`,
-		footerText: wm
+		buttonText: `☂️ SFX Here ☂️`,
+                description: `⚡ Please select SFX in the button below...\n*Text to send:* ${text}\n\nRetype *${usedPrefix + command}* your text to change text again`,
+                footerText: wm
 	}
 	return await conn.sendListM(m.chat, button, row, m)
 }
 
 if (command == 'sfx3') {
-if (!text) throw `Contoh:
+if (!text) throw `Example:
 ${usedPrefix + command} 1234`
 let f = await fetch(`https://freesound.org/apiv2/sounds/${text}/?format=json&token=TJEbxX84wKTySiEtUPxhm8b2WCi5Izak0h9nNDbO`)
 let xx = await f.json()
@@ -173,9 +173,9 @@ try {
 		rowId: usedPrefix + 'get https://raw.githubusercontent.com/AyGemuy/HAORI-API/main/audio/' + hasil[v] + '.mp3'
 	}))
 	let button = {
-		buttonText: `☂️ SFX Disini ☂️`,
-		description: `⚡ Silakan pilih SFX di tombol di bawah...\n*Teks yang anda kirim:* ${text}\n\nKetik ulang *${usedPrefix + command}* teks anda untuk mengubah teks lagi`,
-		footerText: wm
+		buttonText: `☂️ SFX Here ☂️`,
+                description: `⚡ Please select SFX in the button below...\n*Text to send:* ${text}\n\nRetype *${usedPrefix + command}* your text to change text again`,
+                footerText: wm
 	}
 	return await conn.sendListM(m.chat, button, row, m)
 } catch (e) {
@@ -192,8 +192,8 @@ try {
 		rowId: usedPrefix + 'get https://raw.githubusercontent.com/AyGemuy/HAORI-API/main/sound/sound' + hasil[v] + '.mp3'
 	}))
 	let button = {
-		buttonText: `☂️ SFX Disini ☂️`,
-		description: `⚡ Silakan pilih SFX di tombol di bawah...\n*Teks yang anda kirim:* ${text}\n\nKetik ulang *${usedPrefix + command}* teks anda untuk mengubah teks lagi`,
+		buttonText: `☂️ SFX Here ☂️`,
+description: `⚡ Please select SFX in the button below...\n*Text to send:* ${text}\n\nRetype *${usedPrefix + command}* your text to change text again`,
 		footerText: wm
 	}
 	return await conn.sendListM(m.chat, button, row, m)
@@ -211,8 +211,8 @@ try {
 		rowId: usedPrefix + 'get https://raw.githubusercontent.com/WH-MODS-BOT/Sounds/main/sound' + hasil[v] + '.mp3'
 	}))
 	let button = {
-		buttonText: `☂️ SFX Disini ☂️`,
-		description: `⚡ Silakan pilih SFX di tombol di bawah...\n*Teks yang anda kirim:* ${text}\n\nKetik ulang *${usedPrefix + command}* teks anda untuk mengubah teks lagi`,
+		buttonText: `☂️ SFX Here ☂️`,
+description: `⚡ Please select SFX in the button below...\n*Text to send:* ${text}\n\nRetype *${usedPrefix + command}* your text to change text again`,
 		footerText: wm
 	}
 	return await conn.sendListM(m.chat, button, row, m)
