@@ -165,14 +165,14 @@ let sololi = siloli.getRandom()
     mediaUrl: sig,
     mediaType: 2,
     description: wm, 
-    title: '👋 Hai, ' + name + ' ' + ucapan,
+    title: '👋 Hi, ' + name + ' ' + ucapan,
     body: botdate,
     thumbnail: await(await fetch(pp)).buffer(),
     sourceUrl: sound
      }}
   })
 } catch (e) {
-return m.reply('Error kan')
+return m.reply('Its an error')
 }
 }
 handler.customPrefix = /^(haaa)$/i
