@@ -5,7 +5,7 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
 let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender
 let pp = await conn.profilePictureUrl(who).catch(_ => hwaifu.getRandom())
 let name = await conn.getName(who)
-    if (!args[0]) throw `Use example ${usedPrefix}${command} https://www.facebook.com/groups/972938613264044/permalink/1103753026849268/?app=fbl`
+    if (!args[0]) throw `Use example ${usedPrefix}${command} any video url`
 const { meta, hd, sd} = await savefrom(args[0]).catch(async _ => await aiovideodl(args[0]))
 const done = hd.url || sd.url
   conn.sendButtonVid(m.chat, done, ` *🏷️Title:* ${meta.title}
