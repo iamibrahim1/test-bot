@@ -30,7 +30,7 @@ Link: ${v.link}`.trim()
   *tag:* ${Array.from(x.result.tag)}
   *description:* ${x.result.description}
   `
-conn.sendFile(m.chat, x.result.link[1].link, 'asupan.mp4', caption, m)
+conn.sendFile(m.chat, x.result.link[2].link, 'asupan.mp4', caption, m)
 } catch (e) {
 throw eror
 }
