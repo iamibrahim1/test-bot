@@ -5,7 +5,7 @@ let urut = text.split`|`
   let thm = urut[0]
   let text1 = urut[1]
   let text2 = urut[2]
-if (!text) throw `Contoh penggunaan ${usedPrefix}${command} tema|teks
+if (!text) throw `Example of using ${usedPrefix}${command} theme|teks
 
 *List tema:*
 • kucing
