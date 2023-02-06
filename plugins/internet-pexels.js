@@ -39,8 +39,7 @@ Original Photo Description
           [('tiny photo').toUpperCase(), usedPrefix + 'get ' + v.src.tiny, des]
         ]])
 	})
-	return conn.sendList(m.chat, htki + ' 📺 Pexels Search 🔎 ' + htka, `⚡ Silakan pilih Pexels Search di tombol di bawah...\n*Teks yang anda kirim:* ${text}\n\nKetik ulang *${usedPrefix + command}* teks anda untuk mengubah teks lagi`, author, `☂️ Pexels Search Disini ☂️`, listSections, m)
-}
+return conn.sendList(m.chat, htki + ' 📺 Pexels Search 🔎 ' + htka, `⚡ Please select Pexels Search in the button below...\n*Text to send:* ${text}\n\nType repeat *${usedPrefix + command}* your text to change the text again`, author, `☂️ Pexels Search Here ☂️`, listSections, m)}
 handler.help = ['pexels']
 handler.tags = ['internet']
 handler.command = /^(pexels)$/i
