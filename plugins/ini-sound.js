@@ -131,7 +131,7 @@ let listSections = []
           ['Audio 🎧', usedPrefix + command + 'get ' + v.audio, '\n*Source:* ' + v.source]
         ]])
 	})
-	return conn.sendList(m.chat, htki + ' 📺 Ringtone Search 🔎 ' + htka, `⚡ Silakan pilih Ringtone Search di tombol di bawah...\n*Teks yang anda kirim:* ${text}\n\nKetik ulang *${usedPrefix + command}* teks anda untuk mengubah teks lagi`, author, 'R I N G T O N E', listSections, m)
+	return conn.sendList(m.chat, htki + ' 📺 Ringtone Search 🔎 ' + htka, `⚡ Please select Ringtone Search in the button below...\n*Text to send:* ${text}\n\nRetype *${usedPrefix + command}* your text to change text again`, author, 'R I N G T O N E ', listSections, m)
 }
 if (command == 'ringtoneget') {
 await conn.sendFile(m.chat, text, 'ringtone.mp3', '', m, null, adReply)
