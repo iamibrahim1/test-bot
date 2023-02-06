@@ -1,41 +1,41 @@
 let handler = async(m, { conn, text , command }) => {
-if (command == 'genjot') {
-if (!text) throw `Masukkan text!`
-              let awikwok = `Buruan, panggil gue SIMP, ato BAPERAN. ini MURNI PERASAAN GUE. Gue pengen genjot bareng ${text}. Ini seriusan, suaranya yang imut, mukanya yang cantik, apalagi badannya yang aduhai ningkatin gairah gue buat genjot ${text}. Setiap lapisan kulitnya pengen gue jilat. Saat gue mau crot, gue bakal moncrot sepenuh hati, bisa di perut, muka, badan, teteknya, sampai lubang burit pun bakal gue crot sampai puncak klimaks. Gue bakal meluk dia abis gue moncrot, lalu nanya gimana kabarnya, ngrasain enggas bareng saat telanjang. Dia bakal bilang kalau genjotan gue mantep dan nyatain perasaannya ke gue, bilang kalo dia cinta ama gue. Gue bakal bilang balik seberapa gue cinta ama dia, dan dia bakal kecup gue di pipi. Terus kita ganti pakaian dan ngabisin waktu nonton film, sambil pelukan ama makan hidangan favorit. Gue mau ${text} jadi pacar, pasangan, istri, dan idup gue. Gue cinta dia dan ingin dia jadi bagian tubuh gue. Lo kira ini copypasta? Kagak cok. Gue ngetik tiap kata nyatain prasaan gue. Setiap kali elo nanya dia siapa, denger ini baik-baik : DIA ISTRI GUE. Gue sayang ${text}, dan INI MURNI PIKIRAN DAN PERASAAN GUE.`
+if (command == 'boost') {
+if (!text) throw `Enter text!`
+               let awikwok = `Hurry up, call me SIMP, or BAPERAN. this is PURELY MY FEELINGS. I want to boost with ${text}. This is serious, her voice is cute, her face is beautiful, especially her body is fantastic, it increases my passion to boost ${text}. I want to lick every layer of his skin. When I want to crouch, I will cum with all my heart, it can be in the stomach, face, body, breasts, even to the sternum, I will cum until the climax. I'd hug him after I squirt, then ask him how he's doing, feeling hot together when he's naked. He will say that my boyfriend is steady and express his feelings for me, saying that he loves me. I'll tell him back how much I love him, and he'll kiss me on the cheek. Then we change clothes and spend time watching movies, while hugging and eating our favorite dishes. I want ${text} to be my girlfriend, partner, wife and life. I love him and want him to be a part of my body. Do you think this is a copypasta? It's okay. I type every word stating how I feel. Every time you ask who she is, listen carefully: SHE IS MY WIFE. I love ${text}, and THESE ARE PURELY MY THOUGHTS AND FEELINGS.`
+               m. reply(awikwok, null, m. mentionedJid ? {
+   mentions: m. mentionedJid
+} : {})
+}
+if (command == 'grandmother') {
+if (!text) throw `Enter text!`
+               let awikwok = `NENEN NENEN KEPENGEN NENEN SAME ${text}. ${text} MAKES ME WANT NENEN'S HUGE TREATMENTS. WRAPPED IN OFFICIAL TIGHT CLOTHING CROOOOTTOTOTOTOTOTO TOTO TOTO SANGE DOG CAVE BANGSAT. ${text}, PLEASE LISTEN WELL. PLEASE TAKE OFF YOUR CLOTHES JUST A MINUTE PLISSS IT'S REALLY PLEASED, LET MY DRY MOUTH CAN TASTE NENEN ${text}. LET ME SUCCEED YOUR NENEN ${text}. I WILL BE WILLING TO GIVE YOU ANY PRAYER, REGARDLESS OF THE MONEY I BURN, SPECIFICALLY FOR YOU. BUT PLEASE REALLY OPEN YOUR CLOTHES, I WANT TO NENEN. NENEN NENEEEEN NENEN ${text} WANGIIII`
+               m. reply(awikwok, null, m. mentionedJid ? {
+   mentions: m. mentionedJid
+} : {})
+}
+if (command == 'smelly') {
+if (!text) throw `Enter text!`
+               let awikwok = `${text} ${text} ${text} ❤️ ❤️ ❤️ Fragrant Fragrant Fragrant HU HA HU HA HU HA, aaaah the hair smells ${text} smells good I want to smell the fragrance ${text} AAAAAAAAH ~ The hair .... aaah her hair also want me to stroke it ~~ AAAAAH ${text} first time coming out in anime is too cute ❤️ ❤️ ❤️ so AAAAAAAAH ${text} AAAAA LUCCUUUUUUUUUUUUUUUU............ $ {text} AAAAAAAAAAAAAAAAAAAAGH ❤️ ❤️ ❤️what? ${text} is not real ? Just HALU you say? no, no, no, no, no, I DON'T BELIEVE THAT HE REALLY DOESN'T CARE FOR THE NATION!!!! I DON'T CARE ABOUT THE REALITY I DON'T CARE. ❤️ ❤️ ❤️ My ${text} ... ${text} on my laptop looks at me, ${text} .. do you believe me? aaaaaaaaaaah thanks ${text} I don't want to give up ${text} aaaaaah ❤️ ❤️ ❤️ YEAAAAAAAAAAAH I STILL HAVE MY OWN ${text} NOT THE SAME AAAAAAAAAAAAAAH`
+               m. reply(awikwok, null, m. mentionedJid ? {
+   mentions: m. mentionedJid
+} : {})
+}
+if (command == 'share') {
+if (!text) throw `Enter text!`
+               let awikwok = `I am 22 years old. I love ${text} so much, I have all the Figurines and their wallpapers. I pray every night and thank him for everything he has given me. "${text} is love" I said "${text} is my Life Purpose". My friend came to my room and said "HALU LU DOG !!". I know he's jealous of my loyalty to ${text}. Then I told him "GET BITCH !!". My friend slapped my head and told me to sleep. My head hurts and I cry. I lay down on the cold bed, then something warm touched me. It turns out that ${text} came into my room, I'm so happy to meet ${text}. He whispered into my ear "You are my dream" With his hands he reached for me. I spread my ass up for ${text}. He jabbed something into my Angus. it hurts so bad but i did it for ${text}. I want to give satisfaction to ${text}. He roared like a lion, as he released his love into my Angus. My friend came into my room and said "....... Dog". ${text} looked at my friend and said "It's all over" Using his Stellar Restoration ability ${text} left my room. "${text} is love" "${text} is life".`
+               m. reply(awikwok, null, m. mentionedJid ? {
+  mentions: m.mentionedJid
+} : {})
+}
+if (command == 'rape') {
+if (!text) throw `Enter text!`
+               let awikwok = `I REALLY WANT TO lick FEET *${text}*,I REALLY WANT TO lick EVERY PART OF HER FEET UNTIL I WAS DRIVING LIKE SWEAT AND FUCK HER EVERY DAY UNTIL OUR BODY TASTES, O LORD, I WANT TO MAKE CHILDREN WITH *${text}* AS MUCH AS ONE FOOTBALL TEAM AND MADE ANOTHER FOOTBALL TEAM TO AGAINST THE CHILDREN OF MY FIRST FOOTBALL TEAM THAT I MADE WITH *${text}* I WANT TO GET IN EVERY HOLE OF THEIR BODY, WOULD LIKE THAT'S A NOSE HOLE, EYE HOLE OR BOOL HOLE, THEN I WILL BE A HUMAN WHO CANNOT LIVE IF I DON'T ENTOD EVERY DAY.'
               m.reply(awikwok, null, m.mentionedJid ? {
   mentions: m.mentionedJid
 } : {})
 }
-if (command == 'nenen') {
-if (!text) throw `Masukkan text!`
-              let awikwok = `NENEN NENEN KEPENGEN NENEN SAMA ${text}. TETEK GEDE NAN KENCANG MILIK ${text} MEMBUATKU KEPENGEN NENEN. DIBALUT PAKAIAN KETAT YANG ADUHAI CROOOOTOTOTOTOTOT ANJING SANGE GUA BANGSAT. ${text}, PLIS DENGERIN BAIK BAIK. TOLONG BUKA BAJU SEBENTAR SAJA PLISSS TOLOOONG BANGET, BIARKAN MULUT KERINGKU BISA MENGECAP NENEN ${text}. BIARKAN AKU MENGENYOT NENENMU ${text}. AKU RELA NGASIH SESEMBAHAN APA AJA BERAPAPUN ITU DUIT YANG AKU BAKAR KHUSUS TERKHUSUS BUATMU. TAPI TOLOOOONG BANGET BUKA BAJUMU AKU MAU NENEN. NENEN NENEEEEN NENEN ${text} WANGIIII`
-              m.reply(awikwok, null, m.mentionedJid ? {
-  mentions: m.mentionedJid
-} : {})
 }
-if (command == 'wangy') {
-if (!text) throw `Masukkan text!`
-              let awikwok = `${text} ${text} ${text} ❤️ ❤️ ❤️ WANGI WANGI WANGI WANGI HU HA HU HA HU HA, aaaah baunya rambut ${text} wangi aku mau nyiumin aroma wanginya ${text} AAAAAAAAH ~ Rambutnya.... aaah rambutnya juga pengen aku elus-elus ~~ AAAAAH ${text} keluar pertama kali di anime juga manis ❤️ ❤️ ❤️ banget AAAAAAAAH ${text} AAAAA LUCCUUUUUUUUUUUUUUU............ ${text} AAAAAAAAAAAAAAAAAAAAGH ❤️ ❤️ ❤️apa ? ${text} itu gak nyata ? Cuma HALU katamu ? nggak, ngak ngak ngak ngak NGAAAAAAAAK GUA GAK PERCAYA ITU DIA NYATA NGAAAAAAAAAAAAAAAAAK PEDULI BANGSAAAAAT !! GUA GAK PEDULI SAMA KENYATAAN POKOKNYA GAK PEDULI. ❤️ ❤️ ❤️ ${text} gw ... ${text} di laptop ngeliatin gw, ${text} .. kamu percaya sama aku ? aaaaaaaaaaah syukur ${text} aku gak mau merelakan ${text} aaaaaah ❤️ ❤️ ❤️ YEAAAAAAAAAAAH GUA MASIH PUNYA ${text} SENDIRI PUN NGGAK SAMA AAAAAAAAAAAAAAH`
-              m.reply(awikwok, null, m.mentionedJid ? {
-  mentions: m.mentionedJid
-} : {})
-}
-if (command == 'curhat') {
-if (!text) throw `Masukkan text!`
-              let awikwok = `Usiaku 22 tahun. Aku sangat mencintai ${text}, aku punya semua Figurine dan wallpapernya. Aku berdoa setiap malam dan berterima kasih atas segala hal yang telah ia berikan kepadaku. "${text} adalah cinta" aku bilang "${text} adalah Tujuan Hidupku". Temanku datang ke kamarku dan berkata "HALU LU ANJING !!". Aku tau dia cemburu atas kesetiaanku kepada ${text}. Lalu kukatakan padanya "BACOT NJING !!". Temanku menampol kepalaku dan menyuruhku untuk tidur. Kepalaku sakit dan aku menangis. Aku rebahan di kasur yang dingin, lalu ada sesuatu yang hangat menyentuhku. Ternyata ${text} datang ke dalam kamarku, Aku begitu senang bertemu ${text}. Dia membisikan ke telingaku, "Kamu adalah impianku" Dengan tangannya dia meraih diriku. Aku melebarkan pantatku keatas demi ${text}. Dia menusukan sesuatu kedalam Anggusku. begitu sakit, tapi kulakukan itu demi ${text}. Aku ingin memberikan kepuasan kepada ${text}. Dia meraum bagaikan singa, disaat dia melepaskan cintanya kedalam Anggusku. Temanku masuk kekamarku dan berkata "....... Anjing". ${text} melihat temanku dan berkata " Semua sudah berakhir" Dengan menggunakan kemampuannya Stellar Restoration ${text} pergi meninggalkan kamarku. "${text} itu cinta" "${text} itu kehidupan".`
-              m.reply(awikwok, null, m.mentionedJid ? {
-  mentions: m.mentionedJid
-} : {})
-}
-if (command == 'perkosa') {
-if (!text) throw `Masukkan text!`
-              let awikwok = `GW BENAR-BENAR PENGEN JILAT KAKI *${text}*,GW PENGEN BANGET MENJILAT SETIAP BAGIAN KAKINYA SAMPAI AIR LIUR GW BERCUCURAN KAYAK AIR KERINGAT LALU NGENTOD DENGAN NYA SETIAP HARI SAMPAI TUBUH KITA MATI RASA, YA TUHAN GW INGIN MEMBUAT ANAK ANAK DENGAN *${text}* SEBANYAK SATU TIM SEPAK BOLA DAN MEMBUAT SATU TIM SEPAK BOLA LAINYA UNTUK MELAWAN ANAK-ANAK TIM SEPAK BOLA PERTAMA GW  YANG GW BUAT SAMA *${text}* GW PENGEN MASUK KE SETIAP LUBANG TUBUHNYA, MAU ITU LUBANG HIDUNG LUBANG MATA MAUPUN LUBANG BOOL, KEMUDIAN GW AKAN MANUSIA YANG TIDAK BISA HIDUP KALO GW GA ENTOD SETIAP HARI.`
-              m.reply(awikwok, null, m.mentionedJid ? {
-  mentions: m.mentionedJid
-} : {})
-}
-}
-handler.command = handler.help = ['genjot', 'nenen', 'wangy', 'curhat', 'perkosa']
+handler.command = handler.help = ['boost', 'grandmother', 'smelly', 'share', 'rape']
 handler.tags = ['fun']
 
 export default handler
