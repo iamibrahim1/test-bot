@@ -9,7 +9,7 @@ if (command == 'kodenuklir') {
 let konuk = `
 	「 KODE NUKLIR 」
 
-Code Nuklear [Doujin Hentai Genre NTR] (Netorare)
+Code Nuclear [Doujin Hentai Genre NTR] (Netorare)
 
 Easy Mode :
 • https://nhentai.net/g/316755/
@@ -47,7 +47,7 @@ Hard Mode :
 • https://nhentai.net/g/311882/
 • https://nhentai.net/g/312180/
 
-Kodeu nuklir ti MILF Oneesan dugi ka bro ***** loli
+Nuclear code ti MILF Onee San dugi ka bro ***** loli
 
 https://nhentai.net/g/271890/
 https://nhentai.net/g/272057/
@@ -502,6 +502,6 @@ conn.sendButton(m.chat, konuk, author, null, [['🔄 Next 🔄', `/${command}`]]
 
 }
 
-handler.command =  handler.help = ['trapito', 'kodenuklir']
+handler.command =  handler.help = ['trapito', 'nuclearcode']
 handler.tags = ['nsfw']
 export default  handler
