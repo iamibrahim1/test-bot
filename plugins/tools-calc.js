@@ -4,7 +4,7 @@ let handler = async (m, { conn, text }) => {
   if (id in conn.math) {
     clearTimeout(conn.math[id][3])
     delete conn.math[id]
-    conn.sendButton(m.chat, `Jirr.. Ngecit -_- pake kalkulator.. Gpp lahh\nPencet dibawah, meresahkan`, wm, null, [
+    conn.sendButton(m.chat, `Jirr.. Squeak -_- use a calculator.. It's okay \ Press below, it's annoying`, wm, null, [
         ['Ngechit', '/ngechit']
     ], m)
   }
