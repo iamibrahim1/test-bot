@@ -6,7 +6,7 @@ let handler = async (m, { conn, usedPrefix, command }) => {
 		mime = (q.msg || q).mimetype || q.mediaType || ''
 	if (/image/g.test(mime)) {
 		let img = await webp2png(await q.download()),
-			url = API('violetics', '/api/media/image-enhancer', { img }, 'apikey')
+			url =` `
 		conn.sendMessage(m.chat, { image: { url }}, { quoted: m })
 	} else throw `Send/reply an image with command ${usedPrefix + command}`
 }
