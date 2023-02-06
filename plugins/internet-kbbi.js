@@ -16,8 +16,8 @@ ${v.means.map(v => '- ' + v).join('\n`')}
 `).join('\n').trim()}
 
 Note:
-p = Partikel: kelas kata yang meliputi kata depan, kata sambung, kata seru, kata sandang, ucapan salam
-n = Nomina: kata benda
+p = Particle: word class which includes prepositions, conjunctions, interjections, articles, greetings
+n = noun: noun
 `.trim()
 await conn.sendButton(m.chat, caption, wm, Buffer.alloc(0), [
                 ['Next', `${usedPrefix + command}`]
@@ -26,7 +26,7 @@ await conn.sendButton(m.chat, caption, wm, Buffer.alloc(0), [
 throw eror
 }
 }
-handler.help = ['kbbi <teks>']
+handler.help = ['kbbi <text>']
 handler.tags = ['internet']
 handler.command = /^kbbi$/i
 
