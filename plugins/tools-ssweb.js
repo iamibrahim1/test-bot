@@ -10,7 +10,7 @@ let handler = async(m, { conn, usedPrefix, text, args, command }) => {
 	let ss = await uploadImage(st)
 	let ss2 = await ssweb2(url)
 	let lis = [
-'https://shot.screenshotapi.net/screenshot?token=WCCYKR0-X5CMMV0-JB4G5Z5-P6SPC8R&url=' + args[0] + '&full_page=true&fresh=true&output=image&file_type=jpg',
+'https://saipulanuar.ga/api/download/ssweb?url= + args[0] + '',
 'https://api.popcat.xyz/screenshot?url=' + args[0],
 'https://api.apiflash.com/v1/urltoimage?access_key=7eea5c14db5041ecb528f68062a7ab5d&wait_until=page_loaded&url=' + args[0],
 'https://image.thum.io/get/fullpage/' + args[0],
@@ -18,7 +18,7 @@ ss,
 ss2
 ]
 let liss = [
-'shot.screenshotapi',
+'screenshot',
 'api.popcat',
 'api.apiflash',
 'image.thum.io',
@@ -31,8 +31,8 @@ let row = Object.keys(lis, liss).map((v, index) => ({
 		rowId: usedPrefix + 'get ' + lis[v]
 	}))
 	let button = {
-		buttonText: `☂️ Tema Disini ☂️`,
-		description: `⚡ Silakan pilih tema di tombol di bawah...\n*Teks yang anda kirim:* ${text}\n\nKetik ulang *${usedPrefix + command}* teks anda untuk mengubah teks lagi`,
+		buttonText: `☂️ Theme Here ☂️`,
+description: `⚡ Please choose a theme in the button below...\n*Text to send:* ${text}\n\nRetype *${usedPrefix + command}* your text to change the text again`,
 		footerText: wm
 	}
 	return conn.sendListM(m.chat, button, row, m)
