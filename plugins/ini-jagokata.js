@@ -2,7 +2,7 @@ import axios from "axios"
 import cheerio from "cheerio"
 
 let handler = async (m, { conn, text, args, usedPrefix, command }) => {
-if (!text) throw '\nSertakan querinya kak !\n\nContoh: .jagokata Sedih'
+if (!text) throw '\nSertakan querinya kak !\n\nContoh: .jagokata sad'
     m.reply(wait)
     let res = await jagoKata(text)
     throw res[0].isi + '\n\n' + res[0].by
