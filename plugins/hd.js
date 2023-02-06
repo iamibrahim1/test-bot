@@ -4,11 +4,11 @@ import FormData from 'form-data'
 let handler = async (m) => {
 
 try {
- await m.reply('Sedang membuat...')
+ await m.reply('Currently making...')
   let q = m.quoted ? m.quoted : m
   let mime = (q.msg || q).mimetype || ''
   if (!mime) throw 'Fotonya Mana?'
-  if (!/image\/(jpe?g|png)/.test(mime)) throw `Tipe ${mime} tidak didukung!`
+  if (!/image\/(jpe?g|png)/.test(mime)) throw `The ${mime} type is not supported!`
   let img = await q.download()
   let body = new FormData
   body.append('image', img, 'image')
