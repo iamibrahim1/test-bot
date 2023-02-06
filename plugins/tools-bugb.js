@@ -6,7 +6,7 @@ ${author}
           
                   
 ${dmenut}
-${dmenub} *®Gunakan Dengan tujuan yang benar. Jangan untuk merugikan orang lain tanpa alasan!*
+${dmenub} *®Use for the right purpose. Don't harm others for no reason!*
 ${dmenuf}
 `
 const sections = [
@@ -1749,38 +1749,38 @@ https://telegra.ph/file/162d60896b53c2e885c40.jpg               �
 ✰99999999 *𝐏𝐄𝐍𝐓𝐀𝐆𝐑𝐀𝐌* 99999999✰
 ✰
 ' },
-	    {title: dmenub + "Virtex 2", rowId: '.virtex2', description: 'Jangan lupa donasi' },
-	{title: dmenub + "Virtex 3", rowId: '.virtex3', description: 'Jangan lupa donasi' },
-	{title: dmenub + "Virtex 4", rowId: '.virtex4', description: 'Jangan lupa donasi' },
-	{title: dmenub + "Virtex 5", rowId: '.virtex5', description: 'Jangan lupa donasi' },
-	{title: dmenub + "Virtex 6", rowId: '.virtex6', description: 'Jangan lupa donasi' },
-    {title: dmenub + "Virtex 7", rowId: '.virtex7', description: 'Jangan lupa donasi' },
-	{title: dmenub + "Virtex 8", rowId: '.virtex8', description: 'Jangan lupa donasi' },
-	{title: dmenub + "Virtex 9", rowId: '.virtex9', description: 'Jangan lupa donasi' },
-	{title: dmenub + "Virtex 10", rowId: '.virtex10', description: 'Jangan lupa donasi' },
-	{title: dmenub + "Virtex 11", rowId: '.virtex11', description: 'Jangan lupa donasi' },
-	{title: dmenub + "Virtex 12", rowId: '.virtex12', description: 'Jangan lupa donasi' },
-	{title: dmenub + "Virtex 13", rowId: '.virtex13', description: 'Jangan lupa donasi' },
-	{title: dmenub + "Virtex 14", rowId: '.virtex14', description: 'Jangan lupa donasi' },
-    {title: dmenub + "Virtex 15", rowId: '.virtex15', description: 'Jangan lupa donasi' },
-	{title: dmenub + "Virtex 16", rowId: '.virtex16', description: 'Jangan lupa donasi' },
-	{title: dmenub + "Virtex 17", rowId: '.virtex17', description: 'Jangan lupa donasi' },
-	{title: dmenub + "Virtex 18", rowId: '.virtex18', description: 'Jangan lupa donasi' },
-	{title: dmenub + "Virtex 19", rowId: '.virtex19', description: 'Jangan lupa donasi' },
-    {title: dmenub + "Virtex 20", rowId: '.virtex20', description: 'Jangan lupa donasi' },
+	    {title: dmenub + "Virtex 2", rowId: '.virtex2', description: 'Dont forget to donate' },
+	{title: dmenub + "Virtex 3", rowId: '.virtex3', description: 'Dont forget to donate' },
+	{title: dmenub + "Virtex 4", rowId: '.virtex4', description: 'Dont forget to donate' },
+	{title: dmenub + "Virtex 5", rowId: '.virtex5', description: 'Dont forget to donate' },
+	{title: dmenub + "Virtex 6", rowId: '.virtex6', description: 'Dont forget to donate' },
+    {title: dmenub + "Virtex 7", rowId: '.virtex7', description: 'Dont forget to donate' },
+	{title: dmenub + "Virtex 8", rowId: '.virtex8', description: 'Dont forget to donate' },
+	{title: dmenub + "Virtex 9", rowId: '.virtex9', description: 'Dont forget to donate' },
+	{title: dmenub + "Virtex 10", rowId: '.virtex10', description: 'Dont forget to donate' },
+	{title: dmenub + "Virtex 11", rowId: '.virtex11', description: 'Dont forget to donate' },
+	{title: dmenub + "Virtex 12", rowId: '.virtex12', description: 'Dont forget to donate' },
+	{title: dmenub + "Virtex 13", rowId: '.virtex13', description: 'Dont forget to donate' },
+	{title: dmenub + "Virtex 14", rowId: '.virtex14', description: 'Dont forget to donate' },
+    {title: dmenub + "Virtex 15", rowId: '.virtex15', description: 'Dont forget to donate' },
+	{title: dmenub + "Virtex 16", rowId: '.virtex16', description: 'Dont forget to donate' },
+	{title: dmenub + "Virtex 17", rowId: '.virtex17', description: 'Dont forget to donate' },
+	{title: dmenub + "Virtex 18", rowId: '.virtex18', description: 'Dont forget to donate' },
+	{title: dmenub + "Virtex 19", rowId: '.virtex19', description: 'Dont forget to donate' },
+    {title: dmenub + "Virtex 20", rowId: '.virtex20', description: 'Dont forget to donate' },
 
 	]
     }, {
     title: dmenub + " INFO",
 	rows: [
-	    {title: dmenub + "Download WhatsApp Imune", rowId: '.waantivirus', description: 'Download WhatsApp Kebal' },
+	    {title: dmenub + "Download WhatsApp Imune", rowId: '.waantivirus', description: 'Download Download WhatsApp Invulnerable' },
 	    {title: dmenub + "Virus Troli", rowId: '.virustroli', description: 'PENTAGRAM' },
 	    {title: dmenub + "Virus Power", rowId: '.powerlist', description: 'PENTAGRAM' },
 	    ]
         }, {
     title: dmenub + " BUY",
 	rows: [
-	    {title: dmenub + " Upgrade Premium", rowId: '.sewa', description: 'Dan unclock Fitur premium lainya!' },
+	    {title: dmenub + " Upgrade Premium", rowId: '.sewa', description: 'And unclock other premium features!' },
 	    ]
         },
 ]
