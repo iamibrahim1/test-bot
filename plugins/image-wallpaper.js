@@ -100,7 +100,7 @@ let arr_url = ["aesthetic",
           [arr_url[v].toUpperCase(), usedPrefix + "get https://web-production-7c28.up.railway.app/api/wallpaper/" + arr_url[v] + "?apikey=APIKEY", "➥"]
         ]])
 	})
-	if (!text) return conn.sendList(m.chat, htki + " 📺 Models 🔎 " + htka, `⚡ Silakan pilih Model di tombol di bawah...\n*Teks yang anda kirim:* ${text}\n\nKetik ulang *${usedPrefix + command}* teks anda untuk mengubah teks lagi`, author, "☂️ M O D E L ☂️", listSections, m)
+	if (!text) return conn.sendList(m.chat, htki + " 📺 Models 🔎 " + htka, `⚡ Please select your Model in the button below...\n*Text to send:* ${text}\n\nRetype *${usedPrefix + command}* your text to change the text again`, author, "☂️ M O D E L ☂️ ", listSections, m)
     const res = await (/2/.test(command) ? wallpaperv2 : wallpaper)(text)
     const img = res[Math.floor(Math.random() * res.length)]
     conn.sendButton(m.chat, `Result from *${text}*`, wm, await(await fetch(img)).buffer(), [['🎀 Menu', '/menu']], fakes, adReply)
