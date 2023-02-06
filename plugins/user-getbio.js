@@ -9,7 +9,7 @@ let handler = async (m, { conn, text, command }) => {
     let setAt = moment.utc(bio.setAt, 'YYYY-MM-DD\THH:mm:ss\Z').format('YYYY-MM-DD')
     conn.reply(m.chat, '*Status:* ' + bio.status + '\n*Set At:* ' + setAt, fakes, adReply)
     } catch {
-    throw 'Terjadi kesalahan'
+    throw 'There is an error'
     }
 }
 handler.help = ['getbio <@tag/reply>']
