@@ -5,7 +5,7 @@ import moment from 'moment-timezone'
 let handler = async (m, { conn, text, usedPrefix, command }) => {
 let str = `*[ Source Code ]*
 - My Github:
-${sgh}`
+This bot is tranlated and fixed version of https://github.com/Frezzy-XD/Maxxy-V2`
 await conn.relayMessage(m.chat,  {
     requestPaymentMessage: {
       currencyCodeIso4217: 'USD',
