@@ -10,8 +10,7 @@ let handler = async (m, { conn, args, usedPrefix, text, command }) => {
           ['Get Image', usedPrefix + 'get ' + v.thumb, '\n⌚ *By:* ' + author + '\n *Link:* ' + v.thumb]
         ]])
 	})
-	return conn.sendList(m.chat, htki + ' 📺 nightcafe Search 🔎 ' + htka, `⚡ Silakan pilih nightcafe Search di tombol di bawah...\n*Teks yang anda kirim:* ${text}\n\nKetik ulang *${usedPrefix + command}* teks anda untuk mengubah teks lagi`, author, `☂️ nightcafe Search Disini ☂️`, listSections, m)
-    }
+return conn.sendList(m.chat, htki + ' 📺 nightcafe Search 🔎 ' + htka, `⚡ Please select nightcafe Search in the button below...\n*Text to send:* ${text}\n\nType repeat *${usedPrefix + command}* your text to change the text again`, author, `☂️ nightcafe Search Here ☂️`, listSections, m)    }
 handler.help = ['nightcafe']
 handler.tags = ['internet']
 handler.command = /^nightcafe$/i
