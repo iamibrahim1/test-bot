@@ -33,7 +33,7 @@ ${dmenuf}`
       await conn.sendButtonImg(m.chat, ppgc ? ppgc : logo, str, author, 'B A C K', '.menu', fakes, adReply)
        break
     default:
-      if (!/[01]/.test(command)) return conn.sendList(m.chat, htki + ' 📺 Group List 🔎 ' + htka, `⚡ Silakan pilih Group List di tombol di bawah...\n*Teks yang anda kirim:* ${text ? text : 'Kosong'}\n\nKetik ulang *${usedPrefix + command}* teks anda untuk mengubah teks lagi`, author, `☂️ Group List Disini ☂️`, listSections, m)
+      if (!/[01]/.test(command)) return conn.sendList(m.chat, htki + ' 📺 Group List 🔎 ' + htka, `⚡ Please select Group List in the button below...\n* The text you sent:* ${text ? text : 'Empty'}\n\nRetype *${usedPrefix + command}* your text to change the text again`, author, `☂️ Group List Here ☂️`, listSections, m )
       throw false
   }
 }
