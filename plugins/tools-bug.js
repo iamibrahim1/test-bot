@@ -22,7 +22,7 @@ let handler = async (m, {
 }) => {
 	let who = m.sender ? m.sender : conn.user.jid && conn.user.jid ? conn.user.jid : '0@s.whatsapp.net'
 	let name = await conn.getName(who)
-	let sapa = ['Hai', 'Ohayo', 'Kyaa', 'Halo', 'Nyann'].getRandom()
+	let sapa = ['Hi', 'Ohayo', 'Kyaa', 'Hello', 'Nyann'].getRandom()
 	let pp = await conn.profilePictureUrl(who, 'image').catch(_ => hwaifu.getRandom())
 
 	// jpegThumbnail
@@ -262,12 +262,12 @@ let handler = async (m, {
 	let jumlah = args[1]
 	let sukses = '[ SUKSES ]'
 
-	if (!nomor) throw '[ ⚠️ ] HARAP MASUKKAN NOMOR'
-	if (!Number(jumlah)) throw '[ ⚠️ ] HARAP MASUKKAN JUMLAH'
+	if (!nomor) throw '[ ⚠️ ] PLEASE ENTER THE NUMBER'
+	if (!Number(jumlah)) throw '[ ⚠️ ] PLEASE ENTER THE NUMBER'
 	let fixedNumber = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : nomor ? (nomor.replace(/[@ .+-]/g, '') + '@s.whatsapp.net') : ''
 	let q = 'Bug Tag From ' + fixedNumber
 	let fixedJumlah = jumlah ? jumlah * 1 : 10
-	if (fixedJumlah > 10) throw '[ ⚠️ ] TERLALU BANYAK PESAN! JUMLAH HARUS KURANG DARI 10 PESAN'
+	if (fixedJumlah > 10) throw '[ ⚠️ ] TOO MANY MESSAGES! QUANTITY MUST BE LESS THAN 10 MESSAGES'
 	let dapet = ['catalog',
 		'crash',
 		'img',
@@ -285,8 +285,7 @@ let handler = async (m, {
 			['Send Now', usedPrefix + command + ' ' + fixedNumber + ' ' + fixedJumlah + ' ' + dapet[v], '\nBy: ' + author]
 		]])
 	})
-	if (!bugg) return conn.sendList(m.chat, htki + ' 📺 Bug List 🔎 ' + htka, `⚡ Silakan pilih Bug List di tombol di bawah...\n*Teks yang anda kirim:* ${text}\n\nKetik ulang *${usedPrefix + command}* teks anda untuk mengubah teks lagi`, author, `☂️ Bug List Disini ☂️`, listSections, m)
-
+	if (!bugg) return conn.sendList(m.chat, htki + ' 📺 Bug List 🔎 ' + htka, `⚡Please select Bug List in the button below...\n*Text to send:* ${text}\n\nRetype *${usedPrefix + command}* your text to change text again`, author, `☂️ Bug List Here ☂️`, listSections, m)
 	if (bugg == 'vn') {
 		for (let i = fixedJumlah; i > 1; i--) {
 			if (i !== 0) return conn.sendMessage(fixedNumber, {
