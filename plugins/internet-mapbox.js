@@ -21,7 +21,7 @@ let v = await ke.json()
 ['Style: G', usedPrefix + command + ' nice https://api.mapbox.com/styles/v1/mapbox/streets-v11/static/pin-s-a+9ed4bd(' + lon + ',' + lat + '),pin-s-b+000(' + lon + ',' + lat + '),path-5+f44-0.5(%7DrpeFxbnjVsFwdAvr@cHgFor@jEmAlFmEMwM_FuItCkOi@wc@bg@wBSgM)/auto/500x300?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', v.alpha2]
         ]])
 	})
-	if (!args[0]) return conn.sendList(m.chat, htki + ' 📺 MAPS Search 🔎 ' + htka, `⚡ Silakan pilih MAPS Search di tombol di bawah...\n*Teks yang anda kirim:* ${text}\n\nKetik ulang *${usedPrefix + command}* teks anda untuk mengubah teks lagi`, author, `☂️ MAPS Search Disini ☂️`, listSections, m)
+	if (!args[0]) return conn.sendList(m.chat, htki + ' 📺 MAPS Search 🔎 ' + htka, `⚡ Please select MAPS Search in the button below...\n*Text to send:* ${text}\n\nRetype *${usedPrefix + command}* your text to change the text again`, author, `☂️ MAPS Search Here ☂️`, listSections, m)
 	
 	if (args[0] == 'nice') {
 	let cap = 'RESULT'
@@ -46,7 +46,7 @@ if (args[0] == 'custom') {
         ]])
 	})
 	if (lon||lat) return conn.sendList(m.chat, htki + ' 📺 MAPS Search 🔎 ' + htka, `⚡ Silakan pilih MAPS Search di tombol di bawah...\n*Teks yang anda kirim:* ${text}\n\nKetik ulang *${usedPrefix + command}* teks anda untuk mengubah teks lagi`, author, `☂️ MAPS Search Disini ☂️`, listSections, m)
-	else if (!lon||!lat) throw 'Masukkan Longitude dan Latitude\nEx. .mapbox custom 16.000 16.000'
+	else if (!lon||!lat) throw 'Enter Longitude and Latitude\nEx. .mapbox custom 16.000 16.000'
 }
 
 }
