@@ -15,7 +15,7 @@ import fetch from 'node-fetch'
 let handler  = async (m, { conn, command, args, usedPrefix, DevMode }) => {
 	
 	// ------- OTHER ------
-  if (global.db.data.chats[m.chat].nsfw == false && m.isGroup) return conn.sendButton(m.chat, '❗ ᴏᴘᴛɪᴏɴs ɴsғᴡ ᴅɪᴄʜᴀᴛ ɪɴɪ ʙᴇʟᴜᴍ ᴅɪɴʏᴀʟᴀᴋᴀɴ ᴏʟᴇʜ ᴀᴅᴍɪɴ ɢʀᴏᴜᴘ',botdate, null, [['ᴇɴᴀʙʟᴇ', '.on nsfw']], m)
+  if (global.db.data.chats[m.chat].nsfw == false && m.isGroup) return conn.sendButton(m.chat, '❗ THESE NSFW OPTIONS HAVE NOT BEEN TURNED BY GROUP ADMIN',botdate, null, [['ᴇɴᴀʙʟᴇ', '.on nsfw']], m)
   
   let type = (args[0] || '').toLowerCase()
   let _type = (args[0] || '').toLowerCase()
@@ -97,12 +97,12 @@ let yuri = (ch == true ? false : true)
 //---------- TEXT -----------
 let next = 'ɴ ᴇ x ᴛ'
 let fot = botdate
-let txtprem = '❗ ɴsғᴡ ɪɴɪ ᴋʜᴜsᴜs ᴜsᴇʀ ᴘʀᴇᴍɪᴜᴍ\nʜᴀʀᴀᴘ ʜᴜʙᴜɴɢɪ ᴏᴡɴᴇʀ ᴜɴᴛᴜᴋ ᴍᴇᴍʙᴇʟɪ ᴘʀᴇᴍɪᴜᴍ ! 📞'
+let txtprem = '❗ THIS NSFW IS SPECIALLY FOR PREMIMUM USERS /n PLEASE CONTACT THE OWNER TO BUY THE PREMIMUM ! 📞'
 let p = '🅟 | '
 let f = 'Ⓕ | '
 
 let tekk = `\`\`\`➩ Random Image Nsfw ${args[0] ? args[0].capitalize() : false}\`\`\` `
-  let teks = `┊ 📮 Silahkan Pilih Dibawah!
+  let teks = `┊ 📮 Please Select Below!
 ┊› Atau ketik ${usedPrefix}nsfw neko
 ❏──···––`
 //---------------------------
