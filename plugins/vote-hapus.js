@@ -4,14 +4,14 @@ let handler = async (m, { conn, usedPrefix, isAdmin, isOwner }) => {
     }
     let id = m.chat
     conn.vote = conn.vote ? conn.vote : {}
-    if (!(id in conn.vote)) await conn.sendButton(m.chat, `Tidak ada voting digrup ini!`, author, null, [
+    if (!(id in conn.vote)) await conn.sendButton(m.chat, `There is no voting in this group!`, author, null, [
     ['vote', `${usedPrefix}+vote`],
     ['menu', `${usedPrefix}menu`]
 ], m)
     delete conn.vote[id]
     m.reply(`Berhasil!`)
 }
-handler.help = ['hapusvote']
+handler.help = ['deletevote']
 handler.tags = ['vote']
 handler.command = /^(delete|hapus|-)vote$/i
 
