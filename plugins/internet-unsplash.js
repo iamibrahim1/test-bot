@@ -16,8 +16,7 @@ let handler = async (m, { conn, args, usedPrefix, text, command }) => {
           ['Get Full', usedPrefix + 'get ' + v.user.tags[0].source.cover_photo.urls.full, des]
         ]])
 	})
-	return conn.sendList(m.chat, htki + ' 📺 Unsplash Search 🔎 ' + htka, `⚡ Silakan pilih Unsplash Search di tombol di bawah...\n*Teks yang anda kirim:* ${text}\n\nKetik ulang *${usedPrefix + command}* teks anda untuk mengubah teks lagi`, author, `☂️ Unsplash Search Disini ☂️`, listSections, m)
-    }
+return conn.sendList(m.chat, htki + ' 📺 Unsplash Search 🔎 ' + htka, `⚡ Please select Unsplash Search in the button below...\n*Text to send:* ${text}\n\nType repeat *${usedPrefix + command}* your text to change the text again`, author, `☂️ Unsplash Search Here ☂️`, listSections, m)    }
 handler.help = ['unsplesh']
 handler.tags = ['internet']
 handler.command = /^unsplesh$/i
