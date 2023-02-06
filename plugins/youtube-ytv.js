@@ -11,7 +11,7 @@ await conn.sendMessage(m.chat, {
 let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender
 let pp = await conn.profilePictureUrl(who).catch(_ => hwaifu.getRandom())
 let name = await conn.getName(who)
-if (!args || !args[0]) throw '[ Masukkan Url Youtube! ]'
+if (!args || !args[0]) throw '[ Enter Youtube Url! ]'
 try {
   let chat = global.db.data.chats[m.chat]
   const isY = /y(es)/gi.test(args[1])
@@ -49,17 +49,17 @@ try {
 *${htjava} Title:* ${title}
 *${htjava} Filesize:* ${video.fileSizeH}`, title + '.mp4', await(await fetch(link)).buffer(), [["🎥 G E T", usedPrefix + 'get ' + link], ["🎶 Search", usedPrefix + 'yts ' + text]], m, adReplyS)
   } catch (e) {
-let res = await axios('https://violetics.pw/api/downloader/youtube?apikey=beta&url=' + text)
+let res = await axios('https://api.akuari.my.id/downloader/youtube3?link==' + text)
 let json = res.data
-let dapet = json.result.url
+let dapet = json.mp4.download
 	let row = Object.values(dapet).map((v, index) => ({
 		title: htjava + '📌 Quality: ' + v.subname,
 		description: '\n⌚ Host: ' + json.result.hosting + '\n⏲️ Title: ' + json.result.meta.title + '\n📎 URL: ' + v.url + '\n📌 Source: ' + json.result.meta.source + '\n📌 Duration: ' + json.result.meta.duration,
 		rowId: usedPrefix + 'get ' + v.url
 	}))
 	let button = {
-		buttonText: `☂️ ${command} Search Disini ☂️`,
-		description: `⚡ Hai ${name}, Silakan pilih ${command} Search di tombol di bawah...\n*Teks yang anda kirim:* ${text}\n\nKetik ulang *${usedPrefix + command}* teks anda untuk mengubah teks lagi`,
+		buttonText: `☂️${command} Search Here ☂️`,
+description: `⚡ Hi ${name}, Please select ${command} Search in the button below...\n*Text to send:* ${text}\n\nRetype *${usedPrefix + command}* your text to change the text again`,
 		footerText: wm
 	}
 	return conn.sendListM(m.chat, button, row, m)
