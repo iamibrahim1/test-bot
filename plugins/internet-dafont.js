@@ -2,7 +2,7 @@ import { dafontSearch, dafontDown } from '../lib/dafont.js'
 import fetch from 'node-fetch'
 
 let handler = async(m, { conn, text, usedPrefix, command }) => {
-  if (!text) throw 'Harap Masukan Query'
+  if (!text) throw 'Please Enter Queries'
   if (command == 'dafonts') {
   try {
     let res = await dafontSearch(text)
@@ -13,7 +13,7 @@ let handler = async(m, { conn, text, usedPrefix, command }) => {
 	}))
 	let button = {
 		buttonText: `☂️ ${command} Search Disini ☂️`,
-		description: `⚡ Silakan pilih ${command} Search di tombol di bawah...\n*Teks yang anda kirim:* ${text}\n\nKetik ulang *${usedPrefix + command}* teks anda untuk mengubah teks lagi`,
+		description: `⚡ Please select ${command} Search in the button below...\n*Text to send:* ${text}\n\nRetype *${usedPrefix + command}* your text to change text again`,
 		footerText: wm
 	}
 	return await conn.sendListM(m.chat, button, row, m)
@@ -29,9 +29,8 @@ let row = Object.values(res).map((v, index) => ({
 		rowId: usedPrefix + 'get ' + v.down
 	}))
 	let button = {
-		buttonText: `☂️ ${command} Search Disini ☂️`,
-		description: `⚡ Silakan pilih apkpure ${command} di tombol di bawah...\n*Teks yang anda kirim:* ${text}\n\nKetik ulang *${usedPrefix + command}* teks anda untuk mengubah teks lagi`,
-		footerText: wm
+		buttonText: `☂️ ${command} Search Here ☂️`,
+                description: `⚡ Please select apkpure ${command} in the button below...\n*Text to send:* ${text}\n\nRetype *${usedPrefix + command}* your text to change the text again `,		footerText: wm
 	}
 	return await conn.sendListM(m.chat, button, row, m)
 	} catch (e) { throw eror }
