@@ -34,8 +34,7 @@ if (command == 'poetry') {
           [v.author, usedPrefix + 'poetrygetb ' + text + '|' + index, v.linecount + ' baris']
         ]])
 	})
-	return conn.sendList(m.chat, htki + ' 📺 Poetry 🔎 ' + htka, '⚡ Berikut daftar List Poetry...\nAkses langsung dengan copy namanya', author, '☂️ Klik Disini ☂️', listSections, m)
-  }
+return conn.sendList(m.chat, htki + ' 📺 Poetry 🔎 ' + htka, '⚡ Heres a list of Poetry Lists...\nAccess directly by copying the name', author, '☂️ Click Here ☂️', listSections, m)  }
   
   
   if (command == 'poetrygetb') {
