@@ -6,7 +6,7 @@ let handler = async (m, { conn, args, text, usedPrefix, command }) => {
 
 let template = (args[0] || '').toLowerCase()
 if (!args[0]) {
-let caption = `*Contoh Penggunaan*
+let caption = `*Usage Example*
 
 ${usedPrefix + command} tai @user
 
@@ -106,13 +106,13 @@ let pp = await conn.profilePictureUrl(who).catch(_ => hwaifu.getRandom())
 let name = await conn.getName(who)
     let som = 100
     let sim = som.getRandom()
-    let caption = `Tingkat ke *${args[0]}an* \nAtas nama ${name ? args[1] : '*Semua Member*'} ${'@' + who.split("@")[0] ? args[1] : '*Semua Member*'} \nAdalah Sebesar *${Number(sim).toFixed(2)}%*`
+    let caption = `Level to *${args[0]}an* \nIn the name of ${name ? args[1] : '*All Members*'} ${'@' + who.split("@")[0] ? args[1] : '*All Members*'} \nIs *${Number(sim).toFixed(2)}%*`
   await conn.send2ButtonDoc(m.chat, caption, author, '🔖 Ok', 'Huuu', 'ℹ️ Menu', '.menu', fakes, adReply)
 break
             }
        }
 }
-handler.help = ['cek <menu> <user>']
+handler.help = ['check <menu> <user>']
 handler.tags = ['tools'] 
-handler.command = /^cek$/i
+handler.command = /^check$/i
 export default handler
