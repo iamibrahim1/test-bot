@@ -11,7 +11,7 @@ if (!text) throw 'Input Username 500px'
           ['Get Image', usedPrefix + 'get ' + v.img, '\n⌚ *By:* ' + v.pubDate + '\n *Link:* ' + v.link + '\n⌚ *Epoch:* ' + v.epoch]
         ]])
 	})
-	return conn.sendList(m.chat, htki + ' 📺 500px Search 🔎 ' + htka, `⚡ Silakan pilih 500px Search di tombol di bawah...\n*Teks yang anda kirim:* ${text}\n\nKetik ulang *${usedPrefix + command}* teks anda untuk mengubah teks lagi`, author, `☂️ 500px Search Disini ☂️`, listSections, m)
+	return conn.sendList(m.chat, htki + ' 📺 500px Search 🔎 ' + htka, `⚡ Please select 500px Search in the button below...\n*Text to send:* ${text}\n\nRetype *${usedPrefix + command}* your text to change the text again`, author, `☂️ 500px Search Here ☂️`, listSections, m)
     }
 handler.help = ['500px']
 handler.tags = ['internet']
