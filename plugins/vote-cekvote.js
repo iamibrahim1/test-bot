@@ -8,7 +8,7 @@ let handler = async (m, { conn, groupMetadata, usedPrefix }) => {
 ], m)
 
     let [reason, upvote, devote] = conn.vote[id]
-    let caption = `*${htjava} DAFTAR VOTE ${htjava}*
+    let caption = `*${htjava} VOTE LIST ${htjava}*
 *Alasan:* ${reason}
 
 *${htjava} UPVOTE ${htjava}*
@@ -26,11 +26,11 @@ ${dmenuf}
 await conn.sendButton(m.chat, caption, author, null, [
         ['upvote', `${usedPrefix}upvote`],
         ['devote', `${usedPrefix}devote`],
-        ['hapusvote', `${usedPrefix}-vote`]
+        ['deletevote', `${usedPrefix}-vote`]
     ], m, { mentions: conn.parseMention(caption) })
 }
-handler.help = ['cekvote']
+handler.help = ['checkvote']
 handler.tags = ['vote']
-handler.command = /^cekvote$/i
+handler.command = /^checkvote$/i
 
 export default handler
