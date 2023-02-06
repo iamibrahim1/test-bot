@@ -13,7 +13,7 @@ let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? c
 let pp = await conn.profilePictureUrl(who).catch(_ => hwaifu.getRandom())
 let name = await conn.getName(who)
 
-  if (!args || !args[0]) throw '[ Masukkan Url Youtube! ]'
+  if (!args || !args[0]) throw '[ Enter Youtube Url! ]'
   let chat = global.db.data.chats[m.chat]
   const isY = /y(es)/gi.test(args[1])
   const { thumbnail, audio: _audio, title } = await youtubedl(args[0]).catch(async _ => await youtubedlv2(args[0])).catch(async _ => await youtubedlv3(args[0]))
@@ -56,7 +56,7 @@ let dapet = p.result
           [v.ext, usedPrefix + 'get ' + v.url, '\n⏲️ *filesize:* ' + v.filesize]
         ]])
 	})
-	return conn.sendList(m.chat, htki + ' 📺 Youtube Search 🔎 ' + htka, `⚡ Silakan pilih YouTube Search di tombol di bawah...\n*Teks yang anda kirim:* ${text}\n\nKetik ulang *${usedPrefix + command}* teks anda untuk mengubah teks lagi`, author, `☂️ YouTube Search Disini ☂️`, listSections, m)
+	return conn.sendList(m.chat, htki + ' 📺 Youtube Search 🔎 ' + htka, `⚡Please select YouTube Search in the button below...\n*Text to send:* ${text}\n\nRetype *${usedPrefix + command}* your text to change the text again`, author, `☂️ YouTube Search Here ☂️`, listSections, m)
 }
 } catch (e) {
     throw eror
