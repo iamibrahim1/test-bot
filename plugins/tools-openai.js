@@ -8,7 +8,7 @@ import fs from "fs"
 import fetch from "node-fetch"
 
 let handler = async (m, { conn, isOwner, usedPrefix, command, args }) => {
-	let query = "input text\nEx. .aiworld naruto\n<command> <tex>\n\nCommand:\n-ai\n-aicute\n-aianime\n-aitextimg\n-aitextgen\n-aidiff\n-aisent\n-ai3d\n-aipunk\n-aiworld\n-aidalle"
+	let query = "input text\nEx. .aiworld naruto\n<command> <tex>\n\nCommand:\n-ai\n-aicute\n-aianime\n-aitextimg\n-aitextgen\n-aidiff\n-aisent\n-ai3d\n -aipunk\n-aiworld\n-aidalle"
 	let text
 	if (args.length >= 1) {
 		text = args.slice(0).join(" ")
@@ -26,8 +26,8 @@ let handler = async (m, { conn, isOwner, usedPrefix, command, args }) => {
           ["💬 T E X T", usedPrefix + command + "text " + text],
           ["📷 I M A G E", usedPrefix + command + "img " + text]
         ]])
-	return conn.sendList(m.chat, htki + " 📺 OpenAi 🔎 " + htka, `⚡ Silakan pilih Model di tombol di bawah...\n*Teks yang anda kirim:* ${text}\n\nKetik ulang *${usedPrefix + command}* teks anda untuk mengubah teks lagi`, author, "☂️ T Y P E ☂️", listSections, m)
-			}
+	return conn.sendList(m.chat, htki + " 📺 OpenAi 🔎 " + htka, `⚡ Splease select Model in the button below...\n*Text to send:* ${text}\n\nRetype *${usedPrefix + command}* your text to change text again`, author, "☂️ T Y P E ☂️ ", listSections, m)
+			                                   }
 			
 	if (command == "openaiimg") {
 		try {
@@ -40,7 +40,7 @@ let handler = async (m, { conn, isOwner, usedPrefix, command, args }) => {
 				[emojis + " M E N U", ".menulist"]
 			], m)
 		} catch (e) {
-			m.reply("Maaf, sepertinya ada yang error")
+			m.reply("Sorry, there seems to be an error")
 		}
 	}
 	if (command == "openaitext") {
