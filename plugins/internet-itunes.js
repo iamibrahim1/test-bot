@@ -35,8 +35,7 @@ if (!text) throw 'Masukkan teks, Ex. Radiogead'
           ['Get Audio', usedPrefix + 'get ' + v.previewUrl, des]
         ]])
 	})
-	return conn.sendList(m.chat, htki + ' 📺 itunes Search 🔎 ' + htka, `⚡ Silakan pilih itunes Search di tombol di bawah...\n*Teks yang anda kirim:* ${text}\n\nKetik ulang *${usedPrefix + command}* teks anda untuk mengubah teks lagi`, author, `☂️ itunes Search Disini ☂️`, listSections, m)
-    }
+return conn.sendList(m.chat, htki + ' 📺 itunes Search 🔎 ' + htka, `⚡ Please select itunes Search in the button below...\n*Text to send:* ${text}\n\nType repeat *${usedPrefix + command}* your text to change the text again`, author, `☂️ itunes Search Here ☂️`, listSections, m)    }
 handler.help = ['itunes']
 handler.tags = ['music', 'audio']
 handler.command = ['itunes']
