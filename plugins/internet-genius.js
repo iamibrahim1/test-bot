@@ -30,7 +30,7 @@ let listSections = []
            ['Get Lyrics', usedPrefix + command + ' get|' + index + '|' + v.title, des]
         ]])
 	})
-	return conn.sendList(m.chat, htki + ' 📺 Genius Search 🔎 ' + htka, `⚡ Silakan pilih Genius Search di tombol di bawah...\n*Teks yang anda kirim:* ${text}\n\nKetik ulang *${usedPrefix + command}* teks anda untuk mengubah teks lagi`, author, `☂️ Genius Search Disini ☂️`, listSections, m)
+	return conn.sendList(m.chat, htki + ' 📺 Genius Search 🔎 ' + htka, `⚡Please select Genius Search in the button below...\n*Text to send:* ${text}\n\nRetype *${usedPrefix + command}* your text to change the text again`, author, `☂️ Genius Search Here ☂️`, listSections, m)
 	}
 	
 	if (comm == 'b') {
@@ -64,7 +64,7 @@ let listSections = []
           ['Get Song', usedPrefix + command + ' a|' + v.result.title, des]
         ]])
 	})
-	return conn.sendList(m.chat, htki + ' 📺 Genius Search 🔎 ' + htka, `⚡ Silakan pilih Genius Search di tombol di bawah...\n*Teks yang anda kirim:* ${text}\n\nKetik ulang *${usedPrefix + command}* teks anda untuk mengubah teks lagi`, author, `☂️ Genius Search Disini ☂️`, listSections, m)
+	return conn.sendList(m.chat, htki + ' 📺 Genius Search 🔎 ' + htka, `⚡ Please select Genius Search in the button below...\n*Text to send:* ${text}\n\nRetype *${usedPrefix + command}* your text to change the text again`, author, `☂️ Genius Search Here ☂️`, listSections, m)
 	}
 	
 if (comm == 'get') {
