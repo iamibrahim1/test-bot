@@ -2,7 +2,7 @@ import fetch from 'node-fetch'
 import fs from 'fs'
 let handler = async(m, { conn, usedPrefix, text, args, command }) => {
 
-    if (!text) throw `Contoh penggunaan ${usedPrefix}${command} japan`
+    if (!text) throw `Example of using ${usedPrefix}${command} japan`
 let f = await fetch(`https://api.lolhuman.xyz/api/shopee?apikey=sonelganz&query=${text}`)
 let xx = await f.json()
 let str = xx.result.map((v, index) => {
@@ -23,7 +23,7 @@ ${cmenua}
 `.trim()
     }).join(`\n\n*${htki} SHOPEE ${htka}*\n\n`)
 
-let weem = `📮 *Note:* Jangan beli sembarangan`
+let weem = `📮 *Note: * Don't buy at random
 let mim_ = ["application/vnd.openxmlformats-officedocument.presentationml.presentation","application/vnd.openxmlformats-officedocument.spreadsheetml.sheet","application/vnd.openxmlformats-officedocument.wordprocessingml.document","text/rtf"]
     await conn.sendButton(m.chat, str, weem, Buffer.alloc(0), [['All Menu', usedPrefix + 'allmenu'], ['List Menu', usedPrefix + 'menulist']], m, { quoted: fakes,
 mimetype: mim_.getRandom(), fileName: ucapan, pageCount: fpagedoc, fileLength: fsizedoc, seconds: fsizedoc, jpegThumbnail: await( await fetch(xx.result[0].image_cover)).buffer(), contextInfo: {
