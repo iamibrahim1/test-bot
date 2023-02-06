@@ -207,9 +207,9 @@ let teks = await sanoboys(one)
 		rowId: usedPrefix + 'ss ' + v.link
 	}))
 	let button = {
-		buttonText: `☂️ ${command} Search Disini ☂️`,
-		description: `⚡ ${name} Silakan pilih ${command} Search di tombol di bawah...\n*Teks yang anda kirim:* ${text}\n\nKetik ulang *${usedPrefix + command}* teks anda untuk mengubah teks lagi`,
-		footerText: wm
+		buttonText: `☂️ ${command} Search Here ☂️`,
+                description: `⚡ ${name} Please select ${command} Search in the button below...\n*Text to send:* ${text}\n\nRetype *${usedPrefix + command}* your text to change the text again`,
+                footerText: wm
 	}
 	return await conn.sendListM(m.chat, button, row, m)
 }
@@ -222,9 +222,9 @@ let teks = await sapkmirror(one)
 		rowId: usedPrefix + 'ss ' + v.link
 	}))
 	let button = {
-		buttonText: `☂️ ${command} Search Disini ☂️`,
-		description: `⚡ ${name} Silakan pilih ${command} Search di tombol di bawah...\n*Teks yang anda kirim:* ${text}\n\nKetik ulang *${usedPrefix + command}* teks anda untuk mengubah teks lagi`,
-		footerText: wm
+		buttonText: `☂️ ${command} Search Here ☂️`,
+                description: `⚡ ${name} Please select ${command} Search in the button below...\n*Text to send:* ${text}\n\nRetype *${usedPrefix + command}* your text to change the text again`,
+                 footerText: wm 
 	}
 	return await conn.sendListM(m.chat, button, row, m)
 }
@@ -237,9 +237,9 @@ let teks = await sapkmody(one)
 		rowId: usedPrefix + 'ss ' + v.link
 	}))
 	let button = {
-		buttonText: `☂️ ${command} Search Disini ☂️`,
-		description: `⚡ ${name} Silakan pilih ${command} Search di tombol di bawah...\n*Teks yang anda kirim:* ${text}\n\nKetik ulang *${usedPrefix + command}* teks anda untuk mengubah teks lagi`,
-		footerText: wm
+		buttonText: `☂️ ${command} Search Here ☂️`,
+                description: `⚡ ${name} Please select ${command} Search in the button below...\n*Text to send:* ${text}\n\nRetype *${usedPrefix + command}* your text to change the text again`,
+                footerText: wm
 	}
 	return await conn.sendListM(m.chat, button, row, m)
 }
@@ -255,9 +255,9 @@ let row = Object.values(teks).map((v, index) => ({
 		rowId: usedPrefix + 'ss ' + v.link
 	}))
 	let button = {
-		buttonText: `☂️ ${command} Search Disini ☂️`,
-		description: `⚡ ${name} Silakan pilih ${command} Search di tombol di bawah...\n*Teks yang anda kirim:* ${text}\n\nKetik ulang *${usedPrefix + command}* teks anda untuk mengubah teks lagi`,
-		footerText: wm
+		buttonText: `☂️${command} Search Here ☂️`,
+                escription: `⚡ ${name} Please select ${command} Search in the button below...\n*Text to send:* ${text}\n\nRetype *${usedPrefix + command}* your text to change the text again`,
+                footerText: wm
 	}
 	return await conn.sendListM(m.chat, button, row, m)
 }
@@ -296,10 +296,10 @@ let teks = await scarigc(one)
 		rowId: usedPrefix + 'inspect ' + v.link
 	}))
 	let button = {
-		buttonText: `☂️ ${command} Search Disini ☂️`,
-		description: `⚡ ${name} Silakan pilih ${command} Search di tombol di bawah...\n*Teks yang anda kirim:* ${text}\n\nKetik ulang *${usedPrefix + command}* teks anda untuk mengubah teks lagi`,
-		footerText: wm
-	}
+		buttonText: `☂️ ${command} Search Here ☂️`,
+                description: `⚡ ${name} Please select ${command} Search in the button below...\n*Text to send:* ${text}\n\nRetype *${usedPrefix + command}* your text to change the text again`,
+                footerText: wm
+} 
 	return await conn.sendListM(m.chat, button, row, m)
 }
 if (args[0] == 'cariresep') {
@@ -349,9 +349,9 @@ let row = Object.values(teks.data).map((v, index) => ({
 		rowId: usedPrefix + 'get ' + v.url
 	}))
 	let button = {
-		buttonText: `☂️ ${command} Search Disini ☂️`,
-		description: `⚡ ${name} Silakan pilih ${command} Search di tombol di bawah...\n*Teks yang anda kirim:* ${text}\n\nKetik ulang *${usedPrefix + command}* teks anda untuk mengubah teks lagi`,
-		footerText: wm
+	        buttonText: `☂️ ${command} Search Here ☂️`,
+                description: `⚡ ${name} Please select ${command} Search in the button below...\n*Text to send:* ${text}\n\nRetype *${usedPrefix + command}* your text to change the text again`,
+                footerText: wm
 	}
 	return await conn.sendListM(m.chat, button, row, m)
 }
