@@ -1,16 +1,16 @@
 let handler = async (m, { conn, text, usedPrefix, command }) => {
-    if (!text) throw `kalo kamu nemu pesan eror, lapor pake perintah ini\n\ncontoh:\n${usedPrefix + command} selamat siang owner, sy menemukan eror seperti berikut <copy/tag pesan erornya>`
-    if (text.length < 10) throw `Laporan terlalu pendek, minimal 10 karakter!`
-    if (text.length > 1000) throw `Laporan terlalu panjang, maksimal 1000 karakter!`
-    let teks = `*${command.toUpperCase()}!*\n\nDari : *@${m.sender.split`@`[0]}*\n\nPesan : ${text}\n`
+    if (!text) throw `if you find an error message, report it using this command\n\nexample:\n${usedPrefix + command} good afternoon owner, I found an error like this <copy/tag the error message>`
+     if (text.length < 10) throw `Report too short, at least 10 characters!`
+     if (text.length > 1000) throw `Report too long, maximum 1000 characters!`
+     let text = `*${command.toUpperCase()}!*\n\nFrom : *@${m.sender.split`@`[0]}*\n\nMessage : ${text}\n`
     conn.reply(global.nomorown + '@s.whatsapp.net', m.quoted ? teks + m.quoted.text : teks, null, {
         contextInfo: {
             mentionedJid: [m.sender]
         }
     })
-    m.reply(`_Pesan terkirim kepemilik bot, jika ${command.toLowerCase()} hanya main-main tidak akan ditanggapi._`)
+    m.reply(`_Message sent to bot owner, if ${command.toLowerCase()} is just for fun it will not be responded._`)
 }
-handler.help = ['report'].map(v => v + ' <teks>')
+handler.help = ['report'].map(v => v + ' <text>')
 handler.tags = ['info']
 handler.command = /^(reports|masalah|report?|lapor|bug[gs]|bug)$/i
 export default handler
