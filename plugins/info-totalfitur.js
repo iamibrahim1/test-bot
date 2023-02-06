@@ -20,7 +20,7 @@ _Jangan di spam ntar erorr_
 ${cmenua}`
 return conn.send2ButtonLoc(m.chat, knimg, tqto, wm + '\n\n' + botdate, ' All Menu', usedPrefix + 'allmenu', ' List Menu', usedPrefix + 'menulist', m)
 }
-handler.help = ['totalfitur']
+handler.help = ['totalfeature']
 handler.tags = ['main','info']
-handler.command = /^(feature|totalfitur)$/i
+handler.command = /^(feature|totalfeature)$/i
 export default handler
