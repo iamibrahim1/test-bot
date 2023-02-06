@@ -7,7 +7,7 @@ let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? c
 let pp = await conn.profilePictureUrl(who).catch(_ => hwaifu.getRandom())
 let namemu = await conn.getName(who)
 
-if (!args[0]) throw "Masukkan Nama Lokasi"
+if (!args[0]) throw "Enter Location Name"
 
         let response = axios.get('https://api.weatherapi.com/v1/current.json?key=897dba35c1d94f4cbea134758220207&q=' + text)
         let res = await response
@@ -60,8 +60,8 @@ ${readMore}
         contextInfo: {
         mentionedJid: [m.sender],
         externalAdReply: {
-        title: 'P E R K I R A A N',
-        body: 'C U A C A',
+        title: 'ESTIMATION',
+         body: 'Weather',
         thumbnail: icon,
         mediaType: 1,
         sourceUrl: sgh 
@@ -75,7 +75,7 @@ ${readMore}
          }
 }
 
-handler.help = ['infocuaca <city>']
+handler.help = ['infoweather <city>']
 handler.tags = ['info']
 handler.command = /^infocuaca|weather$/i
 handler.limit = true
