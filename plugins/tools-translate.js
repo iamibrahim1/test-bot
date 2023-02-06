@@ -12,18 +12,18 @@ let handler = async (m, { args, usedPrefix, command }) => {
 	const regionNamesInEnglish = new Intl.DisplayNames(['en'], { type: 'region' });
 	let Detect = regionNamesInEnglish.of(res.from.language.iso.toUpperCase() ? res.from.language.iso.toUpperCase() : 'US')
 	let ToLang = regionNamesInEnglish.of(lang.toUpperCase())
-	let caption = `*[ Terdeteksi ]*
+	let caption = `*[ detected ]*
 - ${Detect}
 
-*[ Ke Bahasa ]*
+*[ Origibal Lnaguage ]*
 - ${ToLang}
 
-*[ Terjemahan ]*
+*[ Translation ]*
 - ${res.text}
 `
 m.reply(caption)
 }
-handler.help = ['translate'].map(v => v + ' <bahasa> <teks>')
+handler.help = ['translate'].map(v => v + ' <language> <text>')
 handler.tags = ['tools']
 handler.command = /^(tr(anslate)?)$/i
 
