@@ -25,8 +25,7 @@ let name = await conn.getName(who)
 `]
 ]])
 	})
-	return conn.sendList(m.chat, htki + ' 📺 Yayimages 🔎 ' + htka, `⚡ Hai ${name} Silakan pilih Yayimages Search di tombol di bawah...\n*Teks yang anda kirim:* ${text}\n\nKetik ulang *${usedPrefix + command}* teks anda untuk mengubah teks lagi`, author, `☂️ Yayimages Disini ☂️`, listSections, m)
-}
+return conn.sendList(m.chat, htki + ' 📺 Yayimages 🔎 ' + htka, `⚡ Hi ${name} Please select Yayimages Search in the button below...\n*Text you sent:* ${text} \n\nRetype *${usedPrefix + command}* your text to change the text again`, author, `☂️ Yayimages Here ☂️`, listSections, m)}
 handler.help = ['yay <teks>']
 handler.tags = ['sticker']
 handler.command = /^(yay)$/i
