@@ -19,7 +19,7 @@ ${dmenuf}\n\n`
       await conn.sendButtonImg(m.chat, pp ? pp : logo, str, author, 'B A C K', '.menu', fakes, adReply)
        break
     default:
-      if (!/[01]/.test(command)) return conn.sendList(m.chat, htki + ' 📺 Private List 🔎 ' + htka, `⚡ Silakan pilih Private List di tombol di bawah...\n*Teks yang anda kirim:* ${text ? text : 'Kosong'}\n\nKetik ulang *${usedPrefix + command}* teks anda untuk mengubah teks lagi`, author, `☂️ Private List Disini ☂️`, listSections, m)
+      if (!/[01]/.test(command)) return conn.sendList(m.chat, htki + ' 📺 Private List 🔎 ' + htka, `⚡ Please select Private List in the button below...\n*Text you sent:* ${text ? text : 'Empty'}\n\nRetype *${usedPrefix + command}* your text to change the text again`, author, `☂️ Private List Here ☂️`, listSections, m)
       throw false
   }
 }
