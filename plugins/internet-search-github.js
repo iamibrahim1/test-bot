@@ -98,8 +98,7 @@ ${v.url}
           ['Lihat', usedPrefix + 'ss ' + v.url, des]
         ]])
 	})
-	return conn.sendList(m.chat, htki + ' 📺 Github Search 🔎 ' + htka, `⚡ Total ${sul.total_count} Code, Silakan pilih Github Search di tombol di bawah...\n*Teks yang anda kirim:* ${text}\n\nKetik ulang *${usedPrefix + command}* teks anda untuk mengubah teks lagi`, author, `☂️ Github Search Disini ☂️`, listSections, m)
-}
+return conn.sendList(m.chat, htki + ' 📺 Github Search 🔎 ' + htka, `⚡ Total ${sul.total_count} Code, Please select Github Search in the button below...\n*Text to send: * ${text}\n\nRetype *${usedPrefix + command}* your text to change the text again`, author, `☂️ Github Search Here ☂️`, listSections, m)}
 
 if (command == 'ghcommits') {
   let url = "https://api.github.com/search/commits?q=" + text;
@@ -348,8 +347,7 @@ ${v.node_id}
           ['Lihat', usedPrefix + 'ss ' + v.url, des]
         ]])
 	})
-	return conn.sendList(m.chat, htki + ' 📺 Github Search 🔎 ' + htka, `⚡ Total ${sul.total_count} Code, Silakan pilih Github Search di tombol di bawah...\n*Teks yang anda kirim:* ${text}\n\nKetik ulang *${usedPrefix + command}* teks anda untuk mengubah teks lagi`, author, `☂️ Github Search Disini ☂️`, listSections, m)
-}
+return conn.sendList(m.chat, htki + ' 📺 Github Search 🔎 ' + htka, `⚡ Total ${sul.total_count} Code, Please select Github Search in the button below...\n*Text to send: * ${text}\n\nRetype *${usedPrefix + command}* your text to change the text again`, author, `☂️ Github Search Here ☂️`, listSections, m)}
 
 if (command == 'ghlabels') {
   let url = "https://api.github.com/search/labels?q=" + text;
@@ -383,8 +381,7 @@ ${v.node_id}
           ['Lihat', usedPrefix + 'ss ' + v.url, des]
         ]])
 	})
-	return conn.sendList(m.chat, htki + ' 📺 Github Search 🔎 ' + htka, `⚡ Total ${sul.total_count} Code, Silakan pilih Github Search di tombol di bawah...\n*Teks yang anda kirim:* ${text}\n\nKetik ulang *${usedPrefix + command}* teks anda untuk mengubah teks lagi`, author, `☂️ Github Search Disini ☂️`, listSections, m)
-}
+return conn.sendList(m.chat, htki + ' 📺 Github Search 🔎 ' + htka, `⚡ Total ${sul.total_count} Code, Please select Github Search in the button below...\n*Text to send: * ${text}\n\nRetype *${usedPrefix + command}* your text to change the text again`, author, `☂️ Github Search Here ☂️`, listSections, m)}
 
 if (command == 'ghrepositories') {
   let url = "https://api.github.com/search/repositories?q=" + text;
@@ -509,8 +506,7 @@ ${v.forks_count}
           ['Lihat', usedPrefix + 'ss ' + v.url, des]
         ]])
 	})
-	return conn.sendList(m.chat, htki + ' 📺 Github Search 🔎 ' + htka, `⚡ Total ${sul.total_count} Code, Silakan pilih Github Search di tombol di bawah...\n*Teks yang anda kirim:* ${text}\n\nKetik ulang *${usedPrefix + command}* teks anda untuk mengubah teks lagi`, author, `☂️ Github Search Disini ☂️`, listSections, m)
-}
+return conn.sendList(m.chat, htki + ' 📺 Github Search 🔎 ' + htka, `⚡ Total ${sul.total_count} Code, Please select Github Search in the button below...\n*Text to send: * ${text}\n\nRetype *${usedPrefix + command}* your text to change the text again`, author, `☂️ Github Search Here ☂️`, listSections, m)}
 
 if (command == 'ghtopics') {
   let url = "https://api.github.com/search/topics?q=" + text;
@@ -546,8 +542,7 @@ ${v.score}
           ['Lihat', usedPrefix + 'ss ' + v.url, des]
         ]])
 	})
-	return conn.sendList(m.chat, htki + ' 📺 Github Search 🔎 ' + htka, `⚡ Total ${sul.total_count} Code, Silakan pilih Github Search di tombol di bawah...\n*Teks yang anda kirim:* ${text}\n\nKetik ulang *${usedPrefix + command}* teks anda untuk mengubah teks lagi`, author, `☂️ Github Search Disini ☂️`, listSections, m)
-}
+return conn.sendList(m.chat, htki + ' 📺 Github Search 🔎 ' + htka, `⚡ Total ${sul.total_count} Code, Please select Github Search in the button below...\n*Text to send: * ${text}\n\nRetype *${usedPrefix + command}* your text to change the text again`, author, `☂️ Github Search Here ☂️`, listSections, m)}
 
 if (command == 'ghusers') {
   let url = "https://api.github.com/search/users?q=" + text;
@@ -591,8 +586,7 @@ ${v.site_admin}
           ['Lihat', usedPrefix + 'ss ' + v.url, des]
         ]])
 	})
-	return conn.sendList(m.chat, htki + ' 📺 Github Search 🔎 ' + htka, `⚡ Total ${sul.total_count} Code, Silakan pilih Github Search di tombol di bawah...\n*Teks yang anda kirim:* ${text}\n\nKetik ulang *${usedPrefix + command}* teks anda untuk mengubah teks lagi`, author, `☂️ Github Search Disini ☂️`, listSections, m)
-}
+return conn.sendList(m.chat, htki + ' 📺 Github Search 🔎 ' + htka, `⚡ Total ${sul.total_count} Code, Please select Github Search in the button below...\n*Text to send: * ${text}\n\nRetype *${usedPrefix + command}* your text to change the text again`, author, `☂️ Github Search Here ☂️`, listSections, m)}
 
 }
 handler.command = /^gh(repositories|(commit|label|topic|user)s|issues|code)$/i
