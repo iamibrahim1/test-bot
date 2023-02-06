@@ -2,12 +2,12 @@ import cheerio from 'cheerio';
 import got from 'got';
 
 let handler = async (m, { text, args, usedPrefix, command }) => {
-let kueri =  'Masukkan Query\nEx. ' + usedPrefix + command + ' go |buku\n\n*List*\n-yts\n-tik\n-mf\n-go\n-gen\n-wik\n-gi'
+let kueri =  'Enter Queries\nEx. ' + usedPrefix + command + ' go |books\n\n*List*\n-yts\n-tick\n-mf\n-go\n-gen\n-wik\n-gi'
 let urut = text.split`|`
   let one = urut[1]
   let two = urut[2]
   let three = urut[3]
-  if (!one) throw kueri
+  if (!one) throw query
   if (args[0] == 'yts') {
   let res = await youtubeSearch(one)
   let dapet = res.result.video
@@ -18,7 +18,7 @@ let urut = text.split`|`
           ['Audio 🎧', usedPrefix + 'yta ' + v.url + ' yes', '\n⌚ *Duration:* ' + v.durationH + '\n⏲️ *Uploaded:* ' + v.publishedTime + '\n👁️ *Views:* ' + v.view + '\n📎 *Url:* ' + v.url]
         ]])
 	})
-	return conn.sendList(m.chat, htki + ' 📺 YT Search 🔎 ' + htka, `⚡ Silakan pilih YouTube Search di tombol di bawah...\n*Teks yang anda kirim:* ${text}\n\nKetik ulang *${usedPrefix + command}* teks anda untuk mengubah teks lagi`, author, `☂️ YouTube Search Disini ☂️`, listSections, m)
+	return conn.sendList(m.chat, htki + ' 📺 YT Search 🔎 ' + htka, `⚡ Please select YouTube Search in the button below...\n*Text to send:* ${text}\n\nRetype *${usedPrefix + command}* your text to change the text again`, author, `☂️ YouTube Search Here ☂️`, listSections, m)
   }
   if (args[0] == 'tik') {
   let res = await tiktokdl(one)
@@ -29,7 +29,7 @@ let urut = text.split`|`
           ['WM', usedPrefix + 'get ' + dapet.wm, author],
           ['MUSIC', usedPrefix + 'get ' + dapet.music, author]
         ]])
-	return conn.sendList(m.chat, htki + ' 📺 TIK 🔎 ' + htka, `${dapet.music_info}⚡ Silakan pilih Tik di tombol di bawah...\n*Teks yang anda kirim:* ${text}\n\nKetik ulang *${usedPrefix + command}* teks anda untuk mengubah teks lagi`, author, `☂️ YouTube Search Disini ☂️`, listSections, m)
+	return conn.sendList(m.chat, htki + ' 📺 TIK 🔎 ' + htka, `${dapet.music_info}⚡ Please select Type in the button below...\n*Text you send:* ${text} \n\nRetype *${usedPrefix + command}* your text to change the text again`, author, `☂️ YouTube Search Here ☂️`, listSections, m)
   }
   if (args[0] == 'mf') {
   let res = await mediafiredl(one)
@@ -45,8 +45,8 @@ let urut = text.split`|`
           [ky[v].slice(10, 20), usedPrefix + "get " + ky[v], "➥"]
         ]])
 	})
-	return conn.sendList(m.chat, htki + " 📺 RESULT 🔎 " + htka, `⚡ Silakan pilih result di tombol di bawah...\n*Teks yang anda kirim:* ${text}\n\nKetik ulang *${usedPrefix + command}* teks anda untuk mengubah teks lagi`, author, "☂️ I M A G E S ☂️", listSections, m)
-  }
+	return conn.sendList(m.chat, htki + " 📺 RESULT 🔎 " + htka, `⚡ Please select the result in the button below...\n*Text to send:* ${text}\n\nRetype *${usedPrefix + command}* your text to change the text again`, author, "☂️ I M A G E S ☂️ ", listSections, m)
+   }
   if (args[0] == 'gen') {
   let res = await genius(one)
   let cap = `*${res.result.song.artist_names}*\n${res.result.song.full_title}\n\n*Lirik:*\n${res.result.lyrics}`
