@@ -12,7 +12,7 @@ let totalf = Object.values(global.plugins).filter(
 let tqto = `${wm}
 
 ${cmenut}
-${cmenub} *🔖 FITUR :* ${totalf}
+${cmenub} *🔖 FEATURE :* ${totalf}
 ${cmenuf}
 
 _Jangan di spam ntar erorr_
