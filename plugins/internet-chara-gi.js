@@ -2,7 +2,7 @@ import genshin from 'genshin'
 
 let handler = async (m, { text }) => {
 	
-let list = ['amber','ayaka','baizhu','barbara','beidou','bennett','childe','chongyun','cyno','dainsleif','diluc','diona','fischl','ganyu','jean','kaeya','keqing','klee','lisa','mona','ningguang','noelle','qiqi','razor','sucrose','venti','xiangling','xiao','xingqiu','xinyan','zhongli']
+let list = ['amber','ayaka','baizhu','barbara','beidou','bennett','childe','chongyun','cyno','dainsleif','diluc','diona','fischl ','ganyu','jean','kaeya','keqing','klee','lisa','mona','ningguang','noelle','qiqi','razor','sucrose', 'venti','xiangling','xiao','xingqiu','xinyan','zhongli']
 
 if (!list.includes(text.toLowerCase())) return m.reply('*List Chara GI:*\n\n' + list.map(v => v).join('\n'))
 
