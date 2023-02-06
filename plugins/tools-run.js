@@ -5,10 +5,10 @@ import path, { join } from 'path'
   let handler = async (m, { conn, text }) => {
     let q = m.quoted ? m.quoted : m
     let mime = (q.msg || q).mimetype || ''
-    if (!/image/.test(mime)) throw `balas gambarnya!`
+    if (!/image/.test(mime)) throw `reply the picture!`
     try { q = m.quoted.download() }
     catch (e) { q = m.download() }
-    m.reply('_Sedang membuat..._\n*Mohon tunggu sekitar 1 menit*')
+    m.reply('_Currently making..._\n*Please wait about 1 minute*')
     running(await q).then(vid => conn.sendFile(m.chat, vid, 'run.mp4', author, m))
   }
   handler.help = ['run <media>']
