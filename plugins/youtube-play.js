@@ -5,9 +5,9 @@ await conn.sendMessage(m.chat, {
             text: '⏳',
             key: m.key,
           }})
-  if (!text) throw `Use example ${usedPrefix}${command} Dj Gama Naufal`
+  if (!text) throw `Use example ${usedPrefix}${command} tusa wada log ho`
   let vid = (await youtubeSearch(text)).video[0]
-  if (!vid) throw 'Video/Audio Tidak ditemukan'
+  if (!vid) throw 'Video/Audio Not found'
   let { title, description, thumbnail, videoId, durationH, viewH, publishedTime } = vid
   const url = 'https://www.youtube.com/watch?v=' + videoId
   let caption = `
@@ -23,7 +23,7 @@ ${htjava} *Title:* ${title}
   `.trim()
   let listSections = []
 	
-	listSections.push(['[ PILIH OPSI YANG KAMU MAU ]', [
+	listSections.push(['[ SELECT THE OPTION YOU WOULD LIKE ]', [
     ['🎶 Audio', usedPrefix + 'yta ' + url + ' yes'],
     ['🎥 Video', usedPrefix + 'ytv ' + url + ' yes'],
     ['🔎 Youtube Search', usedPrefix + 'yts ' + url]
