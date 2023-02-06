@@ -9,7 +9,7 @@ let handler = async (m, { usedPrefix, command }) => {
         throw `_*Error!*_`
     }
 }
-handler.help = ['bacaanshalat']
+handler.help = ['prayerreading']
 handler.tags = ['islam']
-handler.command = /^(bacaansh?(a|o)lat)$/i
+handler.command = /^(prayerreading)$/i
 export default handler
