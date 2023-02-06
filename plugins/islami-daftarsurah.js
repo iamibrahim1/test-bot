@@ -15,7 +15,7 @@ Type: ${v.revelationType}
             ], m)
         
 }
-handler.help = ['daftarsurah']
+handler.help = ['lissurah']
 handler.tags = ['islam']
 handler.command = /^((list|daftar)sura(t|h))$/i
 export default handler
