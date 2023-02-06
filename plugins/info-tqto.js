@@ -9,46 +9,8 @@ let name = await conn.getName(who)
 let tqto = `*${htki} BIG THANKS TO ${htka}*
 
 *Adiwajshing:*
-https://github.com/adiwajshing
-
-*Nurutomo:*
-https://github.com/Nurutomo
-
-*Istikmal:* 
-https://github.com/BochilGaming
-
-*Ariffb:*
-https://github.com/Ariffb25
-
-*Ilman:*
-https://github.com/ilmanhdyt
-
-*Amirul:*
-https://github.com/amiruldev20
-
-*Rasel:*
-https://github.com/raselcomel
-
-*Fatur:*
-https://github.com/Ftwrr
-
-*Rominaru:*
-https://github.com/Rominaru
-
-*Kannachann:*
-https://github.com/Kannachann
-
-*The.sad.boy01:*
-https://github.com/kangsad01
-
-*Ameliascrf:*
-https://github.com/Ameliascrf
-
-*Fokus ID:*
-https://github.com/Fokusdotid
-
-*AmmarBN:*
-https://github.com/AmmarrBN
+Bot script owner:
+https://github.com/Frezzy-XD
 `
 conn.sendButton(m.chat, tqto, wm, await(await fetch(hwaifu.getRandom())).buffer(), [['🎀 Menu', '/menu']], m, { fileLength: fsizedoc, seconds: fsizedoc, contextInfo: {
           externalAdReply :{
