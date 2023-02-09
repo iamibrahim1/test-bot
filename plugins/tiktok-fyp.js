@@ -10,7 +10,7 @@ let name = await conn.getName(m.sender)
           ['🎧 Music ' + v.music.authorName, usedPrefix + 'get ' + v.music.playUrl, 'Desc: ' + v.title ? v.title : 'Tidak diketahui' + '\nSecond: ' + v.music.duration]
         ]])
 	})
-	return conn.sendList(m.chat, htki + ' 📺 FYP 🔎 ' + htka, `⚡ Silakan pilih FYP di tombol di bawah...\n\nKetik ulang *${usedPrefix + command}* teks anda untuk mengubah teks lagi`, author, '☂️ FYP Disini ☂️', listSections, m)
+	return conn.sendList(m.chat, htki + ' 📺 FYP 🔎 ' + htka, `⚡ Please select FYP in the button below...\n\nRetype *${usedPrefix + command}* your text to change the text again`, author, '☂️ FYP Here ☂️', listSections, m)
 }
 handler.help = ['fyp']
 handler.tags = ['tools']
