@@ -11,7 +11,7 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
     
     let js = await fetch(`https://api.lolhuman.xyz/api/agedetect?apikey=${global.lolkey}&img=${encodeURIComponent(url)}`)
     let has = await js.json()
-    await m.reply('Hasil deteksi Usia dar gambar tersebut adalah ' + has.result + ' Tahun')
+    await m.reply('The results of the Age detection of the image are ' + has.result + ' Tahun')
     
 }
 //lo mau apa??
