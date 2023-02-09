@@ -10,9 +10,9 @@ let handler = async (m, { conn, usedPrefix, command }) => {
           ['Pesan: ' + v.nama, usedPrefix + 'getmsg ' + v.nama, '\n\n' + htjava + '\n' + dmenub + ' *ID:* ' + v.key.id + '\n' + dmenub + ' *Type:* ' + Object.keys(v.message) + '\n' + dmenub + ' *Jid:* ' + (v.key.remoteJid).replace(/@.+/, '') + '\n' + dmenuf]
         ]])
 	})
-	if (chat.getmsg === false) return conn.sendButton(m.chat, `kamu harus mengaktifkan getmsg dengan mengklik tombol di bawah`, wm, null, [['Nyalakan getmsg', '.on getmsg']], m)
-	if (msg[0]) return conn.sendList(m.chat, htki + ' 📺 LIST MESSAGE 🔎 ' + htka, `⚡ Hai ${name} Berikut daftar Menu yg Ada di List store...\nAkses langsung dengan mengetik namanya`, author, `☂️ ${command} Klik Disini ☂️`, listSections, m)
-	else throw `\nBelum ada Menu yg Ada di list store.\nketik *${usedPrefix + command} <teks>* untuk menambahkan daftar menu.\n`
+	if (chat.getmsg === false) return conn.sendButton(m.chat, `you must enable getmsg by clicking the button below`, wm, null, [['Turn on getmsg', '.on getmsg']], m)
+if (msg[0]) return conn.sendList(m.chat, htki + ' 📺 LIST MESSAGE 🔎 ' + htka, `⚡ Hi ${name} Here is a list of menus available in List store...\nAccess directly by typing name`, author, `☂️ ${command} Click Here ☂️`, listSections, m)
+else throw `\nThere are no menus in the store list yet.\nType *${usedPrefix + command} <text>* to add a menu list.\n`
 }
 handler.help = ['store'].map(v => 'list' + v)
 handler.tags = ['database']
