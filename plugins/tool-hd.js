@@ -10,7 +10,7 @@ let pp = await conn.profilePictureUrl(who).catch(_ => hwaifu.getRandom())
 let name = await conn.getName(who)
 	let q = m.quoted ? m.quoted : m
 	let mime = (q.msg || q).mimetype || ''
-	if (!mime) throw 'ʀᴇᴘʟʏ ɢᴀᴍʙᴀʀɴʏᴀ ᴋᴀᴋ ' + name
+	if (!mime) throw 'Reply the picture sis ' + name
     await m.reply(global.wait)
 	if (!/image\/(jpe?g|png)/.test(mime)) throw `Mime ${mime} tidak support`
 	let img = mime.split('/')[1]
@@ -24,7 +24,7 @@ let name = await conn.getName(who)
     mediaUrl: sig,
     mediaType: 2,
     description: wm, 
-    title: '👋 Hai, ' + name + ' ' + ucapan,
+    title: '👋 Hi, ' + name + ' ' + ucapan,
     body: botdate,
     thumbnail: await(await fetch(pp)).buffer(),
     sourceUrl: sgc
