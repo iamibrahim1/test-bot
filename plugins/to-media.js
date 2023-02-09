@@ -30,7 +30,7 @@ await conn.sendFile(m.chat, res, 'out.webp', m, false, { mimetype: 'image/webp',
 if (command == 'webptogif') {
 let q = m.quoted ? m.quoted : m
     let mime = (q.msg || q).mimetype || ''
-    if (!mime) throw `balas gambar dengan perintah\n\n${usedPrefix + command}`
+    if (!mime) throw `reply image with command\n\n${usedPrefix + command}`
 
     let img = await q.download?.()
    // let url = await uploadImage(img)
@@ -41,7 +41,7 @@ await conn.sendFile(m.chat, res, 'out.gif', m, false, { mimetype: 'image/gif', t
 if (command == 'webptomp4') {
 let q = m.quoted ? m.quoted : m
     let mime = (q.msg || q).mimetype || ''
-    if (!mime) throw `balas gambar dengan perintah\n\n${usedPrefix + command}`
+    if (!mime) throw `reply image with command\n\n${usedPrefix + command}`
 
     let img = await q.download?.()
    // let url = await uploadImage(img)
@@ -52,7 +52,7 @@ await conn.sendFile(m.chat, res, 'out.mp4', m, false, { mimetype: 'video/mp4', t
 if (command == 'imgtopdf') {
 let q = m.quoted ? m.quoted : m
     let mime = (q.msg || q).mimetype || ''
-    if (!mime) throw `balas gambar dengan perintah\n\n${usedPrefix + command}`
+    if (!mime) throw `reply image with command\n\n${usedPrefix + command}`
 
     let img = await q.download?.()
     // let url = await uploadImage(img)
@@ -63,7 +63,7 @@ await conn.sendFile(m.chat, res, 'out.pdf', m, false, { mimetype: 'application/p
 if (command == 'topng') {
 let q = m.quoted ? m.quoted : m
     let mime = (q.msg || q).mimetype || ''
-    if (!mime) throw `balas gambar dengan perintah\n\n${usedPrefix + command}`
+    if (!mime) throw `reply image with command\n\n${usedPrefix + command}`
 
     let img = await q.download?.()
    // let url = await uploadImage(img)
@@ -74,7 +74,7 @@ await conn.sendFile(m.chat, res, 'out.png', m, false, { mimetype: 'image/png', t
 if (command == 'tobase64') {
 let q = m.quoted ? m.quoted : m
     let mime = (q.msg || q).mimetype || ''
-    if (!mime) throw `balas gambar dengan perintah\n\n${usedPrefix + command}`
+    if (!mime) throw `reply image with command\n\n${usedPrefix + command}`
 
     let img = await q.download?.()
     // let url = await uploadFile(img)
@@ -83,13 +83,13 @@ await conn.sendFile(m.chat, res, 'Hasil', '', m)
 }
 
 if (command == '64tofile') {
-if (!text) throw `balas gambar dengan perintah\n\n${usedPrefix + command} base64`
+if (!text) throw `reply image with command\n\n${usedPrefix + command} base64`
 let res = `https://api.lolhuman.xyz/api/base64tofile?apikey=${global.lolkey}&base=${text}`
 await conn.sendFile(m.chat, res, 'Hasil', '', m)
 }
 
 if (command == 'urltoimg') {
-if (!text) throw `balas gambar dengan perintah\n\n${usedPrefix + command} url`
+if (!text) throw `reply image with command\n\n${usedPrefix + command} url`
 let res = `https://api.lolhuman.xyz/api/urltoimg?apikey=${global.lolkey}&url=${text}`
 await conn.sendFile(m.chat, res, 'out.jpeg', m, false, { mimetype: 'image/jpeg', thumbnail: Buffer.alloc(0) })
 }
@@ -97,7 +97,7 @@ await conn.sendFile(m.chat, res, 'out.jpeg', m, false, { mimetype: 'image/jpeg',
 if (command == 'filetourl') {
 let q = m.quoted ? m.quoted : m
     let mime = (q.msg || q).mimetype || ''
-    if (!mime) throw `balas gambar dengan perintah\n\n${usedPrefix + command}`
+    if (!mime) throw `reply image with command\n\n${usedPrefix + command}`
 
     let img = await q.download?.()
    // let url = await uploadImage(img)
@@ -108,7 +108,7 @@ let q = m.quoted ? m.quoted : m
 }
 
 if (command == 'emorse') {
-    if (!text) throw `balas gambar dengan perintah\n\n${usedPrefix + command} text`
+    if (!text) throw `reply image with command\n\n${usedPrefix + command} text`
 let res = await fetch(`https://api.lolhuman.xyz/api/morse/encrypt?apikey=${global.lolkey}&text=${text}`)
     let p = await res.json()
     let rem = p.result
@@ -116,7 +116,7 @@ let res = await fetch(`https://api.lolhuman.xyz/api/morse/encrypt?apikey=${globa
 }
 
 if (command == 'dmorse') {
-    if (!text) throw `balas gambar dengan perintah\n\n${usedPrefix + command} kode morse`
+    if (!text) throw `reply image with command\n\n${usedPrefix + command} kode morse`
 let res = await fetch(`https://api.lolhuman.xyz/api/morse/decrypt?apikey=${global.lolkey}&text=${text}`)
     let p = await res.json()
     let rem = p.result
@@ -142,7 +142,7 @@ await conn.sendFile(m.chat, res, 'out.jpeg', m, false, { mimetype: 'image/jpeg',
 }
 
 if (command == 'smojimg2') {
-    if (!text) throw `balas gambar dengan perintah\n\n${usedPrefix + command} emoji`
+    if (!text) throw `reply image with command\n\n${usedPrefix + command} emoji`
 let res = await fetch(`https://api.lolhuman.xyz/api/smoji3/${text}?apikey=${global.lolkey}`)
     let p = await res.json()
     let x = p.result
@@ -175,10 +175,10 @@ let res = await fetch(`https://api.lolhuman.xyz/api/smoji3/${text}?apikey=${glob
 ]
 
 const listMessage = {
-  text: `⚡ Silakan pilih tema di tombol di bawah...\n*Teks yang anda kirim:* ${text}\n\nKetik ulang *${usedPrefix + command}* teks anda untuk mengubah teks lagi`,
-  footer: global.wm,
-  title: `⎔───「 ${command} 」───⎔`,
-  buttonText: `☂️ Tema Disini ☂️`,
+  text: `⚡ Please choose a theme in the button below...\n*Text you send:* ${text}\n\nRetype *${usedPrefix + command}* your text to change the text again`,
+   footer: global.wm,
+   title: `⎔───「${command} 」───⎔`,
+   buttonText: `☂️ Theme Here ☂️`,
   sections
 }
 conn.sendMessage(m.chat, listMessage, fdoc)
